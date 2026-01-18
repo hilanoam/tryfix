@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>מחשבון שכר</title>
+  <link rel="icon" type="image/png" href="./topleft.png">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+      
+      <div class="topbar">
+        <img class="top-logo left" src="./topleft.png" alt="לוגו שמאל">
+
+        <div class="brand-center">
+          <div class="title">מחשבון שכר</div>
+        </div>
+
+        <img class="top-logo right" src="./topright.png" alt="לוגו ימין">
+      </div>
+
+      <div class="section">
+        <div class="section-title"><i class="fa-solid fa-layer-group"></i> רמת פעילות</div>
+        <div class="activity-grid" id="activityCards"></div>
+        <select id="activity" style="display:none"></select>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><i class="fa-solid fa-briefcase"></i> מקצוע</div>
+        <div class="field"><select id="profession"></select></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><i class="fa-solid fa-gift"></i> קבוצת תמריץ</div>
+        <div class="field"><select id="incentiveGroup"></select></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><i class="fa-solid fa-chevron-up"></i> דרגה </div>
+        <div class="field"><select id="rankBefore"></select></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><i class="fa-solid fa-hourglass-half"></i> וותק</div>
+        <div class="field"><select id="seniority"></select></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><i class="fa-solid fa-list-check"></i> דירוג </div>
+        <div class="field"><select id="ratingBefore"></select></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><i class="fa-solid fa-bolt"></i> תחנה מבצעית?</div>
+        <div class="segmented" id="operationalSeg">
+          <button type="button" class="seg-btn active" data-value="0">
+            <i class="fa-regular fa-circle"></i><span>לא</span>
+          </button>
+          <button type="button" class="seg-btn" data-value="1">
+            <i class="fa-solid fa-bolt"></i><span>כן</span>
+          </button>
+        </div>
+
+        <select id="operational" style="display:none">
+          <option value="0" selected>לא</option>
+          <option value="1">כן</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><i class="fa-solid fa-id-badge"></i> מינוי אחרי קק"צ</div>
+        <div class="field">
+          <select id="appointment">
+            <option value="">בלי מינוי (רק אחרי קק"צ)</option>
+            <option value="מינוי מפקח">מפקח</option>
+            <option value="מינוי פקד">פקד</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><i class="fa-solid fa-ranking-star"></i> דירוג אחרי קק"צ</div>
+        <div class="field"><select id="officerRating" disabled></select></div>
+      </div>
+
+      <div class="actions">
+        <button class="btn-primary" id="calcBtn" disabled>
+          <i class="fa-solid fa-equals"></i> חשב שכר
+        </button>
+        <button class="btn-ghost" id="resetBtn" type="button">
+          <i class="fa-solid fa-rotate-left"></i> איפוס
+        </button>
+      </div>
+
+      <div class="results" id="results"></div>
+
+      <!-- ✅ תמיד מוצג -->
+      <div class="export-area" id="exportArea">
+        <button class="btn-ghost" id="exportBtn" type="button">
+          <i class="fa-solid fa-file-arrow-down"></i> ייצוא תוצאה לקובץ
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
