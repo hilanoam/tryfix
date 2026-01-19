@@ -29,68 +29,92 @@
         <img class="top-logo right" src="./topright.png" alt="לוגו ימין">
       </div>
 
+            <!-- שלב 1: דרגה נוכחית -->
       <div class="section">
-        <div class="section-title"><i class="fa-solid fa-layer-group"></i> רמת פעילות</div>
-        <div class="activity-grid" id="activityCards"></div>
-        <select id="activity" style="display:none"></select>
+        <div class="section-title"><i class="fa-solid fa-user"></i> דרגה נוכחית</div>
+        <div class="field">
+          <select id="currentRank"></select>
+        </div>
       </div>
 
+      <!-- שלב 2: תחילת קורס -->
       <div class="section">
-        <div class="section-title"><i class="fa-solid fa-briefcase"></i> מקצוע</div>
-        <div class="field"><select id="profession"></select></div>
-      </div>
+        <div class="section-title"><i class="fa-solid fa-play"></i> יום תחילת הקורס</div>
 
-      <div class="section">
-        <div class="section-title"><i class="fa-solid fa-gift"></i> קבוצת תמריץ</div>
-        <div class="field"><select id="incentiveGroup"></select></div>
-      </div>
-
-      <div class="section">
-        <div class="section-title"><i class="fa-solid fa-chevron-up"></i> דרגה </div>
-        <div class="field"><select id="rankBefore"></select></div>
-      </div>
-
-      <div class="section">
-        <div class="section-title"><i class="fa-solid fa-hourglass-half"></i> וותק</div>
-        <div class="field"><select id="seniority"></select></div>
-      </div>
-
-      <div class="section">
-        <div class="section-title"><i class="fa-solid fa-list-check"></i> דירוג </div>
-        <div class="field"><select id="ratingBefore"></select></div>
-      </div>
-
-      <div class="section">
-        <div class="section-title"><i class="fa-solid fa-bolt"></i> תחנה מבצעית?</div>
-        <div class="segmented" id="operationalSeg">
-          <button type="button" class="seg-btn active" data-value="0">
-            <i class="fa-regular fa-circle"></i><span>לא</span>
-          </button>
-          <button type="button" class="seg-btn" data-value="1">
-            <i class="fa-solid fa-bolt"></i><span>כן</span>
-          </button>
+        <div class="field">
+          <label>דרגה בתחילת הקורס</label>
+          <select id="courseStartRank"></select>
         </div>
 
-        <select id="operational" style="display:none">
-          <option value="0" selected>לא</option>
-          <option value="1">כן</option>
-        </select>
-      </div>
-
-      <div class="section">
-        <div class="section-title"><i class="fa-solid fa-id-badge"></i> מינוי אחרי קק"צ</div>
         <div class="field">
-          <select id="appointment">
-            <option value="">בלי מינוי (רק אחרי קק"צ)</option>
-            <option value="מינוי מפקח">מפקח</option>
-            <option value="מינוי פקד">פקד</option>
+          <label>דירוג נוכחי</label>
+          <select id="currentRating"></select>
+        </div>
+
+        <div class="field">
+          <label>תחנה מבצעית?</label>
+          <div class="segmented" id="operationalStartSeg">
+            <button type="button" class="seg-btn active" data-value="0"><span>לא</span></button>
+            <button type="button" class="seg-btn" data-value="1"><span>כן</span></button>
+          </div>
+          <select id="operationalStart" style="display:none">
+            <option value="0" selected>לא</option>
+            <option value="1">כן</option>
           </select>
         </div>
       </div>
 
+      <!-- שלב 3: סיום קורס -->
       <div class="section">
-        <div class="section-title"><i class="fa-solid fa-ranking-star"></i> דירוג אחרי קק"צ</div>
-        <div class="field"><select id="officerRating" disabled></select></div>
+        <div class="section-title"><i class="fa-solid fa-flag-checkered"></i> יום אחרון של הקורס</div>
+
+        <div class="field">
+          <label>דרגה בסיום הקורס (אוטומטי)</label>
+          <select id="courseEndRank" disabled></select>
+        </div>
+
+        <div class="field">
+          <label>תחנה מבצעית?</label>
+          <div class="segmented" id="operationalEndSeg">
+            <button type="button" class="seg-btn active" data-value="0"><span>לא</span></button>
+            <button type="button" class="seg-btn" data-value="1"><span>כן</span></button>
+          </div>
+          <select id="operationalEnd" style="display:none">
+            <option value="0" selected>לא</option>
+            <option value="1">כן</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- שלב 4: תקן לאחר קק"צ -->
+      <div class="section">
+        <div class="section-title"><i class="fa-solid fa-id-badge"></i> תקן לאחר הקק"צ</div>
+
+        <div class="field">
+          <label>תקן</label>
+          <select id="appointment">
+            <option value="">בחר תקן...</option>
+            <option value="מינוי מפקח">מפקח</option>
+            <option value="מינוי פקד">פקד</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>דירוג</label>
+          <select id="officerRating" disabled></select>
+        </div>
+
+        <div class="field">
+          <label>תחנה מבצעית?</label>
+          <div class="segmented" id="operationalAppSeg">
+            <button type="button" class="seg-btn active" data-value="0"><span>לא</span></button>
+            <button type="button" class="seg-btn" data-value="1"><span>כן</span></button>
+          </div>
+          <select id="operationalApp" style="display:none">
+            <option value="0" selected>לא</option>
+            <option value="1">כן</option>
+          </select>
+        </div>
       </div>
 
       <div class="actions">
@@ -114,7 +138,7 @@
     </div>
   </div>
 
-  <script src="./data.js"></script>
+  <script src="./data_normalized.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>

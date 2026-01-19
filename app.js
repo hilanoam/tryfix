@@ -1,25 +1,33 @@
 // app.js
 
 const els = {
-  activity: document.getElementById("activity"),
-  rankBefore: document.getElementById("rankBefore"),
-  seniority: document.getElementById("seniority"),
-  ratingBefore: document.getElementById("ratingBefore"),
-  operational: document.getElementById("operational"),
-  appointment: document.getElementById("appointment"),
-  officerRating: document.getElementById("officerRating"),
-  calcBtn: document.getElementById("calcBtn"),
-  results: document.getElementById("results"),
+    // שלב 1
+    currentRank: document.getElementById("currentRank"),
 
-  activityCards: document.getElementById("activityCards"),
-  population: document.getElementById("population"),
-  operationalSeg: document.getElementById("operationalSeg"),
-  resetBtn: document.getElementById("resetBtn"),
+    // שלב 2
+    courseStartRank: document.getElementById("courseStartRank"),
+    currentRating: document.getElementById("currentRating"),
+    operationalStartSeg: document.getElementById("operationalStartSeg"),
+    operationalStart: document.getElementById("operationalStart"),
 
-  profession: document.getElementById("profession"),
-  incentiveGroup: document.getElementById("incentiveGroup"),
-  exportBtn: document.getElementById("exportBtn"),
-};
+    // שלב 3
+    courseEndRank: document.getElementById("courseEndRank"),
+    operationalEndSeg: document.getElementById("operationalEndSeg"),
+    operationalEnd: document.getElementById("operationalEnd"),
+
+    // שלב 4
+    appointment: document.getElementById("appointment"),
+    officerRating: document.getElementById("officerRating"),
+    operationalAppSeg: document.getElementById("operationalAppSeg"),
+    operationalApp: document.getElementById("operationalApp"),
+
+    // actions/results
+    calcBtn: document.getElementById("calcBtn"),
+    resetBtn: document.getElementById("resetBtn"),
+    results: document.getElementById("results"),
+    exportBtn: document.getElementById("exportBtn"),
+  };
+
 
 let DATA = [];
 
@@ -43,7 +51,17 @@ function setOptions(selectEl, values, placeholder = "בחר...") {
     selectEl.appendChild(opt);
   });
 }
-
+const END_RANK_BY_START = {
+    'רס"מ 0': 'רס"מ 3',
+    'רס"מ 3': 'רס"מ 5',
+    'רס"מ 5': 'רס"מ 5',
+  };
+function updateEndRank() {
+    const start = normalize(els.courseStartRank.value);
+    const end = END_RANK_BY_START[start] || "";
+    setOptions(els.courseEndRank, end ? [end] : [], end ? end : "בחרי תחילת קורס קודם...");
+    if (end) els.courseEndRank.value = end;
+}
 function wireSegment(containerEl, hiddenSelectEl) {
   if (!containerEl) return;
   const buttons = [...containerEl.querySelectorAll(".seg-btn")];
@@ -138,63 +156,94 @@ function showWarning(msg) {
   els.results.innerHTML = `<div class="warn">⚠️ ${msg}</div>`;
 }
 
-function renderResults(beforeRow, afterRow, appointRow) {
-  const beforeSalary = Number(beforeRow["שכר"]);
-  const afterSalary = Number(afterRow["שכר"]);
-  const delta1 = afterSalary - beforeSalary;
+function renderResults(courseStartRow, courseEndRow, appointRow) {
+  if (!els.results) return;
+
+  const startSalary = Number(courseStartRow?.["שכר"]);
+  const endSalary   = Number(courseEndRow?.["שכר"]);
+
+  const hasStart = Number.isFinite(startSalary);
+  const hasEnd   = Number.isFinite(endSalary);
+
+  if (!hasStart || !hasEnd) {
+    els.results.innerHTML = `<div class="warn">⚠️ חסר שכר לאחד משלבי הקורס.</div>`;
+    return;
+  }
+
+  const deltaCourse = endSalary - startSalary;
 
   const hasApp = !!appointRow;
-  const appSalary = hasApp ? Number(appointRow["שכר"]) : null;
-  const delta2 = hasApp ? (appSalary - afterSalary) : null;
+  const appSalary = hasApp ? Number(appointRow?.["שכר"]) : null;
+  const hasAppSalary = hasApp && Number.isFinite(appSalary);
 
-  const fmt = (n) => moneyILS(n).replace("₪", "").trim(); // להציג כמו אצלך בלי סימן ₪ אם בא לך
+  const deltaApp = hasAppSalary ? (appSalary - endSalary) : null;
 
-  const opClass1 = delta1 < 0 ? "negative" : "positive";
-  const sign1 = delta1 < 0 ? "-" : "+";
+  const fmt = (n) => moneyILS(n).replace("₪", "").trim();
 
-  const op2 = hasApp ? (delta2 < 0 ? "negative" : "positive") : "";
-  const sign2 = hasApp ? (delta2 < 0 ? "-" : "+") : "";
+  const cls = (d) => (d < 0 ? "negative" : "positive");
+  const sign = (d) => (d < 0 ? "-" : "+");
+
+  const startRank = normalize(courseStartRow?.["דרגה"] || "");
+  const startRating = normalize(courseStartRow?.["דירוג"] || "אחיד");
+
+  const endRank = normalize(courseEndRow?.["דרגה"] || "");
+  const endRating = normalize(courseEndRow?.["דירוג"] || "");
+
+  const appStage = hasApp ? normalize(appointRow?.["שלב"] || "") : "";
+  const appRating = hasApp ? normalize(appointRow?.["דירוג"] || "") : "";
 
   els.results.innerHTML = `
     <div class="calc">
-      <div class="line">
-        <div class="label">לפני קק"צ</div>
-        <div class="val">₪ ${fmt(beforeSalary)}</div>
-      </div>
-
-      <div class="op ${opClass1}">
-        <div class="sign">${sign1}</div>
-        <div>₪ ${fmt(Math.abs(delta1))}</div>
-      </div>
 
       <div class="line">
-        <div class="label">אחרי קק"צ</div>
-        <div class="val">₪ ${fmt(afterSalary)}</div>
+        <div class="label">יום תחילת הקורס (${startRank} | דירוג: ${startRating})</div>
+        <div class="val">₪ ${fmt(startSalary)}</div>
+      </div>
+
+      <div class="op ${cls(deltaCourse)}">
+        <div class="sign">${sign(deltaCourse)}</div>
+        <div>₪ ${fmt(Math.abs(deltaCourse))}</div>
+      </div>
+
+      <div class="line">
+        <div class="label">יום סיום הקורס (${endRank} | דירוג: ${endRating})</div>
+        <div class="val">₪ ${fmt(endSalary)}</div>
       </div>
 
       ${
         hasApp
-          ? `
-          <div class="op ${op2}">
-            <div class="sign">${sign2}</div>
-            <div>₪ ${fmt(Math.abs(delta2))}</div>
-          </div>
+          ? (hasAppSalary
+              ? `
+                <div class="op ${cls(deltaApp)}">
+                  <div class="sign">${sign(deltaApp)}</div>
+                  <div>₪ ${fmt(Math.abs(deltaApp))}</div>
+                </div>
 
-          <div class="total">
-            <div class="label">${normalize(appointRow["שלב"])}</div>
-            <div class="val">₪ ${fmt(appSalary)}</div>
-          </div>
-        `
+                <div class="total">
+                  <div class="label">${appStage} | דירוג: ${appRating}</div>
+                  <div class="val">₪ ${fmt(appSalary)}</div>
+                </div>
+              `
+              : `
+                <div class="warn">⚠️ נבחר תקן אחרי קק"צ אבל חסר שכר בשלב הזה.</div>
+                <div class="total">
+                  <div class="label">תוצאה</div>
+                  <div class="val">₪ ${fmt(endSalary)}</div>
+                </div>
+              `
+            )
           : `
-          <div class="total">
-            <div class="label">תוצאה</div>
-            <div class="val">₪ ${fmt(afterSalary)}</div>
-          </div>
-        `
+            <div class="total">
+              <div class="label">תוצאה</div>
+              <div class="val">₪ ${fmt(endSalary)}</div>
+            </div>
+          `
       }
+
     </div>
   `;
 }
+
 
 function exportResultToFile() {
   // אם אין תוצאה בכלל – לא לייצא
@@ -285,34 +334,33 @@ function refreshOfficerRatings() {
   els.officerRating.disabled = !ap;
 
   if (!ap) {
-    setOptions(els.officerRating, [], "בחר דירוג קצין...");
+    setOptions(els.officerRating, [], "בחר דירוג...");
     return;
   }
 
-  const baseRows = filterBase();
-  const ratings = uniq(
-    baseRows
-      .filter((r) => normalize(r["שלב"]) === normalize(ap))
-      .map((r) => normalize(r["דירוג"]))
-      .filter(Boolean)
-  ).sort((a, b) => a.localeCompare(b, "he"));
+  const opApp = Number(els.operationalApp.value);
 
-  setOptions(els.officerRating, ratings, "בחר דירוג קצין...");
+  // דירוגים מתוך הדאטה רק לשלב המינוי הנבחר + תחנה
+  const ratings = uniq(
+    DATA
+      .filter(r => r["שלב"] === normalize(ap) && Number(r["תחנה_מבצעית"]) === opApp)
+      .map(r => normalize(r["דירוג"]))
+      .filter(Boolean)
+  ).sort((a,b)=>a.localeCompare(b,"he"));
+
+  setOptions(els.officerRating, ratings, "בחר דירוג...");
 }
+
 
 function refreshCalcEnabled() {
-  const ok =
-    els.activity.value &&
-    els.rankBefore.value &&
-    els.seniority.value &&
-    els.ratingBefore.value &&
-    els.operational.value !== "";
+  const hasStartRank = !!els.courseStartRank.value;
+  const hasEndRank = !!END_RANK_BY_START[normalize(els.courseStartRank.value)];
+  const hasAppointment = !!els.appointment.value;
+  const hasOfficerRating = !hasAppointment || !!els.officerRating.value;
 
-  const ap = els.appointment.value;
-  const officerOk = !ap || !!els.officerRating.value;
-
-  els.calcBtn.disabled = !(ok && officerOk);
+  els.calcBtn.disabled = !(hasStartRank && hasEndRank && hasOfficerRating);
 }
+
 
 function attachListeners() {
   ["activity", "rankBefore", "seniority", "ratingBefore", "operational"].forEach((id) => {
@@ -344,11 +392,14 @@ function attachListeners() {
     }
 
     const op = els.operational.value;
-    const beforeRow = findOne(baseRows, "לפני", op);
-    const afterRow = findOne(baseRows, 'אחרי קק"צ', op);
+    const beforeRow      = findOne(baseRows, 'לפני', op);
+    const courseStartRow = findOne(baseRows, 'יום תחילת הקורס', op);
+    const courseEndRow   = findOne(baseRows, 'יום סיום הקורס', op);
 
-    if (!beforeRow) return showWarning("חסר נתון לשלב 'לפני' עבור הבחירות שלך.");
-    if (!afterRow) return showWarning('חסר נתון לשלב "אחרי קק"צ" עבור הבחירות שלך.');
+    if (!beforeRow)      return showWarning('חסר נתון לשלב "לפני" עבור הבחירות שלך.');
+    if (!courseStartRow) return showWarning('חסר נתון לשלב "תחילת קורס" עבור הבחירות שלך.');
+    if (!courseEndRow)   return showWarning('חסר נתון לשלב "סיום קורס" עבור הבחירות שלך.');
+
 
     const ap = els.appointment.value;
     let appointRow = null;
@@ -399,83 +450,150 @@ function attachListeners() {
 
 function init() {
   if (!window.SALARY_DATA) {
-    els.results.innerHTML =
-      `<div class="warn">⚠️ לא נמצא window.SALARY_DATA. ודא ש-data.js נטען לפני app.js.</div>`;
+    els.results.innerHTML = `<div class="warn">⚠️ לא נמצא window.SALARY_DATA. ודאי ש-data_normalized.js נטען לפני app.js.</div>`;
     return;
   }
 
   DATA = window.SALARY_DATA.map((r) => ({
     ...r,
-    "רמת פעילות": normalize(r["רמת פעילות"]),
-    "דרגה לפני": normalize(r["דרגה לפני"]),
-    "דירוג_לפני": normalize(r["דירוג_לפני"]),
     "שלב": normalize(r["שלב"]),
     "דירוג": normalize(r["דירוג"]),
-    "וותק (שנים)": String(r["וותק (שנים)"]).trim(),
+    "דרגה": normalize(r["דרגה"]),
     "תחנה_מבצעית": Number(r["תחנה_מבצעית"]),
     "שכר": Number(r["שכר"]),
-    "דרגה": normalize(r["דרגה"]),
   }));
 
-  if (els.profession) {
-    const professions = uniq(DATA.map(r => normalize(r["מקצוע"])).filter(Boolean))
-      .sort((a,b) => a.localeCompare(b,"he"));
-    setOptions(els.profession, professions, "בחרי מקצוע...");
-  }
+  // שלב 1: דרגה נוכחית - רק רס"ר 8
+  setOptions(els.currentRank, ['רס"ר 8'], 'בחר דרגה...');
+  els.currentRank.value = 'רס"ר 8';
+  els.currentRank.disabled = true;
 
-  if (els.incentiveGroup) {
-    const groups = uniq(DATA.map(r => normalize(r["קבוצת תמריץ"])).filter(Boolean))
-      .sort((a,b) => a.localeCompare(b,"he"));
-    setOptions(els.incentiveGroup, groups, "בחר קבוצת תמריץ...");
-  }
+  // שלב 2: תחילת קורס - דרגות קבועות
+  setOptions(els.courseStartRank, ['רס"מ 0', 'רס"מ 3', 'רס"מ 5'], 'בחר דרגה...');
+  // דירוג נוכחי - רק אחיד
+  setOptions(els.currentRating, ['אחיד'], 'בחר דירוג...');
+  els.currentRating.value = 'אחיד';
+  els.currentRating.disabled = true;
 
+  // שלב 3: סיום קורס - נקבע אוטומטית
+  setOptions(els.courseEndRank, [], 'בחרי תחילת קורס קודם...');
+  els.courseEndRank.disabled = true;
 
-  const activities = uniq(DATA.map((r) => r["רמת פעילות"]).filter(Boolean)).sort((a, b) => a.localeCompare(b, "he"));
-  const ranksBefore = uniq(DATA.map((r) => r["דרגה לפני"]).filter(Boolean)).sort((a, b) => a.localeCompare(b, "he"));
+  // חיבור Segments
+  wireSegment(els.operationalStartSeg, els.operationalStart);
+  wireSegment(els.operationalEndSeg, els.operationalEnd);
+  wireSegment(els.operationalAppSeg, els.operationalApp);
 
-  // הסלקטים החבויים/רגילים (לוגיקה)
-  setOptions(els.activity, activities, "בחר רמת פעילות...");
-  setOptions(els.rankBefore, ranksBefore, "בחר דרגה...");
-
-  // UI כרטיסים
-  renderActivityCards(activities);
-
-  // segmented buttons
-  wireSegment(els.operationalSeg, els.operational);
-  wireSegment(els.population, null); // כרגע רק UI
-
-  // תלויות
-  els.activity.addEventListener("change", refreshDependent);
-  els.rankBefore.addEventListener("change", refreshDependent);
-
-  function refreshDependent() {
+  // שינויים שמעדכנים דרגת סיום
+  els.courseStartRank.addEventListener("change", () => {
     clearResults();
+    updateEndRank();
+    refreshOfficerRatings(); // כי השלב הבא תלוי בחיתוכים
+    refreshCalcEnabled();
+  });
 
-    const a = normalize(els.activity.value);
-    const rb = normalize(els.rankBefore.value);
-
-    const subset = DATA.filter((r) =>
-      (!a || r["רמת פעילות"] === a) &&
-      (!rb || r["דרגה לפני"] === rb)
-    );
-
-    const seniorities = uniq(subset.map((r) => r["וותק (שנים)"]).filter(Boolean))
-      .sort((x, y) => Number(x) - Number(y));
-
-    const ratingsBefore = uniq(subset.map((r) => r["דירוג_לפני"]).filter(Boolean))
-      .sort((a, b) => a.localeCompare(b, "he"));
-
-    setOptions(els.seniority, seniorities, "בחר ותק...");
-    setOptions(els.ratingBefore, ratingsBefore, "בחר דירוג...");
-
+  // מינוי ודירוג אחרי קק"צ
+  els.appointment.addEventListener("change", () => {
+    clearResults();
     refreshOfficerRatings();
     refreshCalcEnabled();
-  }
+  });
 
-  refreshDependent();
-  attachListeners();
+  els.officerRating.addEventListener("change", () => {
+    clearResults();
+    refreshCalcEnabled();
+  });
+
+  // שינוי תחנה בכל אחד מהשלבים
+  [els.operationalStart, els.operationalEnd, els.operationalApp].forEach((x) => {
+    x.addEventListener("change", () => {
+      clearResults();
+      refreshOfficerRatings();
+      refreshCalcEnabled();
+    });
+  });
+
+  // כפתורים
+  els.calcBtn.addEventListener("click", onCalculate);
+  els.resetBtn.addEventListener("click", onReset);
+  if (els.exportBtn) els.exportBtn.addEventListener("click", exportResultToFile);
+
+  refreshOfficerRatings();
   refreshCalcEnabled();
 }
+function onCalculate() {
+  clearResults();
+
+  const startRank = normalize(els.courseStartRank.value);
+  const endRank = END_RANK_BY_START[startRank];
+
+  if (!startRank) return showWarning("בחרי דרגה ביום תחילת הקורס.");
+  if (!endRank) return showWarning("לא הצלחתי לגזור דרגה ביום אחרון הקורס.");
+
+  const opStart = Number(els.operationalStart.value);
+  const opEnd   = Number(els.operationalEnd.value);
+
+  // תחילת קורס (דירוג תמיד אחיד)
+  const startRow = DATA.find(r =>
+    r["שלב"] === "יום תחילת הקורס" &&
+    r["דרגה"] === startRank &&
+    r["דירוג"] === "אחיד" &&
+    Number(r["תחנה_מבצעית"]) === opStart
+  );
+
+  if (!startRow) return showWarning('חסר נתון בטבלה: "יום תחילת הקורס" עבור הבחירות שלך.');
+
+  // סיום קורס (דירוג — עדיין אחיד כרגע כי לא ביקשת בחירה פה. אם תרצי נוסיף בחירה.)
+  const endRow = DATA.find(r =>
+    r["שלב"] === "יום סיום הקורס" &&
+    r["דרגה"] === endRank &&
+    Number(r["תחנה_מבצעית"]) === opEnd
+  );
+
+  if (!endRow) return showWarning('חסר נתון בטבלה: "יום סיום הקורס" עבור הבחירות שלך.');
+
+  // תקן אחרי קק"צ (אופציונלי)
+  let appRow = null;
+  const ap = normalize(els.appointment.value);
+  const opApp = Number(els.operationalApp.value);
+
+  if (ap) {
+    const rating = normalize(els.officerRating.value);
+    appRow = DATA.find(r =>
+      r["שלב"] === ap &&
+      r["דירוג"] === rating &&
+      Number(r["תחנה_מבצעית"]) === opApp
+    );
+    if (!appRow) return showWarning(`חסר נתון בטבלה עבור ${ap} עם דירוג "${rating}" ותחנה "${opApp ? "כן" : "לא"}".`);
+  }
+
+  renderResults(startRow, endRow, appRow);
+}
+function onReset() {
+  clearResults();
+
+  els.courseStartRank.value = "";
+  updateEndRank();
+
+  // תחנות חזרה ל"לא"
+  ["operationalStartSeg","operationalEndSeg","operationalAppSeg"].forEach((id) => {
+    const seg = els[id];
+    if (!seg) return;
+    [...seg.querySelectorAll(".seg-btn")].forEach(b => b.classList.remove("active"));
+    seg.querySelector('.seg-btn[data-value="0"]')?.classList.add("active");
+  });
+
+  els.operationalStart.value = "0";
+  els.operationalEnd.value = "0";
+  els.operationalApp.value = "0";
+
+  els.appointment.value = "";
+  setOptions(els.officerRating, [], "בחר דירוג...");
+  els.officerRating.disabled = true;
+
+  refreshCalcEnabled();
+}
+
 
 try {
   init();
