@@ -339,7 +339,9 @@ async function init(){
   bindSegment(els.s3_hablanSeg, els.s3_hablan);
   bindSegment(els.s4_stationSeg, els.s4_station);
 
-  const res = await fetch("./salary_data.json", {cache:"no-store"});
+  const url = window.SALARY_TABLE_URL || "./salary_data.json";
+  const res = await fetch(url, { cache: "no-store" });
+
   if (!res.ok){
     warn("לא הצלחתי לטעון salary_data.json. בדקי שהוא באותה תיקייה של index.html");
     return;
