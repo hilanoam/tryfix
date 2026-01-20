@@ -1,4 +1,5 @@
 
+
 :root{
   /* Colors */
   --bg:#f3f6fb;
@@ -34,6 +35,14 @@
 }
 
 *{ box-sizing:border-box; }
+.card::before{
+  content:"";
+  display:block;
+  height:4px;
+  background: var(--accent);
+  border-radius: 4px 4px 0 0;
+  margin:-18px -18px 14px -18px;
+}
 
 html, body, button, input, select, textarea{
   font-family: var(--font);
@@ -162,8 +171,8 @@ body{
   border-radius: 12px;
   display:grid;
   place-items:center;
-  background: rgba(29,78,216,.08);
-  border: 1px solid rgba(29,78,216,.18);
+  background: rgba(47,79,47,.12);
+  border: 1px solid rgba(47,79,47,.3);
   color: var(--accent);
 }
 
@@ -230,9 +239,9 @@ select:focus, input:focus, textarea:focus{
 }
 
 .seg-btn.active{
-  background: rgba(29,78,216,.10);
-  border-color: rgba(29,78,216,.55);
-  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent)
 }
 
 .op .amount{ font-weight: 900; }
