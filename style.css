@@ -75,8 +75,8 @@ body{
 
 /* לוגואים למעלה */
 .top-logo{
-  width: 90px;      /* ✅ גדולים יותר */
-  height: 90px;
+  width: 120px;      
+  height: 120px;
   object-fit: contain;
   display:block;
   z-index: 2;
