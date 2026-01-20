@@ -56,121 +56,125 @@
       <!-- שלב 1 -->
       <div class="section">
         <div class="section-title"><i class="fa-solid fa-1"></i>לפני קורס קצינים</div>
+          <div class="grid2">
+          <div class="field">
+            <label>דירוג</label>
+            <select id="s1_rating"></select>
+          </div>
 
-        <div class="field">
-          <label>דירוג</label>
-          <select id="s1_rating"></select>
-        </div>
-
-        <div class="field">
-          <label>דרגה</label>
-          <select id="s1_rank"></select>
-        </div>
+          <div class="field">
+            <label>דרגה</label>
+            <select id="s1_rank"></select>
+          </div>
+          </div>
       </div>
 
       <!-- שלב 2 -->
       <div class="section">
         <div class="section-title"><i class="fa-solid fa-2"></i>בתחילת קורס קצינים</div>
-
-        <div class="field">
-          <label>דרגה</label>
-          <select id="s2_rank"></select>
-        </div>
-
-        <div class="field">
-          <label>דירוג</label>
-          <select id="s2_rating"></select>
-        </div>
-
-        <div class="field">
-          <label>וותק</label>
-          <select id="s2_seniority"></select>
-        </div>
-
-        <div class="field">
-          <label>האם בתחנה?</label>
-          <div class="segmented" id="s2_stationSeg">
-            <button type="button" class="seg-btn active" data-value="0">
-              <i class="fa-regular fa-circle"></i><span>לא</span>
-            </button>
-            <button type="button" class="seg-btn" data-value="1">
-              <i class="fa-solid fa-bolt"></i><span>כן</span>
-            </button>
+        <div class="grid4">
+          <div class="field">
+            <label>דרגה</label>
+            <select id="s2_rank"></select>
           </div>
-          <select id="s2_station" style="display:none">
-            <option value="0" selected>לא</option>
-            <option value="1">כן</option>
-          </select>
-        </div>
+
+          <div class="field">
+            <label>דירוג</label>
+            <select id="s2_rating"></select>
+          </div>
+
+          <div class="field">
+            <label>וותק</label>
+            <select id="s2_seniority"></select>
+          </div>
+
+          <div class="field">
+            <label>האם בתחנה?</label>
+            <div class="segmented" id="s2_stationSeg">
+              <button type="button" class="seg-btn active" data-value="0">
+                <i class="fa-regular fa-circle"></i><span>לא</span>
+              </button>
+              <button type="button" class="seg-btn" data-value="1">
+                <i class="fa-solid fa-bolt"></i><span>כן</span>
+              </button>
+            </div>
+            <select id="s2_station" style="display:none">
+              <option value="0" selected>לא</option>
+              <option value="1">כן</option>
+            </select>
+          </div>
+          </div>
       </div>
 
       <!-- שלב 3 -->
       <div class="section">
         <div class="section-title"><i class="fa-solid fa-3"></i> בסיום קורס קצינים</div>
-
-        <div class="field">
-          <label>דירוג</label>
-          <select id="s3_rating"></select>
-        </div>
-
-        <div class="field">
-          <label>דרגה</label>
-          <select id="s3_rank"></select>
-        </div>
-
-        <div class="field">
-          <label>האם חבלן בכיר?</label>
-          <div class="segmented" id="s3_hablanSeg">
-            <button type="button" class="seg-btn active" data-value="0">
-              <i class="fa-regular fa-circle"></i><span>לא</span>
-            </button>
-            <button type="button" class="seg-btn" data-value="1">
-              <i class="fa-solid fa-shield-halved"></i><span>כן</span>
-            </button>
+        <div class="grid3">
+          <div class="field">
+            <label>דירוג</label>
+            <select id="s3_rating"></select>
           </div>
-          <select id="s3_hablan" style="display:none">
-            <option value="0" selected>לא</option>
-            <option value="1">כן</option>
-          </select>
-        </div>
+
+          <div class="field">
+            <label>דרגה</label>
+            <select id="s3_rank"></select>
+          </div>
+
+          <div class="field">
+            <label>האם חבלן בכיר?</label>
+            <div class="segmented" id="s3_hablanSeg">
+              <button type="button" class="seg-btn active" data-value="0">
+                <i class="fa-regular fa-circle"></i><span>לא</span>
+              </button>
+              <button type="button" class="seg-btn" data-value="1">
+                <i class="fa-solid fa-shield-halved"></i><span>כן</span>
+              </button>
+            </div>
+            <select id="s3_hablan" style="display:none">
+              <option value="0" selected>לא</option>
+              <option value="1">כן</option>
+            </select>
+          </div>
+          </div>
       </div>
 
       <!-- שלב 4 -->
       <div class="section">
         <div class="section-title"><i class="fa-solid fa-4"></i> לאחר מינוי</div>
-
-        <div class="field">
-          <label>מפקח / פקד</label>
-          <select id="s4_role">
-            <option value="mifkach">מפקח</option>
-            <option value="pakad">פקד</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label>דירוג</label>
-          <select id="s4_rating" disabled></select>
-        </div>
-
-        <div class="field">
-          <label>שלב (רק מפקח)</label>
-          <select id="s4_stage" disabled></select>
-        </div>
-
-        <div class="field">
-          <label>האם בתחנה?</label>
-          <div class="segmented" id="s4_stationSeg">
-            <button type="button" class="seg-btn active" data-value="0">
-              <i class="fa-regular fa-circle"></i><span>לא</span>
-            </button>
-            <button type="button" class="seg-btn" data-value="1">
-              <i class="fa-solid fa-bolt"></i><span>כן</span>
-            </button>
+        <div class="grid4">
+          <div class="field">
+            <label>מפקח / פקד</label>
+            <select id="s4_role">
+              <option value="mifkach">מפקח</option>
+              <option value="pakad">פקד</option>
+            </select>
           </div>
-          <select id="s4_station" style="display:none">
-            <option value="0" selected>לא</option>
-            <option value="1">כן</option>
-          </select>
+
+          <div class="field">
+            <label>דירוג</label>
+            <select id="s4_rating" disabled></select>
+          </div>
+
+          <div class="field">
+            <label>שלב (רק מפקח)</label>
+            <select id="s4_stage" disabled></select>
+          </div>
+
+          <div class="field">
+            <label>האם בתחנה?</label>
+            <div class="segmented" id="s4_stationSeg">
+              <button type="button" class="seg-btn active" data-value="0">
+                <i class="fa-regular fa-circle"></i><span>לא</span>
+              </button>
+              <button type="button" class="seg-btn" data-value="1">
+                <i class="fa-solid fa-bolt"></i><span>כן</span>
+              </button>
+            </div>
+            <select id="s4_station" style="display:none">
+              <option value="0" selected>לא</option>
+              <option value="1">כן</option>
+            </select>
+          </div>
         </div>
       </div>
 

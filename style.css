@@ -205,12 +205,6 @@ select:focus, input:focus, textarea:focus{
   box-shadow: 0 0 0 4px rgba(29,78,216,.12);
 }
 
-/* Segmented Buttons */
-.segmented{
-  display:flex;
-  gap:10px;
-}
-
 .seg-btn{
   flex: 1;
   height: 58px;
@@ -542,16 +536,56 @@ select:focus, input:focus, textarea:focus{
 
 .diff .amount{ font-weight: 900; }
 .diff .sign{ width: 18px; text-align:center; }
-/* שלושה שדות באותה שורה */
-.grid3{
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr; /* מקצוע קצת יותר רחב */
+.grid2{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
 
-/* רספונסיבי – במובייל ירד לשורה */
-@media (max-width: 700px){
-  .grid3{
-    grid-template-columns: 1fr;
-  }
+.grid3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
 }
+
+.grid4{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* רספונסיבי */
+@media (max-width: 900px){
+  .grid4{ grid-template-columns: repeat(2, 1fr); }
+  .grid3{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 520px){
+  .grid2, .grid3, .grid4{ grid-template-columns: 1fr; }
+}
+/* segmented נראה כמו select */
+.segmented{
+  height: var(--control-h);
+  align-items: stretch;
+}
+
+.segmented .seg-btn{
+  height: 100%;
+  padding: 0 14px;
+  border-radius: var(--radius);
+  font-size: var(--fs-14);
+  font-weight: var(--w-bold);
+}
+
+/* אייקון קטן ומרוכז */
+.segmented .seg-btn i{
+  font-size: 16px;
+}
+
+/* ברירת מחדל - "לא" נראה ברור */
+.segmented .seg-btn.active{
+  background: rgba(29,78,216,.12);
+  border-color: rgba(29,78,216,.55);
+  color: var(--accent);
+}
+
