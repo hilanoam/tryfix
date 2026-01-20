@@ -252,7 +252,7 @@ select:focus, input:focus, textarea:focus{
   padding: 14px 16px;
   border-radius: 16px;
   border: 2px solid var(--accent);
-  background: #a0fdc7;
+  background: var(--accent-soft);
   display:flex;
   justify-content: space-between;
   align-items: baseline;
