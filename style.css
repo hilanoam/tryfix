@@ -205,24 +205,7 @@ select:focus, input:focus, textarea:focus{
   box-shadow: 0 0 0 4px rgba(29,78,216,.12);
 }
 
-.seg-btn{
-  flex: 1;
-  height: 58px;
-  border-radius: var(--radius);
-  border:1px solid var(--stroke);
-  background: #ffffff;
-  color: var(--text);
-  cursor:pointer;
 
-  display:flex;
-  gap:12px;
-  align-items:center;
-  justify-content:center;
-
-  transition: transform .08s ease, border-color .2s ease, background .2s ease;
-  font-size: var(--fs-14);
-  font-weight: var(--w-bold);
-}
 
 .seg-btn:hover{
   transform: translateY(-1px);
@@ -536,56 +519,41 @@ select:focus, input:focus, textarea:focus{
 
 .diff .amount{ font-weight: 900; }
 .diff .sign{ width: 18px; text-align:center; }
-.grid2{
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
+
+.grid{
+  display: grid;
   gap: 12px;
+  align-items: end;
 }
 
-.grid3{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
 
-.grid4{
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
+.grid-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-4{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
-/* רספונסיבי */
+/* רספונסיבי: בטאבלט/מובייל נשבר יפה */
 @media (max-width: 900px){
-  .grid4{ grid-template-columns: repeat(2, 1fr); }
-  .grid3{ grid-template-columns: repeat(2, 1fr); }
+  .grid-4{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-3{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-
 @media (max-width: 520px){
-  .grid2, .grid3, .grid4{ grid-template-columns: 1fr; }
+  .grid-4, .grid-3, .grid-2{ grid-template-columns: 1fr; }
 }
-/* segmented נראה כמו select */
+
+/* ===== Fix segmented layout inside narrow columns ===== */
 .segmented{
-  height: var(--control-h);
-  align-items: stretch;
+  display:flex;
+  gap: 10px;
+  flex-wrap: nowrap;   /* שלא יישבר לעמודה */
 }
 
-.segmented .seg-btn{
-  height: 100%;
-  padding: 0 14px;
-  border-radius: var(--radius);
-  font-size: var(--fs-14);
-  font-weight: var(--w-bold);
+.seg-btn{
+  height: 54px;        /* קצת קטן יותר כדי להיכנס בעמודה */
+  padding: 0 12px;
+  white-space: nowrap; /* לא לשבור "כן" / "לא" */
 }
 
-/* אייקון קטן ומרוכז */
-.segmented .seg-btn i{
-  font-size: 16px;
-}
 
-/* ברירת מחדל - "לא" נראה ברור */
-.segmented .seg-btn.active{
-  background: rgba(29,78,216,.12);
-  border-color: rgba(29,78,216,.55);
-  color: var(--accent);
-}
+
+
 

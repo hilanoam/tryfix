@@ -30,11 +30,9 @@
 
       <!-- נתונים בסיסיים -->
       <div class="section">
-        <div class="section-title">
-          <i class="fa-solid fa-layer-group"></i> תפקיד נוכחי
-        </div>
+        <div class="section-title"><i class="fa-solid fa-layer-group"></i> תפקיד נוכחי</div>
 
-        <div class="grid3">
+        <div class="grid grid-3">
           <div class="field">
             <label>מקצוע</label>
             <select id="profession"></select>
@@ -52,11 +50,11 @@
         </div>
       </div>
 
-
       <!-- שלב 1 -->
       <div class="section">
-        <div class="section-title"><i class="fa-solid fa-1"></i>לפני קורס קצינים</div>
-          <div class="grid2">
+        <div class="section-title"><i class="fa-solid fa-1"></i> לפני קורס קצינים</div>
+
+        <div class="grid grid-2">
           <div class="field">
             <label>דירוג</label>
             <select id="s1_rating"></select>
@@ -66,13 +64,14 @@
             <label>דרגה</label>
             <select id="s1_rank"></select>
           </div>
-          </div>
+        </div>
       </div>
 
       <!-- שלב 2 -->
       <div class="section">
-        <div class="section-title"><i class="fa-solid fa-2"></i>בתחילת קורס קצינים</div>
-        <div class="grid4">
+        <div class="section-title"><i class="fa-solid fa-2"></i> בתחילת קורס קצינים</div>
+
+        <div class="grid grid-4">
           <div class="field">
             <label>דרגה</label>
             <select id="s2_rank"></select>
@@ -99,17 +98,19 @@
               </button>
             </div>
             <select id="s2_station" style="display:none">
-              <option value="0" selected>לא</option>
+              <option value="0" >לא</option>
               <option value="1">כן</option>
             </select>
           </div>
-          </div>
+        </div>
       </div>
+
 
       <!-- שלב 3 -->
       <div class="section">
         <div class="section-title"><i class="fa-solid fa-3"></i> בסיום קורס קצינים</div>
-        <div class="grid3">
+
+        <div class="grid grid-3">
           <div class="field">
             <label>דירוג</label>
             <select id="s3_rating"></select>
@@ -135,13 +136,15 @@
               <option value="1">כן</option>
             </select>
           </div>
-          </div>
+        </div>
       </div>
+
 
       <!-- שלב 4 -->
       <div class="section">
         <div class="section-title"><i class="fa-solid fa-4"></i> לאחר מינוי</div>
-        <div class="grid4">
+
+        <div class="grid grid-4">
           <div class="field">
             <label>מפקח / פקד</label>
             <select id="s4_role">
@@ -171,12 +174,13 @@
               </button>
             </div>
             <select id="s4_station" style="display:none">
-              <option value="0" selected>לא</option>
+              <option value="0" >לא</option>
               <option value="1">כן</option>
             </select>
           </div>
         </div>
       </div>
+
 
       <div class="actions">
         <button class="btn-primary" id="calcBtn" disabled>

@@ -294,6 +294,7 @@ function syncCalcEnabled(){
     els.s2_rank.value &&
     els.s2_rating.value &&
     els.s2_seniority.value &&
+    els.s2_station.value !== "" && 
     els.s3_rating.value &&
     els.s3_rank.value
   );
@@ -436,9 +437,14 @@ function resetAll(){
   const resetSeg = (seg, hidden) => {
     if (!seg || !hidden) return;
     [...seg.querySelectorAll(".seg-btn")].forEach(b => b.classList.remove("active"));
-    const first = seg.querySelector('.seg-btn[data-value="0"]');
-    first?.classList.add("active");
-    hidden.value = "0";
+    const resetSeg = (seg, hidden) => {
+      if (!seg || !hidden) return;
+      [...seg.querySelectorAll(".seg-btn")].forEach(b =>
+        b.classList.remove("active")
+      );
+      hidden.value = ""; 
+    };
+
   };
 
   els.profession.value = "";
