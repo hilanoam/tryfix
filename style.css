@@ -205,7 +205,24 @@ select:focus, input:focus, textarea:focus{
   box-shadow: 0 0 0 4px rgba(29,78,216,.12);
 }
 
+.seg-btn{
+  flex: 1;
+  height: 58px;
+  border-radius: var(--radius);
+  border:1px solid var(--stroke);
+  background: #ffffff;
+  color: var(--text);
+  cursor:pointer;
 
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+
+  transition: transform .08s ease, border-color .2s ease, background .2s ease;
+  font-size: var(--fs-14);
+  font-weight: var(--w-bold);
+}
 
 .seg-btn:hover{
   transform: translateY(-1px);
