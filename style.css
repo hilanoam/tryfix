@@ -571,6 +571,33 @@ select:focus, input:focus, textarea:focus{
 }
 
 
+@media print {
+  /* מדפיסים רק כרטיס ותוצאות */
+  body { background: #fff !important; }
+  .wrap { padding: 0 !important; max-width: 100% !important; }
+  .card { box-shadow: none !important; border: none !important; }
+
+  /* מסתירים את כל האזור של הטפסים והכפתורים */
+  .section, .actions, .topbar { display: none !important; }
+
+  /* משאירים רק תוצאות */
+  #results { display: block !important; margin-top: 0 !important; }
+
+  /* אם יש לך באנר/תמונה מיותרת */
+  .export-area, .result-banner { display: none !important; }
+
+  /* כותרת קטנה למעלה (אופציונלי) */
+  #results::before{
+    content: "דו״ח חישוב שכר";
+    display:block;
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 12px;
+  }
+
+  /* שהצבעים ירוק/אדום לא ייעלמו בהדפסה */
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
 
 
 

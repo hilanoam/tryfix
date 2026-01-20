@@ -32,7 +32,7 @@ const els = {
 
 const uniq = (arr) => [...new Set(arr.filter(v => v !== null && v !== undefined && String(v).trim() !== ""))];
 
-function setOptions(selectEl, options, placeholder="בחרי..."){
+function setOptions(selectEl, options){
   selectEl.innerHTML = "";
   const ph = document.createElement("option");
   ph.value = "";
@@ -272,7 +272,7 @@ function fillStage4Stages(){
   const rating = (els.s4_rating.value || "").trim();
 
   if (!rating || base.length === 0){
-    setOptions(els.s4_stage, [], "בחרי קודם דירוג");
+    setOptions(els.s4_stage, []);
     syncCalcEnabled();
     return;
   }
@@ -283,7 +283,7 @@ function fillStage4Stages(){
       .map(r => String(r.stage4?.mifkach?.stage ?? "").trim())
   );
 
-  setOptions(els.s4_stage, stages, "בחרי שלב");
+  setOptions(els.s4_stage, stages);
   syncCalcEnabled();
 }
 
@@ -306,7 +306,6 @@ function calc(){
   clearResults();
   const p = getProfBlock();
   if (!p){
-    warn("בחרי מקצוע.");
     return;
   }
 
@@ -335,7 +334,7 @@ function calc(){
     const stg4 = (els.s4_stage.value || "").trim();
 
     if (!r4){
-      warn("בחרי דירוג בשלב 4.");
+      warn("בחר דירוג בשלב 4.");
       return;
     }
 
@@ -343,7 +342,7 @@ function calc(){
 
     if (role === "mifkach"){
       if (!stg4){
-        warn("בחרי שלב בשלב 4 (מפקח).");
+        warn("בחר שלב בשלב 4 (מפקח).");
         return;
       }
       chosen = base3.find(x =>
@@ -451,12 +450,12 @@ function resetAll(){
   els.activity.innerHTML = "";
   els.incentiveGroup.innerHTML = "";
 
-  setOptions(els.s1_rating, [], "בחרי מקצוע קודם");
-  setOptions(els.s1_rank, [], "בחרי מקצוע קודם");
+  setOptions(els.s1_rating, []);
+  setOptions(els.s1_rank, []);
 
-  setOptions(els.s2_rank, [], "בחרי מקצוע קודם");
-  setOptions(els.s2_rating, [], "בחרי מקצוע קודם");
-  setOptions(els.s2_seniority, [], "בחרי מקצוע קודם");
+  setOptions(els.s2_rank, []);
+  setOptions(els.s2_rating, []);
+  setOptions(els.s2_seniority, []);
 
   resetStage3();
   resetStage4();
@@ -486,7 +485,7 @@ async function init(){
   DATA = await res.json();
 
   const profKeys = Object.keys(DATA.professions || {});
-  setOptions(els.profession, profKeys, "בחרי מקצוע");
+  setOptions(els.profession, profKeys);
 
   els.profession.addEventListener("change", () => {
     const p = getProfBlock();
@@ -550,5 +549,24 @@ async function init(){
 
   resetAll();
 }
+function exportToPDF() {
+  // לא מאפשר אם אין תוצאה
+  const hasResult = els.results && els.results.innerText.trim().length > 0;
+  if (!hasResult) {
+    warn("אין תוצאות לייצוא. חשבי שכר קודם.");
+    return;
+  }
+
+  // סימון מצב הדפסה (לא חובה, אבל מאפשר CSS מותאם)
+  document.body.classList.add("print-mode");
+
+  // פותח חלון הדפסה -> לבחור "Save as PDF"
+  window.print();
+
+  // מחזיר מצב רגיל
+  setTimeout(() => document.body.classList.remove("print-mode"), 300);
+}
+
+document.getElementById("pdfBtn").addEventListener("click", exportToPDF);
 
 init().catch(() => warn("שגיאה באתחול. בדקי קונסול (F12)."));
