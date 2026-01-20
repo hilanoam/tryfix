@@ -1,4 +1,5 @@
-// app.js
+// app.js - עובד עם salary_data.json במבנה: professions -> rows -> stage1/2/3/4
+
 let DATA = null;
 
 const els = {
@@ -9,8 +10,8 @@ const els = {
   s1_rating: document.getElementById("s1_rating"),
   s1_rank: document.getElementById("s1_rank"),
 
-  s2_rating: document.getElementById("s2_rating"),
   s2_rank: document.getElementById("s2_rank"),
+  s2_rating: document.getElementById("s2_rating"),
   s2_seniority: document.getElementById("s2_seniority"),
   s2_stationSeg: document.getElementById("s2_stationSeg"),
   s2_station: document.getElementById("s2_station"),
@@ -63,6 +64,9 @@ function money(x){
   return Number(x).toLocaleString("he-IL", {minimumFractionDigits:2, maximumFractionDigits:2});
 }
 
+function clearResults(){ els.results.innerHTML = ""; }
+function warn(msg){ els.results.innerHTML = `<div class="warn">${msg}</div>`; }
+
 function bindSegment(segEl, hiddenSelectEl){
   if (!segEl || !hiddenSelectEl) return;
   segEl.addEventListener("click", (e) => {
@@ -71,6 +75,7 @@ function bindSegment(segEl, hiddenSelectEl){
     [...segEl.querySelectorAll(".seg-btn")].forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
     hiddenSelectEl.value = btn.dataset.value;
+    clearResults();
     syncCalcEnabled();
   });
 }
@@ -78,113 +83,150 @@ function bindSegment(segEl, hiddenSelectEl){
 function isStation(selectEl){ return selectEl.value === "1"; }
 function isYes(selectEl){ return selectEl.value === "1"; }
 
-function clearResults(){ els.results.innerHTML = ""; }
-function warn(msg){ els.results.innerHTML = `<div class="warn">${msg}</div>`; }
-
+// ----- data helpers -----
 function getProfBlock(){
   const key = els.profession.value;
   return DATA?.professions?.[key] || null;
 }
-
 function getRows(){
   return getProfBlock()?.rows || [];
 }
 
-// We match a single row by Stage2 fields (rating+rank+seniority).
-// Stage1 values are displayed/selected but are informational here (per table structure).
-function findRow(){
+// ----- filtering -----
+function rowsMatchingStage2(){
   const rows = getRows();
-  const s2r = (els.s2_rating.value || "").trim();
-  const s2k = (els.s2_rank.value || "").trim();
-  const s2s = String(els.s2_seniority.value || "").trim();
+  const r = (els.s2_rank.value || "").trim();
+  const rt = (els.s2_rating.value || "").trim();
+  const s = String(els.s2_seniority.value || "").trim();
 
-  return rows.find(r =>
-    (r.stage2?.rating || "").trim() === s2r &&
-    (r.stage2?.rank || "").trim() === s2k &&
-    String(r.stage2?.seniority ?? "").trim() === s2s
-  ) || null;
+  if (!r || !rt || !s) return [];
+
+  return rows.filter(x =>
+    (x.stage2?.rank || "").trim() === r &&
+    (x.stage2?.rating || "").trim() === rt &&
+    String(x.stage2?.seniority ?? "").trim() === s
+  );
 }
 
-function fillStage2FromRows(){
-  const rows = getRows();
+function rowsMatchingStage3(){
+  const base = rowsMatchingStage2();
+  const r3 = (els.s3_rank.value || "").trim();
+  const rt3 = (els.s3_rating.value || "").trim();
 
-  // Stage2 rank options
-  const ranks = uniq(rows.map(r => r.stage2?.rank));
-  setOptions(els.s2_rank, ranks, "בחרי דרגה");
+  if (!r3 || !rt3) return [];
+
+  return base.filter(x =>
+    (x.stage3?.rank || "").trim() === r3 &&
+    (x.stage3?.rating || "").trim() === rt3
+  );
+}
+
+// ----- Stage1 fill (לא משפיע על חיפוש שורה - רק בחירה/תצוגה) -----
+function fillStage1(){
+  const rows = getRows();
+  setOptions(els.s1_rating, uniq(rows.map(r => r.stage1?.rating)), "בחרי דירוג");
+  setOptions(els.s1_rank, uniq(rows.map(r => r.stage1?.rank)), "בחרי דרגה");
+}
+
+// ----- Stage2 cascade -----
+function fillStage2Ranks(){
+  const rows = getRows();
+  setOptions(els.s2_rank, uniq(rows.map(r => r.stage2?.rank)), "בחרי דרגה");
+
   setOptions(els.s2_rating, [], "בחרי קודם דרגה");
   setOptions(els.s2_seniority, [], "בחרי קודם דירוג");
 
-  // Stage1 options (from table)
-  const s1r = uniq(rows.map(r => r.stage1?.rating));
-  const s1k = uniq(rows.map(r => r.stage1?.rank));
-  setOptions(els.s1_rating, s1r, "בחרי דירוג");
-  setOptions(els.s1_rank, s1k, "בחרי דרגה");
-
-  // Stage3 is auto-filled after Stage2 selection
-  els.s3_rating.innerHTML = "";
-  els.s3_rank.innerHTML = "";
-  els.s3_rating.disabled = true;
-  els.s3_rank.disabled = true;
-
-  // Stage4 depends on role selection
-  resetStage4();
-
-  clearResults();
-  syncCalcEnabled();
+  // reset stage3+4
+  resetStage3();
+  resetStage4Choices();
 }
 
-function fillStage2Rating(){
+function fillStage2Ratings(){
   const rows = getRows();
   const rank = (els.s2_rank.value || "").trim();
   if (!rank){
     setOptions(els.s2_rating, [], "בחרי קודם דרגה");
     setOptions(els.s2_seniority, [], "בחרי קודם דירוג");
-    clearResults();
+    resetStage3();
+    resetStage4Choices();
     syncCalcEnabled();
     return;
   }
-  const ratings = uniq(rows.filter(r => (r.stage2?.rank||"").trim()===rank).map(r => r.stage2?.rating));
+
+  const ratings = uniq(rows.filter(r => (r.stage2?.rank||"").trim() === rank).map(r => r.stage2?.rating));
   setOptions(els.s2_rating, ratings, "בחרי דירוג");
+
   setOptions(els.s2_seniority, [], "בחרי קודם דירוג");
-  clearResults();
+  resetStage3();
+  resetStage4Choices();
   syncCalcEnabled();
 }
 
-function fillStage2Seniority(){
+function fillStage2Seniorities(){
   const rows = getRows();
   const rank = (els.s2_rank.value || "").trim();
   const rating = (els.s2_rating.value || "").trim();
+
   if (!rank || !rating){
     setOptions(els.s2_seniority, [], "בחרי קודם דרגה + דירוג");
-    clearResults();
+    resetStage3();
+    resetStage4Choices();
     syncCalcEnabled();
     return;
   }
+
   const sens = uniq(rows
     .filter(r => (r.stage2?.rank||"").trim()===rank && (r.stage2?.rating||"").trim()===rating)
     .map(r => String(r.stage2?.seniority ?? "").trim())
   );
+
   setOptions(els.s2_seniority, sens, "בחרי ותק");
-  clearResults();
+  resetStage3();
+  resetStage4Choices();
   syncCalcEnabled();
-  syncStage3Autofill();
-  syncStage4Autofill(); // in case role already chosen
 }
 
-function syncStage3Autofill(){
-  const row = findRow();
-  if (!row){
-    els.s3_rating.innerHTML = "";
-    els.s3_rank.innerHTML = "";
-    els.s3_rating.disabled = true;
-    els.s3_rank.disabled = true;
+// ----- Stage3 (בחירה מלאה לפי Stage2) -----
+function resetStage3(){
+  setOptions(els.s3_rating, [], "בחרי קודם שלב 2");
+  setOptions(els.s3_rank, [], "בחרי קודם דירוג בשלב 3");
+}
+
+function fillStage3Ratings(){
+  const base = rowsMatchingStage2();
+  if (base.length === 0){
+    resetStage3();
+    resetStage4Choices();
+    syncCalcEnabled();
     return;
   }
-  setSingleDisabled(els.s3_rating, row.stage3?.rating || "");
-  setSingleDisabled(els.s3_rank, row.stage3?.rank || "");
+
+  setOptions(els.s3_rating, uniq(base.map(r => r.stage3?.rating)), "בחרי דירוג בשלב 3");
+  setOptions(els.s3_rank, [], "בחרי קודם דירוג בשלב 3");
+
+  resetStage4Choices();
+  syncCalcEnabled();
 }
 
-function resetStage4(){
+function fillStage3Ranks(){
+  const base = rowsMatchingStage2();
+  const r3 = (els.s3_rating.value || "").trim();
+  if (!r3){
+    setOptions(els.s3_rank, [], "בחרי קודם דירוג בשלב 3");
+    resetStage4Choices();
+    syncCalcEnabled();
+    return;
+  }
+
+  const ranks = uniq(base.filter(r => (r.stage3?.rating||"").trim()===r3).map(r => r.stage3?.rank));
+  setOptions(els.s3_rank, ranks, "בחרי דרגה בשלב 3");
+
+  resetStage4Choices();
+  syncCalcEnabled();
+}
+
+// ----- Stage4 (בחירה מלאה לפי Stage2+Stage3) -----
+function resetStage4Choices() {
   els.s4_role.value = "";
   els.s4_rating.innerHTML = "";
   els.s4_stage.innerHTML = "";
@@ -192,52 +234,82 @@ function resetStage4(){
   els.s4_stage.disabled = true;
 }
 
-function syncStage4Autofill(){
+function fillStage4Ratings(){
   const role = els.s4_role.value;
-  const row = findRow();
+  const base = rowsMatchingStage3();
 
-  if (!role){
+  if (!role || base.length === 0){
     els.s4_rating.innerHTML = "";
     els.s4_stage.innerHTML = "";
     els.s4_rating.disabled = true;
     els.s4_stage.disabled = true;
-    return;
-  }
-
-  if (!row){
-    // wait for stage2 selection
-    els.s4_rating.innerHTML = "";
-    els.s4_stage.innerHTML = "";
-    els.s4_rating.disabled = true;
-    els.s4_stage.disabled = true;
+    syncCalcEnabled();
     return;
   }
 
   if (role === "mifkach"){
-    // rating + stage exist
-    const r = row.stage4?.mifkach?.rating || "";
-    const s = row.stage4?.mifkach?.stage ?? "";
-    setSingleDisabled(els.s4_rating, r);
-    setSingleDisabled(els.s4_stage, String(s));
-  } else if (role === "pakad"){
-    // In the table, pakad may have rating but no stage; handle gracefully.
-    const r = row.stage4?.pakad?.rating || "";
-    setSingleDisabled(els.s4_rating, r || "(לפי טבלה)");
-    setSingleDisabled(els.s4_stage, "(לא רלוונטי)");
+    const ratings = uniq(base.map(r => r.stage4?.mifkach?.rating));
+    setOptions(els.s4_rating, ratings, "בחרי דירוג (מפקח)");
+    els.s4_rating.disabled = false;
+
+    setOptions(els.s4_stage, [], "בחרי קודם דירוג");
+    els.s4_stage.disabled = false;
+
+  } else {
+    const ratings = uniq(base.map(r => r.stage4?.pakad?.rating));
+    setOptions(els.s4_rating, ratings, "בחרי דירוג (פקד)");
+    els.s4_rating.disabled = false;
+
+    // לפקד שלב לרוב לא רלוונטי
+    setOptions(els.s4_stage, ["(לא רלוונטי)"], "—");
+    els.s4_stage.value = "(לא רלוונטי)";
+    els.s4_stage.disabled = true;
   }
+
+  syncCalcEnabled();
 }
 
+function fillStage4Stages(){
+  const role = els.s4_role.value;
+  const base = rowsMatchingStage3();
+  const rating = (els.s4_rating.value || "").trim();
+
+  if (role !== "mifkach"){
+    syncCalcEnabled();
+    return;
+  }
+
+  if (!rating || base.length === 0){
+    setOptions(els.s4_stage, [], "בחרי קודם דירוג");
+    syncCalcEnabled();
+    return;
+  }
+
+  const stages = uniq(
+    base
+      .filter(r => (r.stage4?.mifkach?.rating || "").trim() === rating)
+      .map(r => String(r.stage4?.mifkach?.stage ?? "").trim())
+  );
+
+  setOptions(els.s4_stage, stages, "בחרי שלב");
+  syncCalcEnabled();
+}
+
+// ----- calc enabled -----
 function syncCalcEnabled(){
-  // Must have profession + stage2 rank/rating/seniority at least
   const ok = Boolean(
     els.profession.value &&
     els.s2_rank.value &&
     els.s2_rating.value &&
-    els.s2_seniority.value
+    els.s2_seniority.value &&
+    els.s3_rating.value &&
+    els.s3_rank.value
   );
+
   els.calcBtn.disabled = !ok;
 }
 
+// ----- calc -----
 function calc(){
   clearResults();
   const p = getProfBlock();
@@ -245,66 +317,109 @@ function calc(){
     warn("בחרי מקצוע.");
     return;
   }
-  const row = findRow();
-  if (!row){
-    warn("לא נמצאה שורה מתאימה לפי שלב 2 (דירוג/דרגה/וותק). בדקי בחירות.");
+
+  const base3 = rowsMatchingStage3();
+  if (base3.length === 0){
+    warn("לא נמצאה התאמה לפי שלב 2 + שלב 3.");
     return;
   }
 
-  // Stage2 salary depends on station
-  const s2_station = isStation(els.s2_station);
-  const s2_salary = s2_station ? row.stage2.salary_station : row.stage2.salary_not_station;
+  // שכר שלב 2 לפי תחנה
+  const station2 = isStation(els.s2_station);
+  const s2_salary = station2 ? base3[0].stage2.salary_station : base3[0].stage2.salary_not_station;
 
-  // Stage3 salary depends on hablan
+  // שכר שלב 3 לפי חבלן בכיר
   const hablan = isYes(els.s3_hablan);
-  const s3_salary = hablan ? row.stage3.salary_hablan_bachir : row.stage3.salary;
+  const s3_salary = hablan ? base3[0].stage3.salary_hablan_bachir : base3[0].stage3.salary;
 
-  // Stage4 optional
+  // שלב 4 אופציונלי
   const role = els.s4_role.value;
   let s4_salary = null;
   let s4_title = null;
+  let s4_desc = null;
+
   if (role){
-    const st = isStation(els.s4_station);
+    const st4 = isStation(els.s4_station);
+    const r4 = (els.s4_rating.value || "").trim();
+    const stg4 = (els.s4_stage.value || "").trim();
+
+    if (!r4){
+      warn("בחרי דירוג בשלב 4.");
+      return;
+    }
+
+    let chosen = null;
+
     if (role === "mifkach"){
+      if (!stg4){
+        warn("בחרי שלב בשלב 4 (מפקח).");
+        return;
+      }
+
+      chosen = base3.find(x =>
+        (x.stage4?.mifkach?.rating || "").trim() === r4 &&
+        String(x.stage4?.mifkach?.stage ?? "").trim() === stg4
+      );
+
+      if (!chosen){
+        warn("לא נמצאה התאמה לשלב 4 (מפקח) לפי דירוג + שלב.");
+        return;
+      }
+
       s4_title = "שלב 4: מפקח";
-      s4_salary = st ? row.stage4.mifkach.salary_station : row.stage4.mifkach.salary_not_station;
+      s4_desc = `${chosen.stage4.mifkach.rating} · שלב ${chosen.stage4.mifkach.stage} · ${st4 ? "בתחנה" : "לא בתחנה"}`;
+      s4_salary = st4 ? chosen.stage4.mifkach.salary_station : chosen.stage4.mifkach.salary_not_station;
+
     } else {
+      chosen = base3.find(x =>
+        (x.stage4?.pakad?.rating || "").trim() === r4
+      );
+
+      if (!chosen){
+        warn("לא נמצאה התאמה לשלב 4 (פקד) לפי דירוג.");
+        return;
+      }
+
       s4_title = "שלב 4: פקד";
-      s4_salary = st ? row.stage4.pakad.salary_station : row.stage4.pakad.salary_not_station;
+      s4_desc = `${chosen.stage4.pakad.rating || r4} · ${st4 ? "בתחנה" : "לא בתחנה"}`;
+      s4_salary = st4 ? chosen.stage4.pakad.salary_station : chosen.stage4.pakad.salary_not_station;
     }
   }
 
-  const html = `
+  els.results.innerHTML = `
     <div class="calc">
       <div class="line"><div class="label">מקצוע</div><div class="val">${els.profession.value}</div></div>
       <div class="line"><div class="label">רמת פעילות</div><div class="val">${p.activity_level || "—"}</div></div>
       <div class="line"><div class="label">קבוצת תמריץ</div><div class="val">${p.incentive_group ?? "—"}</div></div>
 
-      <div class="line"><div class="label">שלב 1</div><div class="val">${els.s1_rank.value || row.stage1.rank || "—"} · ${els.s1_rating.value || row.stage1.rating || "—"}</div></div>
+      <div class="line"><div class="label">שלב 1</div><div class="val">${els.s1_rank.value || "—"} · ${els.s1_rating.value || "—"}</div></div>
 
-      <div class="line"><div class="label">שלב 2</div><div class="val">${row.stage2.rank} · ${row.stage2.rating} · ותק ${row.stage2.seniority} · ${s2_station ? "בתחנה" : "לא בתחנה"}</div></div>
+      <div class="line"><div class="label">שלב 2</div>
+        <div class="val">${els.s2_rank.value} · ${els.s2_rating.value} · ותק ${els.s2_seniority.value} · ${station2 ? "בתחנה" : "לא בתחנה"}</div>
+      </div>
       <div class="line"><div class="label">שכר שלב 2</div><div class="val">${money(s2_salary)}</div></div>
 
-      <div class="line"><div class="label">שלב 3</div><div class="val">${row.stage3.rank} · ${row.stage3.rating} · ${hablan ? "חבלן בכיר" : "לא חבלן בכיר"}</div></div>
+      <div class="line"><div class="label">שלב 3</div>
+        <div class="val">${els.s3_rank.value} · ${els.s3_rating.value} · ${hablan ? "חבלן בכיר" : "לא חבלן בכיר"}</div>
+      </div>
       <div class="line"><div class="label">שכר שלב 3</div><div class="val">${money(s3_salary)}</div></div>
 
       ${role ? `
-        <div class="line"><div class="label">${s4_title}</div><div class="val">${role === "mifkach" ? (row.stage4.mifkach.rating + " · שלב " + row.stage4.mifkach.stage) : (row.stage4.pakad.rating || "(לפי טבלה)")}</div></div>
+        <div class="line"><div class="label">${s4_title}</div><div class="val">${s4_desc}</div></div>
         <div class="line"><div class="label">שכר שלב 4</div><div class="val">${money(s4_salary)}</div></div>
       ` : ``}
     </div>
   `;
-
-  els.results.innerHTML = html;
 }
 
+// ----- reset -----
 function resetAll(){
-  // reset segmented buttons to "0"
+  // segmented defaults ל"לא"
   const resetSeg = (seg, hidden) => {
     if (!seg || !hidden) return;
-    [...seg.querySelectorAll('.seg-btn')].forEach(b => b.classList.remove('active'));
+    [...seg.querySelectorAll(".seg-btn")].forEach(b => b.classList.remove("active"));
     const first = seg.querySelector('.seg-btn[data-value="0"]');
-    first?.classList.add('active');
+    first?.classList.add("active");
     hidden.value = "0";
   };
 
@@ -319,12 +434,8 @@ function resetAll(){
   setOptions(els.s2_rating, [], "בחרי מקצוע קודם");
   setOptions(els.s2_seniority, [], "בחרי מקצוע קודם");
 
-  els.s3_rating.innerHTML = "";
-  els.s3_rank.innerHTML = "";
-  els.s3_rating.disabled = true;
-  els.s3_rank.disabled = true;
-
-  resetStage4();
+  resetStage3();
+  resetStage4Choices();
 
   resetSeg(els.s2_stationSeg, els.s2_station);
   resetSeg(els.s3_hablanSeg, els.s3_hablan);
@@ -334,22 +445,27 @@ function resetAll(){
   syncCalcEnabled();
 }
 
+// ----- init -----
 async function init(){
   bindSegment(els.s2_stationSeg, els.s2_station);
   bindSegment(els.s3_hablanSeg, els.s3_hablan);
   bindSegment(els.s4_stationSeg, els.s4_station);
 
-  const res = await fetch("./salary_data.json", {cache:"no-store"});
+  const url = window.SALARY_TABLE_URL || "/salary_data.json";
+  const res = await fetch(url, { cache: "no-store" });
+
   if (!res.ok){
-    warn("לא הצלחתי לטעון salary_data.json. בדקי שהוא באותה תיקייה של index.html");
+    warn(`לא הצלחתי לטעון salary_data.json. סטטוס: ${res.status}. URL: ${url}`);
     return;
   }
+
   DATA = await res.json();
 
   // professions dropdown
   const profKeys = Object.keys(DATA.professions || {});
   setOptions(els.profession, profKeys, "בחרי מקצוע");
 
+  // listeners
   els.profession.addEventListener("change", () => {
     const p = getProfBlock();
     if (!p) return;
@@ -358,23 +474,45 @@ async function init(){
     setSingleDisabled(els.activity, p.activity_level || "");
     setSingleDisabled(els.incentiveGroup, String(p.incentive_group ?? ""));
 
-    fillStage2FromRows();
+    fillStage1();
+    fillStage2Ranks();
+
+    clearResults();
+    syncCalcEnabled();
   });
 
-  els.s2_rank.addEventListener("change", fillStage2Rating);
-  els.s2_rating.addEventListener("change", fillStage2Seniority);
-  els.s2_seniority.addEventListener("change", () => { syncStage3Autofill(); syncStage4Autofill(); clearResults(); syncCalcEnabled(); });
+  els.s2_rank.addEventListener("change", () => { fillStage2Ratings(); clearResults(); });
+  els.s2_rating.addEventListener("change", () => { fillStage2Seniorities(); clearResults(); });
 
-  els.s4_role.addEventListener("change", () => { syncStage4Autofill(); clearResults(); syncCalcEnabled(); });
+  els.s2_seniority.addEventListener("change", () => {
+    fillStage3Ratings();
+    resetStage4Choices();
+    clearResults();
+    syncCalcEnabled();
+  });
+
+  els.s3_rating.addEventListener("change", () => {
+    fillStage3Ranks();
+    resetStage4Choices();
+    clearResults();
+    syncCalcEnabled();
+  });
+
+  els.s3_rank.addEventListener("change", () => {
+    resetStage4Choices();
+    clearResults();
+    syncCalcEnabled();
+  });
+
+  els.s4_role.addEventListener("change", () => { fillStage4Ratings(); clearResults(); });
+  els.s4_rating.addEventListener("change", () => { fillStage4Stages(); clearResults(); });
+  els.s4_stage.addEventListener("change", () => { clearResults(); syncCalcEnabled(); });
 
   els.calcBtn.addEventListener("click", calc);
   els.resetBtn.addEventListener("click", resetAll);
 
-  // initial state
+  // start clean
   resetAll();
-  // set initial placeholders
-  setOptions(els.s1_rating, [], "בחרי מקצוע קודם");
-  setOptions(els.s1_rank, [], "בחרי מקצוע קודם");
 }
 
 init().catch(() => warn("שגיאה באתחול. בדקי קונסול (F12)."));

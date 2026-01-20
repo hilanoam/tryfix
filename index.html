@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>מחשבון שכר</title>
+
   <link rel="icon" type="image/png" href="./topleft.png">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <link rel="stylesheet"
@@ -31,7 +32,7 @@
       <div class="section">
         <div class="section-title"><i class="fa-solid fa-layer-group"></i> נתונים בסיסיים</div>
 
-         <div class="field">
+        <div class="field">
           <label>מקצוע</label>
           <select id="profession"></select>
         </div>
@@ -50,29 +51,30 @@
       <!-- שלב 1 -->
       <div class="section">
         <div class="section-title"><i class="fa-solid fa-1"></i> שלב 1</div>
-        <div class="field">
-          <label>דרגה</label>
-          <select id="s1_rank"></select>
-        </div>
-      </div>
 
         <div class="field">
           <label>דירוג</label>
           <select id="s1_rating"></select>
         </div>
 
+        <div class="field">
+          <label>דרגה</label>
+          <select id="s1_rank"></select>
+        </div>
+      </div>
+
       <!-- שלב 2 -->
       <div class="section">
         <div class="section-title"><i class="fa-solid fa-2"></i> שלב 2</div>
 
         <div class="field">
-          <label>דירוג</label>
-          <select id="s2_rating"></select>
+          <label>דרגה</label>
+          <select id="s2_rank"></select>
         </div>
 
         <div class="field">
-          <label>דרגה</label>
-          <select id="s2_rank"></select>
+          <label>דירוג</label>
+          <select id="s2_rating"></select>
         </div>
 
         <div class="field">
@@ -103,12 +105,12 @@
 
         <div class="field">
           <label>דירוג</label>
-          <select id="s3_rating" ></select>
+          <select id="s3_rating"></select>
         </div>
 
         <div class="field">
           <label>דרגה</label>
-          <select id="s3_rank" ></select>
+          <select id="s3_rank"></select>
         </div>
 
         <div class="field">
@@ -178,9 +180,9 @@
       </div>
 
       <div class="results" id="results"></div>
-
     </div>
   </div>
+
   <script src="./data.js"></script>
   <script src="./app.js"></script>
 </body>
