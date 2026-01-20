@@ -32,19 +32,33 @@ const els = {
 
 const uniq = (arr) => [...new Set(arr.filter(v => v !== null && v !== undefined && String(v).trim() !== ""))];
 
-function setOptions(selectEl, options){
+function setOptions(selectEl, options, placeholder = null) {
   selectEl.innerHTML = "";
-  const ph = document.createElement("option");
-  ph.value = "";
-  ph.textContent = placeholder;
-  selectEl.appendChild(ph);
-  for (const opt of options){
+
+  // אם רוצים placeholder – נוסיף. אם לא, לא מוסיפים כלום.
+  if (placeholder !== null) {
+    const ph = document.createElement("option");
+    ph.value = "";
+    ph.textContent = placeholder;
+    ph.disabled = true;
+    ph.hidden = true;
+    ph.selected = true;
+    selectEl.appendChild(ph);
+  }
+
+  for (const opt of options) {
     const o = document.createElement("option");
     o.value = opt;
     o.textContent = opt;
     selectEl.appendChild(o);
   }
+
+  // אם אין placeholder – נשאיר ריק (לא לבחור אוטומטית)
+  if (placeholder === null) {
+    selectEl.value = "";
+  }
 }
+
 
 function setSingleDisabled(selectEl, value){
   selectEl.innerHTML = "";
@@ -306,6 +320,7 @@ function calc(){
   clearResults();
   const p = getProfBlock();
   if (!p){
+    warn("בחר מקצוע.");
     return;
   }
 
