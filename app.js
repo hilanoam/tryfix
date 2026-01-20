@@ -393,7 +393,6 @@ els.results.innerHTML = `
     ${stepRow(`לפני קורס קצינים (${stage2Text})`, money(s2_salary))}
 
     <div class="line">
-      <div class="label">הפרש שלב 2 → שלב 3</div>
       <div class="val">${diffHtml(delta23)}</div>
     </div>
 
@@ -401,11 +400,10 @@ els.results.innerHTML = `
 
     ${role ? `
       <div class="line">
-        <div class="label">הפרש שלב 3 → שלב 4</div>
         <div class="val">${diffHtml(delta34 ?? 0)}</div>
       </div>
 
-      ${stepRow(`שכר שלב 4 (${stage4Text})`, money(s4_salary))}
+      ${stepRow(`לאחר מינוי (${stage4Text})`, money(s4_salary))}
 
       <div class="line">
         <div class="label">שכר משולם בפועל</div>
@@ -414,7 +412,7 @@ els.results.innerHTML = `
 
       ${frozen ? `
         <div class="warn" style="margin-top:10px;">
-          הקפאה על סך <b>${money(freezeAmount)}</b> — משולם השכר הגבוה מביניהם
+          הקפאה על סך <b>${money(freezeAmount)}</b> 
         </div>
       ` : ``}
     ` : `
