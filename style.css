@@ -524,13 +524,16 @@ select:focus, input:focus, textarea:focus{
   min-width: 140px;   /* נותן מקום ליישור שמאלה */
   text-align: left;   /* שמאל בתוך התא של הסכום */
 }
+.line.diff-line{
+  justify-content: flex-end !important; /* ב-RTL זה שמאל */
+}
 
-/* ההפרש עצמו */
 .diff{
-  display: inline-flex;       /* inline כדי לא להתפרס על כל השורה */
-  align-items: center;
-  gap: 70px;
-  direction: ltr;             /* מספר ואז סימן */
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  direction: ltr !important; /* מספר ואז סימן */
+  font-weight: 900 !important;
 }
 
 /* צבעים להפרשים */

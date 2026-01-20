@@ -395,15 +395,15 @@ els.results.innerHTML = `
 
     ${stepRow(`לפני קורס קצינים (${stage2Text})`, money(s2_salary))}
 
-    <div class="line">
-      <div class="val">${diffHtml(delta23)}</div>
+    <div class="line diff-line">
+      ${diffHtml(delta23)}
     </div>
 
     ${stepRow(`בסיום קורס קצינים (${stage3Text})`, money(s3_salary))}
 
     ${role ? `
-      <div class="line">
-        <div class="val">${diffHtml(delta34 ?? 0)}</div>
+      <div class="line diff-line">
+        ${diffHtml(delta34 ?? 0)}
       </div>
 
       ${stepRow(`לאחר מינוי (${stage4Text})`, money(s4_salary))}
