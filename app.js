@@ -310,7 +310,8 @@ function syncCalcEnabled(){
     els.s2_seniority.value &&
     els.s2_station.value !== "" && 
     els.s3_rating.value &&
-    els.s3_rank.value
+    els.s3_rank.value &&
+    els.s3_hablan.value !== ""    
   );
   els.calcBtn.disabled = !ok;
 }
@@ -402,7 +403,6 @@ if (role) {
   } else {
     stage4Text = `פקד, דירוג ${els.s4_rating.value}`;
   }
-  stage4Text += ` (${isStation(els.s4_station) ? "בתחנה" : "לא בתחנה"})`;
 }
 
 els.results.innerHTML = `
