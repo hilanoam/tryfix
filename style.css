@@ -529,7 +529,7 @@ select:focus, input:focus, textarea:focus{
 .diff{
   display: inline-flex;       /* inline כדי לא להתפרס על כל השורה */
   align-items: center;
-  gap: 10px;
+  gap: 70px;
   direction: ltr;             /* מספר ואז סימן */
 }
 
