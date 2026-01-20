@@ -55,6 +55,21 @@ function setSingleDisabled(selectEl, value){
   selectEl.value = value ?? "";
   selectEl.disabled = true;
 }
+function diffHtml(delta) {
+  const sign = delta >= 0 ? "+" : "−";
+  const cls = delta >= 0 ? "positive" : "negative";
+  return `<div class="op ${cls}">
+            <span class="sign">${sign}</span>
+            <span>${money(Math.abs(delta))}</span>
+          </div>`;
+}
+
+function stepRow(label, value) {
+  return `<div class="line">
+            <div class="label">${label}</div>
+            <div class="val">${value}</div>
+          </div>`;
+}
 
 function money(x){
   if (x === null || x === undefined || Number.isNaN(x)) return "—";
@@ -350,30 +365,68 @@ function calc(){
     }
   }
 
-  els.results.innerHTML = `
-    <div class="calc">
-      <div class="line"><div class="label">מקצוע</div><div class="val">${els.profession.value}</div></div>
-      <div class="line"><div class="label">רמת פעילות</div><div class="val">${p.activity_level || "—"}</div></div>
-      <div class="line"><div class="label">קבוצת תמריץ</div><div class="val">${p.incentive_group ?? "—"}</div></div>
+  // הפרשים + הקפאה
+const delta23 = s3_salary - s2_salary;
+const delta34 = (s4_salary !== null && s4_salary !== undefined) ? (s4_salary - s3_salary) : null;
 
-      <div class="line"><div class="label">שלב 1</div><div class="val">${els.s1_rank.value || "—"} · ${els.s1_rating.value || "—"}</div></div>
+// הקפאה: כששלב 4 נמוך משלב 3, משלמים את הגבוה מביניהם ומציגים "הקפאה"
+const frozen = (delta34 !== null && delta34 < 0);
+const freezeAmount = frozen ? Math.abs(delta34) : 0;
+const finalPaid = (delta34 === null) ? s3_salary : Math.max(s3_salary, s4_salary);
 
-      <div class="line"><div class="label">שלב 2</div>
-        <div class="val">${els.s2_rank.value} · ${els.s2_rating.value} · ותק ${els.s2_seniority.value} · ${s2_station ? "בתחנה" : "לא בתחנה"}</div>
-      </div>
-      <div class="line"><div class="label">שכר שלב 2</div><div class="val">${money(s2_salary)}</div></div>
+const stage2Text = `${els.s2_rank.value}, דירוג ${els.s2_rating.value}, ${els.s2_seniority.value} שנות וותק`;
+const stage3Text = `${els.s3_rank.value}, דירוג ${els.s3_rating.value}`;
+let stage4Text = "ללא מינוי";
 
-      <div class="line"><div class="label">שלב 3</div>
-        <div class="val">${els.s3_rank.value} · ${els.s3_rating.value} · ${hablan ? "חבלן בכיר" : "לא חבלן בכיר"}</div>
-      </div>
-      <div class="line"><div class="label">שכר שלב 3</div><div class="val">${money(s3_salary)}</div></div>
+if (role) {
+  if (role === "mifkach") {
+    stage4Text = `מפקח, דירוג ${els.s4_rating.value}, שלב ${els.s4_stage.value}`;
+  } else {
+    stage4Text = `פקד, דירוג ${els.s4_rating.value}`;
+  }
+  stage4Text += ` (${isStation(els.s4_station) ? "בתחנה" : "לא בתחנה"})`;
+}
 
-      ${role ? `
-        <div class="line"><div class="label">${s4_title}</div><div class="val">${s4_desc}</div></div>
-        <div class="line"><div class="label">שכר שלב 4</div><div class="val">${money(s4_salary)}</div></div>
-      ` : ``}
+els.results.innerHTML = `
+  <div class="calc">
+
+    ${stepRow(`לפני קורס קצינים (${stage2Text})`, money(s2_salary))}
+
+    <div class="line">
+      <div class="label">הפרש שלב 2 → שלב 3</div>
+      <div class="val">${diffHtml(delta23)}</div>
     </div>
-  `;
+
+    ${stepRow(`בסיום קורס קצינים (${stage3Text})`, money(s3_salary))}
+
+    ${role ? `
+      <div class="line">
+        <div class="label">הפרש שלב 3 → שלב 4</div>
+        <div class="val">${diffHtml(delta34 ?? 0)}</div>
+      </div>
+
+      ${stepRow(`שכר שלב 4 (${stage4Text})`, money(s4_salary))}
+
+      <div class="line">
+        <div class="label">שכר משולם בפועל</div>
+        <div class="val">${money(finalPaid)}</div>
+      </div>
+
+      ${frozen ? `
+        <div class="warn" style="margin-top:10px;">
+          הקפאה על סך <b>${money(freezeAmount)}</b> — משולם השכר הגבוה מביניהם
+        </div>
+      ` : ``}
+    ` : `
+      <div class="line">
+        <div class="label">שכר משולם בפועל</div>
+        <div class="val">${money(s3_salary)}</div>
+      </div>
+    `}
+
+  </div>
+`;
+
 }
 
 // ---------- reset ----------
