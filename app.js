@@ -415,7 +415,7 @@ els.results.innerHTML = `
 
       ${frozen ? `
         <div class="freeze-box">
-          הקפאה על סך <b>${money(freezeAmount)}</b> — משולם השכר הגבוה מביניהם
+          הקפאה על סך <b>${money(freezeAmount)}</b> 
         </div>
       ` : ``}
 
