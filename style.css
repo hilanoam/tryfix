@@ -414,7 +414,14 @@ select:focus, input:focus, textarea:focus{
   font-weight: var(--w-black);
   font-size: 18px;
 }
-
+/* ✅ הפרשים: תמיד בצד שמאל (לא תלוי ב-op שיש לך כבר) */
+.diff{
+  display:flex;
+  justify-content:flex-end; /* שמאלה בתוך .val */
+  gap:10px;
+  direction:ltr;
+  font-weight: var(--w-black);
+}
 
 .op .sign{ width: 24px; text-align:center; }
 
