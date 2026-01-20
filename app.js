@@ -318,6 +318,14 @@ function syncCalcEnabled(){
 
 // ---------- calc ----------
 function calc(){
+  if (els.s2_station.value === "") {
+      warn("חובה לבחור האם בתחנה (כן/לא).");
+      return;
+    }
+    if (els.s3_hablan.value === "") {
+      warn("חובה לבחור האם חבלן בכיר (כן/לא).");
+      return;
+    }
   clearResults();
   const p = getProfBlock();
   if (!p){
