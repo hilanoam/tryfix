@@ -542,3 +542,16 @@ select:focus, input:focus, textarea:focus{
 
 .diff .amount{ font-weight: 900; }
 .diff .sign{ width: 18px; text-align:center; }
+/* שלושה שדות באותה שורה */
+.grid3{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr; /* מקצוע קצת יותר רחב */
+  gap: 12px;
+}
+
+/* רספונסיבי – במובייל ירד לשורה */
+@media (max-width: 700px){
+  .grid3{
+    grid-template-columns: 1fr;
+  }
+}
