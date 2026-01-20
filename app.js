@@ -311,7 +311,8 @@ function syncCalcEnabled(){
     els.s2_station.value !== "" && 
     els.s3_rating.value &&
     els.s3_rank.value &&
-    els.s3_hablan.value !== ""    
+    els.s3_hablan.value !== "" &&  
+    els.s4_station.value !== ""   
   );
   els.calcBtn.disabled = !ok;
 }
