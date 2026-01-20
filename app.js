@@ -105,8 +105,8 @@ function getRows(){
 
 // ---------- reset stage 3/4 (לא ממלאים, רק מאפסים) ----------
 function resetStage3(){
-  setOptions(els.s3_rating, [], "בחרי קודם שלב 2");
-  setOptions(els.s3_rank, [], "בחרי קודם דירוג בשלב 3");
+  setOptions(els.s3_rating, []);
+  setOptions(els.s3_rank, []);
 }
 function resetStage4(){
   els.s4_role.value = "";
@@ -119,16 +119,16 @@ function resetStage4(){
 // ---------- Stage1 fill (בחירה בלבד) ----------
 function fillStage1(){
   const rows = getRows();
-  setOptions(els.s1_rating, uniq(rows.map(r => r.stage1?.rating)), "בחרי דירוג");
-  setOptions(els.s1_rank, uniq(rows.map(r => r.stage1?.rank)), "בחרי דרגה");
+  setOptions(els.s1_rating, uniq(rows.map(r => r.stage1?.rating)));
+  setOptions(els.s1_rank, uniq(rows.map(r => r.stage1?.rank)));
 }
 
 // ---------- Stage2 cascade ----------
 function fillStage2Ranks(){
   const rows = getRows();
-  setOptions(els.s2_rank, uniq(rows.map(r => r.stage2?.rank)), "בחרי דרגה");
-  setOptions(els.s2_rating, [], "בחרי קודם דרגה");
-  setOptions(els.s2_seniority, [], "בחרי קודם דירוג");
+  setOptions(els.s2_rank, uniq(rows.map(r => r.stage2?.rank)));
+  setOptions(els.s2_rating, []);
+  setOptions(els.s2_seniority, []);
 
   resetStage3();
   resetStage4();
@@ -138,16 +138,16 @@ function fillStage2Ratings(){
   const rows = getRows();
   const rank = (els.s2_rank.value || "").trim();
   if (!rank){
-    setOptions(els.s2_rating, [], "בחרי קודם דרגה");
-    setOptions(els.s2_seniority, [], "בחרי קודם דירוג");
+    setOptions(els.s2_rating, []);
+    setOptions(els.s2_seniority, []);
     resetStage3();
     resetStage4();
     syncCalcEnabled();
     return;
   }
   const ratings = uniq(rows.filter(r => (r.stage2?.rank||"").trim()===rank).map(r => r.stage2?.rating));
-  setOptions(els.s2_rating, ratings, "בחרי דירוג");
-  setOptions(els.s2_seniority, [], "בחרי קודם דירוג");
+  setOptions(els.s2_rating, ratings);
+  setOptions(els.s2_seniority, []);
   resetStage3();
   resetStage4();
   syncCalcEnabled();
@@ -158,7 +158,7 @@ function fillStage2Seniorities(){
   const rank = (els.s2_rank.value || "").trim();
   const rating = (els.s2_rating.value || "").trim();
   if (!rank || !rating){
-    setOptions(els.s2_seniority, [], "בחרי קודם דרגה + דירוג");
+    setOptions(els.s2_seniority, []);
     resetStage3();
     resetStage4();
     syncCalcEnabled();
@@ -168,7 +168,7 @@ function fillStage2Seniorities(){
     .filter(r => (r.stage2?.rank||"").trim()===rank && (r.stage2?.rating||"").trim()===rating)
     .map(r => String(r.stage2?.seniority ?? "").trim())
   );
-  setOptions(els.s2_seniority, sens, "בחרי ותק");
+  setOptions(els.s2_seniority, sens);
 
   // ✅ לא ממלאים שלב 3 אוטומטית! רק מאפשרים אופציות לבחירה
   fillStage3Ratings();
@@ -198,19 +198,19 @@ function fillStage3Ratings(){
     return;
   }
   const ratings = uniq(base.map(r => r.stage3?.rating));
-  setOptions(els.s3_rating, ratings, "בחרי דירוג בשלב 3");
-  setOptions(els.s3_rank, [], "בחרי קודם דירוג בשלב 3");
+  setOptions(els.s3_rating, ratings);
+  setOptions(els.s3_rank, []);
 }
 
 function fillStage3Ranks(){
   const base = rowsMatchingStage2();
   const r3 = (els.s3_rating.value || "").trim();
   if (!r3){
-    setOptions(els.s3_rank, [], "בחרי קודם דירוג בשלב 3");
+    setOptions(els.s3_rank, []);
     return;
   }
   const ranks = uniq(base.filter(r => (r.stage3?.rating||"").trim()===r3).map(r => r.stage3?.rank));
-  setOptions(els.s3_rank, ranks, "בחרי דרגה בשלב 3");
+  setOptions(els.s3_rank, ranks);
 }
 
 // Stage3 match
@@ -242,14 +242,14 @@ function fillStage4Ratings(){
 
   if (role === "mifkach"){
     const ratings = uniq(base.map(r => r.stage4?.mifkach?.rating));
-    setOptions(els.s4_rating, ratings, "בחרי דירוג (מפקח)");
+    setOptions(els.s4_rating, ratings);
     els.s4_rating.disabled = false;
 
-    setOptions(els.s4_stage, [], "בחרי קודם דירוג");
+    setOptions(els.s4_stage, []);
     els.s4_stage.disabled = false;
   } else {
     const ratings = uniq(base.map(r => r.stage4?.pakad?.rating));
-    setOptions(els.s4_rating, ratings, "בחרי דירוג (פקד)");
+    setOptions(els.s4_rating, ratings);
     els.s4_rating.disabled = false;
 
     // לפקד אין שלב -> נשאיר נעול
