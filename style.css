@@ -15,7 +15,9 @@
   --good:#1cb831;
   --bad:#e01313;
   --warn:#7a4a00;
-
+  --freeze-bg: #eef2f7;      /* אפור-כחול בהיר */
+  --freeze-border: #64748b;  /* אפור-פלדה */
+  --freeze-text: #1e293b;  
   --shadow: 0 10px 30px rgba(0,0,0,.08);
 
   /* Typography / sizing */
@@ -271,12 +273,13 @@ select:focus, input:focus, textarea:focus{
   margin-top: 12px;
   padding: 12px 14px;
   border-radius: 16px;
-  border: 1px solid rgba(124,58,237,.25);
-  background: rgba(124,58,237,.08);
-  color: #5b21b6;
+  border: 1px solid var(--freeze-border);
+  background: var(--freeze-bg);
+  color: var(--freeze-text);
   font-weight: 800;
   text-align: center;
 }
+
 
 /* Bigger, special icons for Officer/NCO */
 #population .seg-btn i{
