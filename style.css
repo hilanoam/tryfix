@@ -240,13 +240,6 @@ select:focus, input:focus, textarea:focus{
   border-color: rgba(29,78,216,.55);
   color: var(--accent);
 }
-/* הפרשים: תמיד שמאלה */
-.op{
-  display:flex;
-  justify-content:flex-end; /* שמאלה בתוך תא ה־val */
-  gap:10px;
-  direction:ltr;            /* כדי שהסדר יהיה כמו שכתבת: מספר ואז סימן */
-}
 
 .op .amount{ font-weight: 900; }
 .op .sign{ width: 18px; text-align:center; }
@@ -414,14 +407,6 @@ select:focus, input:focus, textarea:focus{
   font-weight: var(--w-black);
   font-size: 18px;
 }
-/* ✅ הפרשים: תמיד בצד שמאל (לא תלוי ב-op שיש לך כבר) */
-.diff{
-  display:flex;
-  justify-content:flex-end; /* שמאלה בתוך .val */
-  gap:10px;
-  direction:ltr;
-  font-weight: var(--w-black);
-}
 
 .op .sign{ width: 24px; text-align:center; }
 
@@ -531,3 +516,26 @@ select:focus, input:focus, textarea:focus{
   border: 1px solid var(--stroke);
   display:block;
 }
+/* --- FIX DIFF ALIGN + COLORS (שים בסוף הקובץ) --- */
+
+/* תן ל-val להימתח כדי שיהיה “לאן” ליישר שמאלה */
+.line .val{
+  flex: 0 0 auto;     /* הערך לא חייב להימתח */
+  min-width: 140px;   /* נותן מקום ליישור שמאלה */
+  text-align: left;   /* שמאל בתוך התא של הסכום */
+}
+
+/* ההפרש עצמו */
+.diff{
+  display: inline-flex;       /* inline כדי לא להתפרס על כל השורה */
+  align-items: center;
+  gap: 10px;
+  direction: ltr;             /* מספר ואז סימן */
+}
+
+/* צבעים להפרשים */
+.diff.positive{ color: var(--good); }
+.diff.negative{ color: var(--bad); }
+
+.diff .amount{ font-weight: 900; }
+.diff .sign{ width: 18px; text-align:center; }
