@@ -12,8 +12,8 @@
   --accent2:#3a5f3a;       /* ירוק משני */
   --accent-soft:#e6efe6;   /* ירוק בהיר עדין */
 
-  --good:#1e7f43;
-  --bad:#9b1c1c;
+  --good:#1cb831;
+  --bad:#e01313;
   --warn:#7a4a00;
 
   --shadow: 0 10px 30px rgba(0,0,0,.08);
@@ -252,7 +252,7 @@ select:focus, input:focus, textarea:focus{
   padding: 14px 16px;
   border-radius: 16px;
   border: 2px solid var(--accent);
-  background: var(--accent-soft);
+  background: #a0fdc7;
   display:flex;
   justify-content: space-between;
   align-items: baseline;
