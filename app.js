@@ -56,13 +56,16 @@ function setSingleDisabled(selectEl, value){
   selectEl.disabled = true;
 }
 function diffHtml(delta) {
-  const sign = delta >= 0 ? "+" : "−";
   const cls = delta >= 0 ? "positive" : "negative";
-  return `<div class="op ${cls}">
-            <span class="sign">${sign}</span>
-            <span>${money(Math.abs(delta))}</span>
-          </div>`;
+  const sign = delta >= 0 ? "+" : "−";
+  return `
+    <div class="op ${cls}">
+      <span class="amount">${money(Math.abs(delta))}</span>
+      <span class="sign">${sign}</span>
+    </div>
+  `;
 }
+
 
 function stepRow(label, value) {
   return `<div class="line">
@@ -405,16 +408,17 @@ els.results.innerHTML = `
 
       ${stepRow(`לאחר מינוי (${stage4Text})`, money(s4_salary))}
 
-      <div class="line">
+      <div class="pay-box">
         <div class="label">שכר משולם בפועל</div>
         <div class="val">${money(finalPaid)}</div>
       </div>
 
       ${frozen ? `
-        <div class="warn" style="margin-top:10px;">
-          הקפאה על סך <b>${money(freezeAmount)}</b> 
+        <div class="freeze-box">
+          הקפאה על סך <b>${money(freezeAmount)}</b> — משולם השכר הגבוה מביניהם
         </div>
       ` : ``}
+
     ` : `
       <div class="line">
         <div class="label">שכר משולם בפועל</div>

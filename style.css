@@ -240,6 +240,46 @@ select:focus, input:focus, textarea:focus{
   border-color: rgba(29,78,216,.55);
   color: var(--accent);
 }
+/* הפרשים: תמיד שמאלה */
+.op{
+  display:flex;
+  justify-content:flex-end; /* שמאלה בתוך תא ה־val */
+  gap:10px;
+  direction:ltr;            /* כדי שהסדר יהיה כמו שכתבת: מספר ואז סימן */
+}
+
+.op .amount{ font-weight: 900; }
+.op .sign{ width: 18px; text-align:center; }
+.pay-box{
+  margin-top: 12px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 2px solid rgba(29,78,216,.35);
+  background: rgba(29,78,216,.06);
+  display:flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.pay-box .label{
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.pay-box .val{
+  font-weight: 900;
+  font-size: 20px;
+}
+.freeze-box{
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(124,58,237,.25);
+  background: rgba(124,58,237,.08);
+  color: #5b21b6;
+  font-weight: 800;
+  text-align: center;
+}
 
 /* Bigger, special icons for Officer/NCO */
 #population .seg-btn i{
