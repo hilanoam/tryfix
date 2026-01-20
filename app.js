@@ -59,7 +59,7 @@ function diffHtml(delta) {
   const cls = delta >= 0 ? "positive" : "negative";
   const sign = delta >= 0 ? "+" : "−";
   return `
-    <div class="op ${cls}">
+    <div class="diff ${cls}">
       <span class="amount">${money(Math.abs(delta))}</span>
       <span class="sign">${sign}</span>
     </div>
