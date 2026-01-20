@@ -2,20 +2,21 @@
 
 :root{
   /* Colors */
-  --bg:#f3f6fb;
+  --bg:#f4f5f2;
   --card:#ffffff;
-  --stroke:#e6eaf2;
-  --text:#0f172a;
-  --muted:#475569;
+  --stroke:#d1d5cc;
+  --text:#1f2933;
+  --muted:#4b5563;
 
-  --accent:#1d4ed8;   /* כחול שירות */
-  --accent2:#2563eb;
+  --accent:#2f4f2f;        /* ירוק מג"ב כהה */
+  --accent2:#3a5f3a;       /* ירוק משני */
+  --accent-soft:#e6efe6;   /* ירוק בהיר עדין */
 
-  --good:#16a34a;
-  --bad:#dc2626;
-  --warn:#b45309;
+  --good:#1e7f43;
+  --bad:#9b1c1c;
+  --warn:#7a4a00;
 
-  --shadow: 0 10px 30px rgba(15, 23, 42, .08);
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
 
   /* Typography / sizing */
   --font: "Heebo", system-ui, -apple-system, Segoe UI, Arial;
@@ -210,8 +211,8 @@ select option{
 }
 
 select:focus, input:focus, textarea:focus{
-  border-color: rgba(29,78,216,.55);
-  box-shadow: 0 0 0 4px rgba(29,78,216,.12);
+  border-color:var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
 .seg-btn{
@@ -235,7 +236,7 @@ select:focus, input:focus, textarea:focus{
 
 .seg-btn:hover{
   transform: translateY(-1px);
-  border-color: rgba(29,78,216,.35);
+  border-color: var(--accent);
 }
 
 .seg-btn.active{
@@ -250,8 +251,8 @@ select:focus, input:focus, textarea:focus{
   margin-top: 12px;
   padding: 14px 16px;
   border-radius: 16px;
-  border: 2px solid rgba(29,78,216,.35);
-  background: rgba(29,78,216,.06);
+  border: 2px solid var(--accent);
+  background: var(--accent-soft);
   display:flex;
   justify-content: space-between;
   align-items: baseline;
@@ -314,12 +315,12 @@ select:focus, input:focus, textarea:focus{
 
 .activity-card:hover{
   transform: translateY(-1px);
-  border-color: rgba(29,78,216,.35);
+  border-color: var(--accent);
 }
 
 .activity-card.active{
   background: rgba(29,78,216,.08);
-  border-color: rgba(29,78,216,.55);
+  border-color: var(--accent);
 }
 
 /* ✅ לא Bold מוגזם */
@@ -466,7 +467,7 @@ select:focus, input:focus, textarea:focus{
 
 .step.active{
   background: rgba(29,78,216,.10);
-  border-color: rgba(29,78,216,.55);
+  border-color:var(--accent);
   color: var(--accent);
 }
 
@@ -486,7 +487,7 @@ select:focus, input:focus, textarea:focus{
   gap: 10px;
 }
 .copy-btn:hover{
-  border-color: rgba(29,78,216,.35);
+  border-color: var(--accent);
 }
 
 .export-area{
