@@ -208,27 +208,33 @@ function rowsMatchingStage2(){
   );
 }
 
-function fillStage3Ratings(){
-  const base = rowsMatchingStage2();
-  if (base.length === 0){
-    resetStage3();
-    return;
-  }
-  const ratings = uniq(base.map(r => r.stage3?.rating));
-  setOptions(els.s3_rating, ratings);
-  setOptions(els.s3_rank, []);
-}
-
 function fillStage3Ranks(){
   const base = rowsMatchingStage2();
-  const r3 = (els.s3_rating.value || "").trim();
-  if (!r3){
+  if (base.length === 0){
     setOptions(els.s3_rank, []);
     return;
   }
-  const ranks = uniq(base.filter(r => (r.stage3?.rating||"").trim()===r3).map(r => r.stage3?.rank));
+  const ranks = uniq(base.map(r => r.stage3?.rank));
   setOptions(els.s3_rank, ranks);
+  setOptions(els.s3_rating, []);
 }
+
+function fillStage3Ratings(){
+  const base = rowsMatchingStage2();
+  const rank = (els.s3_rank.value || "").trim();
+  if (!rank){
+    setOptions(els.s3_rating, []);
+    return;
+  }
+  const ratings = uniq(
+    base
+      .filter(r => (r.stage3?.rank || "").trim() === rank)
+      .map(r => r.stage3?.rating)
+  );
+  setOptions(els.s3_rating, ratings);
+}
+
+
 
 // Stage3 match
 function rowsMatchingStage3(){
@@ -530,15 +536,15 @@ async function init(){
 
   // כאן רק ממלאים אופציות לשלב 3 (לא בוחרים)
   els.s2_seniority.addEventListener("change", () => {
-    fillStage3Ratings();
+    fillStage3Ranks();
     resetStage4();
     clearResults();
     syncCalcEnabled();
   });
 
   // שלב 3 - בחירה
-  els.s3_rating.addEventListener("change", () => {
-    fillStage3Ranks();
+  els.s3_rank.addEventListener("change", () => {
+    fillStage3Ratings();
     resetStage4();
     clearResults();
     syncCalcEnabled();
