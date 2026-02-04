@@ -450,9 +450,10 @@ els.results.innerHTML = `
 
       ${frozen ? `
         <div class="freeze-box">
-          הקפאה על סך <b>${money(freezeAmount)}</b> 
+          השכר כולל הקפאה על סך <b>${money(freezeAmount)} ש"ח ברוטו</b>
         </div>
       ` : ``}
+
 
     ` : `
       <div class="line">
