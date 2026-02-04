@@ -626,8 +626,8 @@ select:focus, input:focus, textarea:focus{
 
 /* הלוגו הגדול */
 .top-logo.single{
-  width: 180px;
-  height: 180px;
+  width: 320px;
+  height: 320px;
   object-fit: contain;
   display: block;
 }
@@ -644,7 +644,7 @@ select:focus, input:focus, textarea:focus{
 
 /* רספונסיבי */
 @media (max-width: 520px){
-  .top-logo.single{ width: 120px; height: 120px; }
+  .top-logo.single{ width: 220px; height: 220px; }
   .top-slogan{ font-size: 14px; }
 }
 
