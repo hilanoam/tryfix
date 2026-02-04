@@ -654,3 +654,41 @@ select:focus, input:focus, textarea:focus{
   display: none !important;
 }
 
+/* ===== Disclaimer Modal ===== */
+.disclaimer-backdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(15,23,42,.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.disclaimer-modal{
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 24px;
+  max-width: 420px;
+  width: calc(100% - 32px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  text-align: center;
+}
+
+.disclaimer-modal h2{
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: var(--w-black);
+}
+
+.disclaimer-modal p{
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* נעילת גלילה כשהחלונית פתוחה */
+body.modal-open{
+  overflow: hidden;
+}
