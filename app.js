@@ -428,7 +428,7 @@ if (role) {
 els.results.innerHTML = `
   <div class="calc">
 
-    ${stepRow(`לפני קורס קצינים (${stage2Text})`, money(s2_salary))}
+    ${stepRow(`בתחילת קורס קצינים (${stage2Text})`, money(s2_salary))}
 
     <div class="line diff-line">
       ${diffHtml(delta23)}
