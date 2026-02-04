@@ -503,6 +503,24 @@ function resetAll(){
   syncCalcEnabled();
 }
 
+function initDisclaimer(){
+  const modal = document.getElementById("disclaimerModal");
+  const btn = document.getElementById("disclaimerAccept");
+
+  // אם כבר אישר – לא מציגים שוב
+  if (localStorage.getItem("disclaimerAccepted") === "1"){
+    modal.remove();
+    return;
+  }
+
+  document.body.classList.add("modal-open");
+
+  btn.addEventListener("click", () => {
+    localStorage.setItem("disclaimerAccepted", "1");
+    document.body.classList.remove("modal-open");
+    modal.remove();
+  });
+}
 
 // ---------- init ----------
 async function init(){
