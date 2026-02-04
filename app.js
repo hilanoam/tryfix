@@ -506,6 +506,8 @@ function resetAll(){
 
 // ---------- init ----------
 async function init(){
+  initDisclaimer();
+
   bindSegment(els.s2_stationSeg, els.s2_station);
   bindSegment(els.s3_hablanSeg, els.s3_hablan);
   bindSegment(els.s4_stationSeg, els.s4_station);
