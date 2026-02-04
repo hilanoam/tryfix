@@ -648,4 +648,8 @@ select:focus, input:focus, textarea:focus{
   .top-slogan{ font-size: 14px; }
 }
 
+/* הסתרת שלב 1 מהתצוגה */
+.stage1-hidden{
+  display: none !important;
+}
 

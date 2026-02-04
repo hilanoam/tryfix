@@ -136,9 +136,14 @@ function resetStage4(){
 // ---------- Stage1 fill (בחירה בלבד) ----------
 function fillStage1(){
   const rows = getRows();
-  setOptions(els.s1_rating, uniq(rows.map(r => r.stage1?.rating)));
-  setOptions(els.s1_rank, uniq(rows.map(r => r.stage1?.rank)));
+  if (!rows.length) return;
+
+  const r = rows[0];
+
+  setSingleDisabled(els.s1_rating, r.stage1?.rating ?? "");
+  setSingleDisabled(els.s1_rank, r.stage1?.rank ?? "");
 }
+
 
 // ---------- Stage2 cascade ----------
 function fillStage2Ranks(){
@@ -498,6 +503,7 @@ function resetAll(){
   syncCalcEnabled();
 }
 
+
 // ---------- init ----------
 async function init(){
   bindSegment(els.s2_stationSeg, els.s2_station);
@@ -600,3 +606,4 @@ function exportToPDF() {
 document.getElementById("pdfBtn").addEventListener("click", exportToPDF);
 
 init().catch(() => warn("שגיאה באתחול. בדקי קונסול (F12)."));
+
