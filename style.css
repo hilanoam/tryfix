@@ -707,3 +707,11 @@ body.modal-open{
 .calc-disclaimer{
   color: #e22424;
 }
+
+.top-sub-slogan{
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--muted);
+  text-align: center;
+  margin-top: -2px; /* מצמיד קצת לשורה מעל */
+}
