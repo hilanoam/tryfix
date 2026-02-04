@@ -692,3 +692,15 @@ select:focus, input:focus, textarea:focus{
 body.modal-open{
   overflow: hidden;
 }
+
+/* ===== Disclaimer בתחתית החישוב ===== */
+.calc-disclaimer{
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--stroke);
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--muted);
+  text-align: center;
+}
+
