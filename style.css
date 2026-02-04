@@ -612,5 +612,40 @@ select:focus, input:focus, textarea:focus{
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
 
+/* ===== Topbar single (לוגו גדול באמצע + משפט) ===== */
+.topbar.topbar-single{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 12px 18px;
+  border-bottom: 1px solid var(--stroke);
+}
+
+/* הלוגו הגדול */
+.top-logo.single{
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+/* המשפט */
+.top-slogan{
+  text-align: center;
+  font-size: 16px;
+  font-weight: var(--w-bold);
+  color: var(--text);
+  line-height: 1.25;
+  padding: 0 8px;
+}
+
+/* רספונסיבי */
+@media (max-width: 520px){
+  .top-logo.single{ width: 120px; height: 120px; }
+  .top-slogan{ font-size: 14px; }
+}
 
 
