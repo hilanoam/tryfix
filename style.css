@@ -15,9 +15,9 @@
   --good:#1cb831;
   --bad:#e01313;
   --warn:#7a4a00;
-  --freeze-bg: #eef2f7;      /* אפור-כחול בהיר */
-  --freeze-border: #64748b;  /* אפור-פלדה */
-  --freeze-text: #1e293b;  
+  --freeze-bg: #fdecec;      /* אדום בהיר מאוד, רך */
+  --freeze-border: #f1a7a7;  /* אדום מעושן / ורוד כהה */
+  --freeze-text: #7f1d1d;    /* אדום כהה לקריאות */
   --shadow: 0 10px 30px rgba(0,0,0,.08);
 
   /* Typography / sizing */
