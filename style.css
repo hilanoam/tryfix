@@ -626,8 +626,8 @@ select:focus, input:focus, textarea:focus{
 
 /* הלוגו הגדול */
 .top-logo.single{
-  width: 320px;
-  height: 320px;
+  width: 600px;
+  height: 600px;
   object-fit: contain;
   display: block;
 }
