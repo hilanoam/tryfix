@@ -645,7 +645,7 @@ select:focus, input:focus, textarea:focus{
 
 /* רספונסיבי */
 @media (max-width: 520px){
-  .top-logo.single{ width: 220px; height: 220px; }
+  .top-logo.single{ width: 100%; max-width: 520px; height: auto; }
   .top-slogan{ font-size: 14px; }
 }
 
