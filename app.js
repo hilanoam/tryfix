@@ -81,7 +81,7 @@ function diffHtml(delta) {
   return `
     <div class="diff ${cls}">
       <span class="label">${label}</span>
-      <span class="amount">${money(Math.abs(delta))} ₪</span>
+      <span class="amount">${money(Math.abs(delta))} ש"ח</span>
     </div>
   `;
 }
@@ -91,7 +91,7 @@ function diffHtml(delta) {
 function stepRow(label, value) {
   return `<div class="line">
             <div class="label">${label}</div>
-            <div class="val">${value}<span>₪</span></div>
+            <div class="val">${value}<span>ש"ח</span></div>
           </div>`;
 }
 
@@ -452,12 +452,12 @@ els.results.innerHTML = `
 
       <div class="pay-box">
         <div class="label">שכר משולם בפועל</div>
-        <div class="val">${money(finalPaid)} ₪</div>
+        <div class="val">${money(finalPaid)} ש"ח</div>
       </div>
 
       ${frozen ? `
         <div class="freeze-box">
-          השכר כולל הקפאה על סך <b>${money(freezeAmount)} ₪ ברוטו</b>
+          השכר כולל הקפאה על סך <b>${money(freezeAmount)} ש"ח ברוטו</b>
         </div>
       ` : ``}
 
@@ -465,7 +465,7 @@ els.results.innerHTML = `
     ` : `
       <div class="line">
         <div class="label">שכר משולם בפועל</div>
-        <div class="val">${money(s3_salary)} ₪</div>
+        <div class="val">${money(s3_salary)} ש"ח ברוטו</div>
       </div>
     `}
 
