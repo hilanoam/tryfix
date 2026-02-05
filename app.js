@@ -81,23 +81,30 @@ function diffHtml(delta) {
   return `
     <div class="diff ${cls}">
       <span class="label">${label}</span>
-      <span class="amount">${money(Math.abs(delta))} ₪</span>
+      <span class="amount">${money(Math.abs(delta))}</span>
     </div>
   `;
 }
 
 
 
-function stepRow(label, value) {
-  return `<div class="line">
-            <div class="label">${label}</div>
-            <div class="val">${value}</div>
-          </div>`;
+function stepRow(label, value, opts = {}) {
+  const { showCurrency = true, suffix = "" } = opts; 
+  const valText = showCurrency ? `${value}` : `${value}`;
+  const suffixHtml = suffix ? ` <span class="gross">${suffix}</span>` : "";
+
+  return `
+    <div class="line">
+      <div class="label">${label}</div>
+      <div class="val">${valText}${suffixHtml}</div>
+    </div>
+  `;
 }
+
 
 function money(x){
   if (x === null || x === undefined || Number.isNaN(x)) return "—";
-  return Number(x).toLocaleString("he-IL", {minimumFractionDigits:2, maximumFractionDigits:2}) + " ₪";
+  return Number(x).toLocaleString("he-IL", {minimumFractionDigits:2, maximumFractionDigits:2});
 }
 
 function warn(msg){ els.results.innerHTML = `<div class="warn">${msg} </div>`; }
@@ -452,12 +459,12 @@ els.results.innerHTML = `
 
       <div class="pay-box">
         <div class="label">שכר משולם בפועל</div>
-        <div class="val">${money(finalPaid)} ₪</div>
+        <div class="val">${money(finalPaid)} ברוטו</div>
       </div>
 
       ${frozen ? `
         <div class="freeze-box">
-          השכר כולל הקפאה על סך <b>${money(freezeAmount)} ₪ ברוטו</b>
+          השכר כולל הקפאה על סך <b>${money(freezeAmount)} ברוטו</b>
         </div>
       ` : ``}
 
@@ -465,7 +472,7 @@ els.results.innerHTML = `
     ` : `
       <div class="line">
         <div class="label">שכר משולם בפועל</div>
-        <div class="val">${money(s3_salary)} ₪ ברוטו</div>
+        <div class="val">${money(s3_salary)} ברוטו/div>
       </div>
     `}
 
