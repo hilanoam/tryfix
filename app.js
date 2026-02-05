@@ -91,7 +91,7 @@ function diffHtml(delta) {
 function stepRow(label, value) {
   return `<div class="line">
             <div class="label">${label}</div>
-            <div class="val">${value}</div>
+            <div class="val">${value}<span>₪</span></div>
           </div>`;
 }
 
@@ -100,7 +100,7 @@ function money(x){
   return Number(x).toLocaleString("he-IL", {minimumFractionDigits:2, maximumFractionDigits:2});
 }
 
-function warn(msg){ els.results.innerHTML = `<div class="warn">${msg} ₪</div>`; }
+function warn(msg){ els.results.innerHTML = `<div class="warn">${msg} </div>`; }
 function clearResults(){ els.results.innerHTML = ""; }
 
 function bindSegment(segEl, hiddenSelectEl){
