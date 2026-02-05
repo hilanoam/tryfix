@@ -717,7 +717,7 @@ body.modal-open{
 }
 
 .calc-disclaimer .disclaimer-big{
-  font-size: 1.15rem;   /* תעלי ל-1.25rem אם בא לך יותר גדול */
+  font-size: 1.08rem;   /* תעלי ל-1.25rem אם בא לך יותר גדול */
   font-weight: 800;
   margin: 10px 0 0;
 }
