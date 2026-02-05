@@ -538,8 +538,8 @@ select:focus, input:focus, textarea:focus{
 .diff{
   display: inline-flex !important;
   align-items: center !important;
+  justify-content: space-between !important;
   gap: 12px !important;
-  direction: ltr !important; 
   font-weight: 900 !important;
 }
 
@@ -720,4 +720,32 @@ body.modal-open{
   font-size: 1.08rem;   /* תעלי ל-1.25rem אם בא לך יותר גדול */
   font-weight: 800;
   margin: 10px 0 0;
+}
+/* שורה של הפרש */
+.line.diff-line{
+  display: flex;
+  justify-content: flex-start; /* RTL */
+}
+
+/* הקופסה עצמה */
+.line.diff-line .diff{
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* ימין ↔ שמאל */
+  align-items: center;
+  direction: rtl;                 /* הטקסט מימין */
+}
+
+/* הטקסט */
+.line.diff-line .label{
+  text-align: right;
+  font-weight: 800;
+}
+
+/* הסכום */
+.line.diff-line .amount{
+  text-align: left;
+  direction: ltr;                 /* מספרים + ₪ תקינים */
+  white-space: nowrap;
+  font-weight: 900;
 }
