@@ -523,9 +523,13 @@ select:focus, input:focus, textarea:focus{
   border: 1px solid var(--stroke);
   display:block;
 }
-/*/* --- FIX DIFF ALIGN + COLORS (שים בסוף הקובץ) --- */
 
+/* צבעים להפרשים */
+.diff.positive{ color: #0aadee; }
+.diff.negative{ color: #6c757d; }
 
+.diff .amount{ font-weight: 900; }
+.diff .sign{ width: 18px; text-align:center; }
 
 .grid{
   display: grid;
