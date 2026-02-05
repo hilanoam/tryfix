@@ -538,14 +538,15 @@ select:focus, input:focus, textarea:focus{
 .diff{
   display: inline-flex !important;
   align-items: center !important;
-  gap: 10px !important;
-  direction: ltr !important; /* מספר ואז סימן */
+  justify-content: space-between !important;
+  gap: 12px !important;
+  direction: ltr !important; 
   font-weight: 900 !important;
 }
 
 /* צבעים להפרשים */
-.diff.positive{ color: var(--good); }
-.diff.negative{ color: var(--bad); }
+.diff.positive{ color: #0aadee; }
+.diff.negative{ color: #6c757d; }
 
 .diff .amount{ font-weight: 900; }
 .diff .sign{ width: 18px; text-align:center; }

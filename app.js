@@ -69,16 +69,23 @@ function setSingleDisabled(selectEl, value){
   selectEl.value = value ?? "";
   selectEl.disabled = true;
 }
+
 function diffHtml(delta) {
-  const cls = delta >= 0 ? "positive" : "negative";
-  const sign = delta >= 0 ? "+" : "−";
+  const isPositive = delta >= 0;
+
+  const cls = isPositive ? "positive" : "negative";
+  const label = isPositive
+    ? "התוספת שתתקבל בגין העליה בדרגה ובדירוג"
+    : "סכום ההקפאה לצורך שימור שכר";
+
   return `
     <div class="diff ${cls}">
-      <span class="amount">${money(Math.abs(delta))}</span>
-      <span class="sign">${sign}</span>
+      <span class="label">${label}</span>
+      <span class="amount">${money(Math.abs(delta))} ₪</span>
     </div>
   `;
 }
+
 
 
 function stepRow(label, value) {
