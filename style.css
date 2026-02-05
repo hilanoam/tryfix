@@ -538,7 +538,6 @@ select:focus, input:focus, textarea:focus{
 .diff{
   display: inline-flex !important;
   align-items: center !important;
-  justify-content: space-between !important;
   gap: 12px !important;
   direction: ltr !important; 
   font-weight: 900 !important;
