@@ -100,7 +100,7 @@ function money(x){
   return Number(x).toLocaleString("he-IL", {minimumFractionDigits:2, maximumFractionDigits:2});
 }
 
-function warn(msg){ els.results.innerHTML = `<div class="warn">${msg}</div>`; }
+function warn(msg){ els.results.innerHTML = `<div class="warn">${msg} ₪</div>`; }
 function clearResults(){ els.results.innerHTML = ""; }
 
 function bindSegment(segEl, hiddenSelectEl){
@@ -452,12 +452,12 @@ els.results.innerHTML = `
 
       <div class="pay-box">
         <div class="label">שכר משולם בפועל</div>
-        <div class="val">${money(finalPaid)}</div>
+        <div class="val">${money(finalPaid)} ₪</div>
       </div>
 
       ${frozen ? `
         <div class="freeze-box">
-          השכר כולל הקפאה על סך <b>${money(freezeAmount)} ש"ח ברוטו</b>
+          השכר כולל הקפאה על סך <b>${money(freezeAmount)} ₪ ברוטו</b>
         </div>
       ` : ``}
 
@@ -465,7 +465,7 @@ els.results.innerHTML = `
     ` : `
       <div class="line">
         <div class="label">שכר משולם בפועל</div>
-        <div class="val">${money(s3_salary)}</div>
+        <div class="val">${money(s3_salary)} ₪</div>
       </div>
     `}
 

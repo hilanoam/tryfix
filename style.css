@@ -739,7 +739,7 @@ body.modal-open{
 /* הטקסט */
 .line.diff-line .label{
   text-align: right;
-  font-weight: 800;
+  font-weight: 400;
 }
 
 /* הסכום */
@@ -747,5 +747,5 @@ body.modal-open{
   text-align: left;
   direction: ltr;                 /* מספרים + ₪ תקינים */
   white-space: nowrap;
-  font-weight: 900;
+  font-weight: 800;
 }
