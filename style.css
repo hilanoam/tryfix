@@ -523,32 +523,9 @@ select:focus, input:focus, textarea:focus{
   border: 1px solid var(--stroke);
   display:block;
 }
-/* --- FIX DIFF ALIGN + COLORS (שים בסוף הקובץ) --- */
+/*/* --- FIX DIFF ALIGN + COLORS (שים בסוף הקובץ) --- */
 
-/* תן ל-val להימתח כדי שיהיה “לאן” ליישר שמאלה */
-.line .val{
-  flex: 0 0 auto;     /* הערך לא חייב להימתח */
-  min-width: 140px;   /* נותן מקום ליישור שמאלה */
-  text-align: left;   /* שמאל בתוך התא של הסכום */
-}
-.line.diff-line{
-  justify-content: flex-end !important; /* ב-RTL זה שמאל */
-}
 
-.diff{
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 12px !important;
-  font-weight: 900 !important;
-}
-
-/* צבעים להפרשים */
-.diff.positive{ color: #0aadee; }
-.diff.negative{ color: #6c757d; }
-
-.diff .amount{ font-weight: 900; }
-.diff .sign{ width: 18px; text-align:center; }
 
 .grid{
   display: grid;
@@ -702,11 +679,9 @@ body.modal-open{
   line-height: 1.45;
   color: var(--muted);
   text-align: center;
+   color: #e22424;
 }
 
-.calc-disclaimer{
-  color: #e22424;
-}
 
 .top-sub-slogan{
   font-size: 14px;
