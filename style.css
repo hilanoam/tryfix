@@ -715,3 +715,9 @@ body.modal-open{
   text-align: center;
   margin-top: -2px; /* מצמיד קצת לשורה מעל */
 }
+
+.calc-disclaimer .disclaimer-big{
+  font-size: 1.15rem;   /* תעלי ל-1.25rem אם בא לך יותר גדול */
+  font-weight: 800;
+  margin: 10px 0 0;
+}

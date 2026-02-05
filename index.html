@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>מחשבון שכר</title>
+  <title>אומדן שכר</title>
 
   <link rel="icon" type="image/png" href="./topleft.png">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
@@ -18,13 +18,9 @@
 <body>
   <div class="wrap">
     <div class="card">
-
       <div class="topbar topbar-single">
         <img class="top-logo single" src="./topcenter.png" alt="לוגו">
-        <div class="top-slogan">מחלקת שכר וגמלאות בחשבות - איתך בדרך לקק&quot;צ</div>
-        <div class="top-sub-slogan">
-          מקצועות מג&quot;ב
-        </div>
+        <div class="top-slogan">אומדן ראשוני למועמדים ליציאה לקורס קצינים במג"ב</div>
       </div>
 
       <!-- נתונים בסיסיים -->
@@ -202,12 +198,18 @@
 
       <div class="results" id="results"></div>
       <div class="calc-disclaimer">
-        <b>
-          חישובים אלה הינם בגדר אומדן בלבד, אינם סופיים ומבוססים על נתונים משוערים בלבד
-          שטרם נבדקו ואומתו סופית והם כפופים לשינויים.<br>
-          גרסה זו (גרסה 1) כוללת הסכמי שכר שניתנו בפועל עד תאריך
-          01.01.2026.
-        </b>
+        <div class="calc-disclaimer">
+          <b>
+            חישובים אלה הינם בגדר אומדן בלבד, אינם סופיים ומבוססים על נתונים משוערים בלבד
+            שטרם נבדקו ואומתו סופית והם כפופים לשינויים.<br>
+            גרסה זו (גרסה 1) כוללת הסכמי שכר שניתנו בפועל עד תאריך
+            01.01.2026.
+          </b>
+
+          <p class="disclaimer-big">
+            סימולציה קובעת תבוצע בסמוך ליציאתך לקורס קצינים ע"י אנשי מחלקת שכר
+          </p>
+        </div>   
       </div>
 
     </div>
@@ -216,14 +218,15 @@
   <div class="disclaimer-backdrop" id="disclaimerModal">
     <div class="disclaimer-modal">
       <h2>⚠️ הבהרה חשובה</h2>
-
       <p>
         חישובים אלה הינם בגדר אומדן בלבד, אינם סופיים ומבוססים על נתונים משוערים בלבד
         שטרם נבדקו ואומתו סופית והם כפופים לשינויים.<br>
         גרסה זו (גרסה 1) כוללת הסכמי שכר שניתנו בפועל עד תאריך
         01.01.2026.
       </p>
-
+      <p class="disclaimer-big">
+        סימולציה קובעת תבוצע בסמוך ליציאתך לקורס קצינים ע"י אנשי מחלקת שכר
+      </p>
       <button id="disclaimerAccept" class="btn-primary" type="button">
         מאשר/ת
       </button>
