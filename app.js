@@ -91,13 +91,13 @@ function diffHtml(delta) {
 function stepRow(label, value) {
   return `<div class="line">
             <div class="label">${label}</div>
-            <div class="val">${value}<span>₪</span></div>
+            <div class="val">${value}</div>
           </div>`;
 }
 
 function money(x){
   if (x === null || x === undefined || Number.isNaN(x)) return "—";
-  return Number(x).toLocaleString("he-IL", {minimumFractionDigits:2, maximumFractionDigits:2});
+  return Number(x).toLocaleString("he-IL", {minimumFractionDigits:2, maximumFractionDigits:2}) + " ₪";
 }
 
 function warn(msg){ els.results.innerHTML = `<div class="warn">${msg} </div>`; }
