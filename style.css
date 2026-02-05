@@ -749,3 +749,14 @@ body.modal-open{
   white-space: nowrap;
   font-weight: 800;
 }
+.val, .amount{
+  direction: ltr;
+  unicode-bidi: plaintext;
+  white-space: nowrap;
+}
+.gross{
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--muted);
+  margin-right: 6px; /* RTL */
+}
