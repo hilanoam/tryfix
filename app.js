@@ -1,4 +1,5 @@
 let DATA = null;
+const AUTO_FILL_FIRST = true; 
 
 const els = {
   activity: document.getElementById("activity"),
@@ -117,6 +118,56 @@ function money(x){
 
 function warn(msg){ els.results.innerHTML = `<div class="warn">${msg} </div>`; }
 function clearResults(){ els.results.innerHTML = ""; }
+function pickFirstOption(selectEl){
+  if (!selectEl) return false;
+  const opts = [...selectEl.options].filter(o => !o.disabled && o.value !== "");
+  if (opts.length === 0) return false;
+
+  selectEl.value = opts[0].value;
+  selectEl.dispatchEvent(new Event("change", { bubbles: true }));
+  return true;
+}
+
+function pickFirstSegment(segEl, hiddenSelectEl){
+  if (!segEl || !hiddenSelectEl) return false;
+  const btn = segEl.querySelector(".seg-btn");
+  if (!btn) return false;
+
+  btn.click(); // זה גם יעדכן hiddenSelectEl דרך bindSegment
+  return true;
+}
+
+/* ממלא את כל הזרימה לפי הסדר הנכון */
+
+function autoFillAllFirst(){
+  // מקצוע
+  pickFirstOption(els.profession);
+
+  // שלב 2
+  pickFirstOption(els.s2_rank);
+  pickFirstOption(els.s2_rating);
+  pickFirstOption(els.s2_seniority);
+
+  // סגמנט תחנה בשלב 2 (הכפתור הראשון)
+  pickFirstSegment(els.s2_stationSeg, els.s2_station);
+
+  // שלב 3
+  pickFirstOption(els.s3_rank);
+  pickFirstOption(els.s3_rating);
+
+  // סגמנט חבלן
+  pickFirstSegment(els.s3_hablanSeg, els.s3_hablan);
+
+  // שלב 4
+  pickFirstOption(els.s4_role);
+  pickFirstOption(els.s4_rating);
+  pickFirstOption(els.s4_stage);
+
+  // סגמנט תחנה בשלב 4
+  pickFirstSegment(els.s4_stationSeg, els.s4_station);
+
+  syncCalcEnabled();
+}
 
 function bindSegment(segEl, hiddenSelectEl){
   if (!segEl || !hiddenSelectEl) return;
@@ -631,6 +682,9 @@ async function init(){
   els.resetBtn.addEventListener("click", resetAll);
 
   resetAll();
+  if (AUTO_FILL_FIRST) {
+    autoFillAllFirst();
+  }
 }
 function exportToPDF() {
   // לא מאפשר אם אין תוצאה
