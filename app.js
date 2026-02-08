@@ -456,9 +456,7 @@ els.results.innerHTML = `
     )}
 
     <div class="line diff-line">
-      <div class="diff positive diff-inline-text">
-         ${diffHtml(delta23)}
-      </div>
+      ${diffHtml(delta23)}
     </div>
 
     ${stepRow(`<b>בסיום</b> קורס קצינים (${stage3Text}, גמול א')`, money(s3_salary))}

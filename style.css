@@ -745,3 +745,19 @@ body.modal-open{
   text-decoration-color: #9ca3af; /* אפור נעים */
   opacity: .75;
 }
+/* ✅ תיקון רווחים רק לשורת התוספת (diff-inline-text) */
+.line.diff-line .diff.diff-inline-text{
+  display: block !important;     /* מבטל flex רק כאן */
+  width: 100%;
+  direction: rtl;
+  text-align: right;
+  padding: 2px 0;
+}
+
+.line.diff-line .diff.diff-inline-text .amount{
+  display: inline !important;    /* הסכום בתוך המשפט */
+  direction: ltr;
+  unicode-bidi: plaintext;
+  white-space: nowrap;
+  margin: 0 6px;                 /* רווח קטן ויפה סביב הסכום */
+}
