@@ -78,7 +78,7 @@ function diffHtml(delta) {
     return `
       <div class="diff positive diff-inline-text">
         במהלך הקורס תתקבל תוספת על סך
-        <span class="amount">${money(delta)} ₪</span>
+        <span class="amount"> ₪ ${money(delta)}</span>
         עקב העליה בדרגה ובדירוג
       </div>
     `;
@@ -88,7 +88,7 @@ function diffHtml(delta) {
   return `
     <div class="diff negative">
       סכום ההקפאה לצורך שימור שכר:
-      <span class="amount">${money(Math.abs(delta))} ₪</span>
+      <span class="amount"> ₪ ${money(Math.abs(delta))}</span>
     </div>
   `;
 }
