@@ -98,7 +98,11 @@ function diffHtml(delta) {
 
 function stepRow(label, value, opts = {}) {
   const { showCurrency = true, suffix = "" } = opts;
-  const valText = showCurrency ? `${value} ₪` : `${value}`;
+
+  const valText = showCurrency
+    ? `<span class="ils">₪</span> <span class="num">${value}</span>`
+    : `${value}`;
+
   const suffixHtml = suffix ? ` <span class="gross">${suffix}</span>` : "";
 
   return `
@@ -525,12 +529,12 @@ els.results.innerHTML = `
 
       ${frozen ? `
         <div class="freeze-box">
-          השכר יכלול הקפאה על סך <b>${money(freezeAmount)} ₪ ברוטו</b>
+         השכר יכלול הקפאה על סך <b><span class="ils">₪</span> <span class="num">${money(freezeAmount)}</span> ברוטו</b>
         </div>
         
       <div class="pay-box">
         <div class="label">שכר משולם בפועל</div>
-        <div class="val">${money(finalPaid)} ₪ ברוטו</div>
+        <div class="val"><span class="ils">₪</span> <span class="num">${money(finalPaid)}</span> ברוטו</div>
       </div>
 
       
@@ -540,7 +544,7 @@ els.results.innerHTML = `
     ` : `
       <div class="line">
         <div class="label">שכר משולם בפועל</div>
-        <div class="val">${money(s3_salary)} ₪ ברוטו</div>
+        <div class="val"><span class="ils">₪</span> <span class="num">${money(s3_salary)}</span> ברוטו</div>
       </div>
     `}
 
