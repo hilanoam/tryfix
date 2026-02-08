@@ -75,8 +75,8 @@ function diffHtml(delta) {
 
   if (isPositive) {
     return `
-      <div class="diff positive">
-        במהלך הקורס תתקבל תוספת של
+      <div class="diff positive diff-inline-text">
+        במהלך הקורס תתקבל תוספת על סך
         <span class="amount">${money(delta)} ₪</span>
         עקב העליה בדרגה ובדירוג
       </div>
