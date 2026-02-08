@@ -75,7 +75,7 @@ function diffHtml(delta) {
 
   const cls = isPositive ? "positive" : "negative";
   const label = isPositive
-    ? "התוספת שתתקבל בגין העליה בדרגה ובדירוג"
+    ? "התוספת שתתקבל בגין העליה בדרגה ובדירוג במהלך הקורס"
     : "סכום ההקפאה לצורך שימור שכר";
 
   return `
@@ -443,13 +443,16 @@ if (role) {
 els.results.innerHTML = `
   <div class="calc">
 
-    ${stepRow(`בתחילת קורס קצינים (${stage2Text})`, money(s2_salary))}
+    ${stepRow(
+      `<b>בתחילת</b> קורס קצינים (${stage2Text}, גמול א')`,
+      money(s2_salary)
+    )}
 
     <div class="line diff-line">
       ${diffHtml(delta23)}
     </div>
 
-    ${stepRow(`בסיום קורס קצינים (${stage3Text})`, money(s3_salary))}
+    ${stepRow(`<b>בסיום</b> קורס קצינים (${stage3Text}, גמול א')`, money(s3_salary))}
 
     ${role ? `
       <div class="line diff-line">
