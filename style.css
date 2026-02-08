@@ -726,7 +726,11 @@ body.modal-open{
   white-space: nowrap;
   font-weight: 800;
 }
-
+.val, .amount{
+  direction: ltr;
+  unicode-bidi: plaintext;
+  white-space: nowrap;
+}
 .gross{
   font-size: 12px;
   font-weight: 800;
@@ -754,17 +758,4 @@ body.modal-open{
   unicode-bidi: plaintext;
   white-space: nowrap;
   margin: 0 6px;                 /* רווח קטן ויפה סביב הסכום */
-}
-/* תמיד ₪ משמאל, מספר LTR */
-.val .num, .amount .num{
-  direction: ltr;
-  unicode-bidi: isolate;
-  white-space: nowrap;
-}
-
-.val .ils, .amount .ils{
-  direction: rtl;
-  unicode-bidi: isolate;
-  font-weight: 900;
-  margin-left: 6px; /* מרווח אחרי הסמל */
 }
