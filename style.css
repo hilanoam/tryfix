@@ -417,8 +417,6 @@ select:focus, input:focus, textarea:focus{
 
 .op .sign{ width: 24px; text-align:center; }
 
-.op.positive{ color: var(--good); }
-.op.negative{ color: var(--bad); }
 
 .total{
   margin-top: 10px;
@@ -526,7 +524,7 @@ select:focus, input:focus, textarea:focus{
 
 /* צבעים להפרשים */
 .diff.positive{ color: #0aadee; }
-.diff.negative{ color: #6c757d; }
+.diff.negative{ color: #7f1d1d; }
 
 .diff .amount{ font-weight: 900; }
 .diff .sign{ width: 18px; text-align:center; }
