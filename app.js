@@ -455,7 +455,7 @@ els.results.innerHTML = `
       money(s2_salary)
     )}
 
-    <div class="line diff-line">
+    <div class="diff positive diff-inline-text">
       ${diffHtml(delta23)}
     </div>
 

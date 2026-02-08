@@ -745,17 +745,3 @@ body.modal-open{
   text-decoration-color: #9ca3af; /* אפור נעים */
   opacity: .75;
 }
-/* רק שורת התוספת במהלך הקורס */
-.diff-inline-text{
-  display: block;
-  direction: rtl;
-  line-height: 1.4;
-}
-
-/* הסכום בתוך המשפט – בלי רווחים מוזרים */
-.diff-inline-text .amount{
-  display: inline;
-  white-space: nowrap;
-  margin: 0 4px;
-  font-weight: 900;
-}
