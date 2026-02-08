@@ -98,7 +98,7 @@ function diffHtml(delta) {
 
 function stepRow(label, value, opts = {}) {
   const { showCurrency = true, suffix = "" } = opts;
-  const valText = showCurrency ? `${value} ₪` : `${value}`;
+  const valText = showCurrency ? `₪ ${value} ` : `₪ ${value}`;
   const suffixHtml = suffix ? ` <span class="gross">${suffix}</span>` : "";
 
   return `
@@ -519,7 +519,7 @@ els.results.innerHTML = `
 
       ${stepRow(
         `לאחר מינוי (${stage4Text})`,
-        frozen ? `<span class="strike">${money(s4_salary)} ₪</span>` : `${money(s4_salary)} ₪`,
+        frozen ? `<span class="strike">${money(s4_salary)}</span>` : `${money(s4_salary)} ₪`,
         { showCurrency: false }
       )}
 
