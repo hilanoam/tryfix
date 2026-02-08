@@ -73,18 +73,25 @@ function setSingleDisabled(selectEl, value){
 function diffHtml(delta) {
   const isPositive = delta >= 0;
 
-  const cls = isPositive ? "positive" : "negative";
-  const label = isPositive
-    ? "התוספת שתתקבל בגין העליה בדרגה ובדירוג במהלך הקורס"
-    : "סכום ההקפאה לצורך שימור שכר";
+  if (isPositive) {
+    return `
+      <div class="diff positive">
+        במהלך הקורס תתקבל תוספת של
+        <span class="amount">${money(delta)} ₪</span>
+        עקב העליה בדרגה ובדירוג
+      </div>
+    `;
+  }
 
+  // מצב של הקפאה (שלילי)
   return `
-    <div class="diff ${cls}">
-      <span class="label">${label}</span>
+    <div class="diff negative">
+      סכום ההקפאה לצורך שימור שכר:
       <span class="amount">${money(Math.abs(delta))} ₪</span>
     </div>
   `;
 }
+
 
 
 
@@ -459,8 +466,11 @@ els.results.innerHTML = `
         ${diffHtml(delta34 ?? 0)}
       </div>
 
-      ${stepRow(`לאחר מינוי (${stage4Text})`, money(s4_salary))}
-
+      ${stepRow(
+        `לאחר מינוי (${stage4Text})`,
+        frozen ? `<span class="strike">${money(s4_salary)} ₪</span>` : `${money(s4_salary)} ₪`,
+        { showCurrency: false }
+      )}
       <div class="pay-box">
         <div class="label">שכר משולם בפועל</div>
         <div class="val">${money(finalPaid)} ₪ ברוטו</div>

@@ -739,3 +739,9 @@ body.modal-open{
   color: var(--muted);
   margin-right: 6px; /* RTL */
 }
+.strike{
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #9ca3af; /* אפור נעים */
+  opacity: .75;
+}
