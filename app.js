@@ -471,15 +471,18 @@ els.results.innerHTML = `
         frozen ? `<span class="strike">${money(s4_salary)} ₪</span>` : `${money(s4_salary)} ₪`,
         { showCurrency: false }
       )}
+
+      ${frozen ? `
+        <div class="freeze-box">
+          השכר יכלול הקפאה על סך <b>${money(freezeAmount)} ₪ ברוטו</b>
+        </div>
+        
       <div class="pay-box">
         <div class="label">שכר משולם בפועל</div>
         <div class="val">${money(finalPaid)} ₪ ברוטו</div>
       </div>
 
-      ${frozen ? `
-        <div class="freeze-box">
-          השכר כולל הקפאה על סך <b>${money(freezeAmount)} ₪ ברוטו</b>
-        </div>
+      
       ` : ``}
 
 
