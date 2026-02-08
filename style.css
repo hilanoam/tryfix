@@ -524,7 +524,7 @@ select:focus, input:focus, textarea:focus{
 
 /* צבעים להפרשים */
 .diff.positive{ color: #0aadee; }
-.diff.negative{ color: #7f1d1d; }
+.diff.negative{ color: #c72525; }
 
 .diff .amount{ font-weight: 900; }
 .diff .sign{ width: 18px; text-align:center; }
