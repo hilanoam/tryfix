@@ -677,11 +677,11 @@ body.modal-open{
   margin-top: 14px;
   padding-top: 10px;
   border-top: 1px dashed var(--stroke);
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.45;
   color: var(--muted);
   text-align: center;
-   color: #e22424;
+   color: #8f1515;
 }
 
 
@@ -694,7 +694,7 @@ body.modal-open{
 }
 
 .calc-disclaimer .disclaimer-big{
-  font-size: 1.08rem;   /* תעלי ל-1.25rem אם בא לך יותר גדול */
+  font-size: 1.25rem;   /* תעלי ל-1.25rem אם בא לך יותר גדול */
   font-weight: 800;
   margin: 10px 0 0;
 }
@@ -758,4 +758,34 @@ body.modal-open{
   unicode-bidi: plaintext;
   white-space: nowrap;
   margin: 0 6px;                 /* רווח קטן ויפה סביב הסכום */
+}
+@page {
+  size: A4;
+  margin: 14mm;
+}
+
+@media print {
+  .topbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10mm;
+  }
+
+  .top-logo {
+    width: 600px !important;
+    height: auto !important;
+    margin-bottom: 10px !important;
+  }
+
+
+
+
 }
