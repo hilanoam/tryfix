@@ -1,1470 +1,1521 @@
 {
   "meta": {
-    "source_file": "פישוט טבלה.xlsx",
+    "source_file": "מחשבון מגב פרופילים עם שכר(2).xlsx",
     "sheet": "גיליון1",
-    "notes": [
-      "Stage3 (סיום קורס): אין תחנה. אם חבלן בכיר=כן משתמשים ב-stage3.salary_hablan_bachir, אחרת stage3.salary.",
-      "Stage4: מפקח/פקד עם שכר לפי תחנה/לא תחנה."
-    ]
+    "structure": "independent_stages"
   },
   "professions": {
-    "10847 - מש\"ק סייר מג\"ב": {
+    "10847 - מש\"ק סייר מג\"ב - רמה ב'": {
       "activity_level": "רמה ב'",
       "incentive_group": 6,
-      "rows": [
+      "stage1": {
+        "rating": "אחיד",
+        "rank": "רס\"ר 8"
+      },
+      "stage2": [
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 15123.38,
-            "salary_station": 15833.38
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 3",
-            "salary": 16017.38,
-            "salary_hablan_bachir": 16727.38
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "מח\"ר",
-              "stage": 34,
-              "salary_not_station": 13779.35,
-              "salary_station": 14489.35
-            },
-            "pakad": {
-              "rating": "מח\"ר",
-              "salary_not_station": 13756.02,
-              "salary_station": 14466.02
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 16543.46,
+          "salary_station": 17253.46
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 15123.38,
-            "salary_station": 15833.38
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 3",
-            "salary": 16017.38,
-            "salary_hablan_bachir": 16727.38
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 14544.99,
-              "salary_station": 15254.99
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 14915.46,
-              "salary_station": 15625.46
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 16907.0,
+          "salary_station": 17617.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 15123.38,
-            "salary_station": 15833.38
-          },
-          "stage3": {
-            "rating": "אקדמאי לא ישים",
-            "rank": "רס\"מ 3",
-            "salary": 15123.38,
-            "salary_hablan_bachir": 16499.45
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 14544.99,
-              "salary_station": 15254.99
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 14915.46,
-              "salary_station": 15625.46
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 17410.0,
+          "salary_station": 18120.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 15123.38,
-            "salary_station": 15833.38
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "salary": 15789.45,
-            "salary_hablan_bachir": 16499.45
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 14544.99,
-              "salary_station": 15254.99
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 14915.46,
-              "salary_station": 15625.46
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 16891.3,
+          "salary_station": 17601.3
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 15123.38,
-            "salary_station": 15833.38
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "salary": 15789.45,
-            "salary_hablan_bachir": 16499.45
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "אחיד",
-              "stage": 34,
-              "salary_not_station": 11079.71,
-              "salary_station": 11789.71
-            },
-            "pakad": {
-              "rating": "אחיד",
-              "salary_not_station": 10510.2,
-              "salary_station": 11220.2
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 17265.85,
+          "salary_station": 17975.85
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 15789.45,
-            "salary_station": 16499.45
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 5",
-            "salary": 16730.09,
-            "salary_hablan_bachir": 17440.09
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "מח\"ר",
-              "stage": 34,
-              "salary_not_station": 14047.08,
-              "salary_station": 14757.08
-            },
-            "pakad": {
-              "rating": "מח\"ר",
-              "salary_not_station": 14019.37,
-              "salary_station": 14729.37
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 17782.0,
+          "salary_station": 18492.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 15789.45,
-            "salary_station": 16499.45
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 5",
-            "salary": 16730.09,
-            "salary_hablan_bachir": 17440.09
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 14823.4,
-              "salary_station": 15533.4
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 15199.12,
-              "salary_station": 15909.12
-            }
-          }
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 17319.0,
+          "salary_station": 18029.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 15789.45,
-            "salary_station": 16499.45
-          },
-          "stage3": {
-            "rating": "אקדמאי לא ישים",
-            "rank": "רס\"מ 5",
-            "salary": 15789.45,
-            "salary_hablan_bachir": 17413.53
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 14823.4,
-              "salary_station": 15533.4
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 15199.12,
-              "salary_station": 15909.12
-            }
-          }
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 17707.46,
+          "salary_station": 18417.46
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 15789.45,
-            "salary_station": 16499.45
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "salary": 16703.53,
-            "salary_hablan_bachir": 17413.53
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 14823.4,
-              "salary_station": 15533.4
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 15199.12,
-              "salary_station": 15909.12
-            }
-          }
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 18242.87,
+          "salary_station": 18952.87
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 15789.45,
-            "salary_station": 16499.45
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "salary": 16703.53,
-            "salary_hablan_bachir": 17413.53
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "אחיד",
-              "stage": 34,
-              "salary_not_station": 11306.32,
-              "salary_station": 12016.32
-            },
-            "pakad": {
-              "rating": "אחיד",
-              "salary_not_station": 10712.93,
-              "salary_station": 11422.93
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 15624.07,
+          "salary_station": 16334.07
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 16703.53,
-            "salary_station": 17413.53
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 5",
-            "salary": 17708.15,
-            "salary_hablan_bachir": 18418.15
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "מח\"ר",
-              "stage": 34,
-              "salary_not_station": 14416.7,
-              "salary_station": 15126.7
-            },
-            "pakad": {
-              "rating": "מח\"ר",
-              "salary_not_station": 14382.94,
-              "salary_station": 15092.94
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 15964.0,
+          "salary_station": 16674.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 16703.53,
-            "salary_station": 17413.53
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 5",
-            "salary": 17708.15,
-            "salary_hablan_bachir": 18418.15
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 15207.79,
-              "salary_station": 15917.79
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 15590.75,
-              "salary_station": 16300.75
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 16434.0,
+          "salary_station": 17144.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 16703.53,
-            "salary_station": 17413.53
-          },
-          "stage3": {
-            "rating": "אקדמאי לא ישים",
-            "rank": "רס\"מ 5",
-            "salary": 16703.53,
-            "salary_hablan_bachir": 17413.53
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 15207.79,
-              "salary_station": 15917.79
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 15590.75,
-              "salary_station": 16300.75
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 15949.15,
+          "salary_station": 16659.15
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 16703.53,
-            "salary_station": 17413.53
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "salary": 16703.53,
-            "salary_hablan_bachir": 17413.53
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 15207.79,
-              "salary_station": 15917.79
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 15590.75,
-              "salary_station": 16300.75
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 16299.2,
+          "salary_station": 17009.2
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 16703.53,
-            "salary_station": 17413.53
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "salary": 16703.53,
-            "salary_hablan_bachir": 17413.53
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "אחיד",
-              "stage": 34,
-              "salary_not_station": 11619.17,
-              "salary_station": 12329.17
-            },
-            "pakad": {
-              "rating": "אחיד",
-              "salary_not_station": 10992.83,
-              "salary_station": 11702.83
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 16782.0,
+          "salary_station": 17492.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 16349.0,
+          "salary_station": 17059.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 16711.92,
+          "salary_station": 17421.92
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 17212.31,
+          "salary_station": 17922.31
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 15624.07,
+          "salary_station": 16334.07
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 15964.0,
+          "salary_station": 16674.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 16434.0,
+          "salary_station": 17144.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 15949.15,
+          "salary_station": 16659.15
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 16299.2,
+          "salary_station": 17009.2
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 16782.0,
+          "salary_station": 17492.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 16349.0,
+          "salary_station": 17059.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 16711.92,
+          "salary_station": 17421.92
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 17212.31,
+          "salary_station": 17922.31
         }
-      ]
+      ],
+      "stage3": [
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 16543.46,
+          "salary_station": 17253.46
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 16907.0,
+          "salary_station": 17617.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 17410.0,
+          "salary_station": 18120.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 16891.3,
+          "salary_station": 17601.3
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 17265.85,
+          "salary_station": 17975.85
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 17782.0,
+          "salary_station": 18492.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 17319.0,
+          "salary_station": 18029.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 17707.46,
+          "salary_station": 18417.46
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 18242.87,
+          "salary_station": 18952.87
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 15624.07,
+          "salary_station": 16334.07
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 15964.0,
+          "salary_station": 16674.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 16434.0,
+          "salary_station": 17144.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 15949.15,
+          "salary_station": 16659.15
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 16299.2,
+          "salary_station": 17009.2
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 16782.0,
+          "salary_station": 17492.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 16349.0,
+          "salary_station": 17059.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 16711.92,
+          "salary_station": 17421.92
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 17212.31,
+          "salary_station": 17922.31
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 15624.07,
+          "salary_station": 16334.07
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 15964.0,
+          "salary_station": 16674.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 16434.0,
+          "salary_station": 17144.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 15949.15,
+          "salary_station": 16659.15
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 16299.2,
+          "salary_station": 17009.2
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 16782.0,
+          "salary_station": 17492.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 16349.0,
+          "salary_station": 17059.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 16711.92,
+          "salary_station": 17421.92
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 17212.31,
+          "salary_station": 17922.31
+        }
+      ],
+      "stage4": {
+        "mifkach": [
+          {
+            "rating": "מח\"ר",
+            "seniority": 3,
+            "salary_not_station": 13408.09,
+            "salary_station": 14118.09
+          },
+          {
+            "rating": "מח\"ר",
+            "seniority": 6,
+            "salary_not_station": 13658.21,
+            "salary_station": 14368.21
+          },
+          {
+            "rating": "מח\"ר",
+            "seniority": 10,
+            "salary_not_station": 14003.54,
+            "salary_station": 14713.54
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 3,
+            "salary_not_station": 14152.23,
+            "salary_station": 14862.23
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 6,
+            "salary_not_station": 14412.34,
+            "salary_station": 15122.34
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 10,
+            "salary_not_station": 14771.45,
+            "salary_station": 15481.45
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 3,
+            "salary_not_station": 10846.29,
+            "salary_station": 11556.29
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 6,
+            "salary_not_station": 11057.99,
+            "salary_station": 11767.99
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 10,
+            "salary_not_station": 11350.28,
+            "salary_station": 12060.28
+          }
+        ],
+        "pakad": [
+          {
+            "rating": "מח\"ר",
+            "seniority": 3,
+            "salary_not_station": 12972.79,
+            "salary_station": 13682.79
+          },
+          {
+            "rating": "מח\"ר",
+            "seniority": 6,
+            "salary_not_station": 13224.92,
+            "salary_station": 13934.92
+          },
+          {
+            "rating": "מח\"ר",
+            "seniority": 10,
+            "salary_not_station": 13573.0,
+            "salary_station": 14283.0
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 3,
+            "salary_not_station": 14104.43,
+            "salary_station": 14814.43
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 6,
+            "salary_not_station": 14376.0,
+            "salary_station": 15086.0
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 10,
+            "salary_not_station": 14750.94,
+            "salary_station": 15460.94
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 3,
+            "salary_not_station": 10050.23,
+            "salary_station": 10760.23
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 6,
+            "salary_not_station": 10139.17,
+            "salary_station": 10849.17
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 10,
+            "salary_not_station": 10297.66,
+            "salary_station": 11007.66
+          }
+        ]
+      }
     },
-    "10857 - מש\"ק סייר/מג\"ב - רמה א": {
+    "10857 - מש\"ק סייר מג\"ב - רמה א'": {
       "activity_level": "רמה א'",
       "incentive_group": 6,
-      "rows": [
+      "stage1": {
+        "rating": "אחיד",
+        "rank": "רס\"ר 8"
+      },
+      "stage2": [
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 16601.3,
-            "salary_station": 17311.3
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 3",
-            "salary": 17598.76,
-            "salary_hablan_bachir": 18308.76
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "מח\"ר",
-              "stage": 34,
-              "salary_not_station": 15259.42,
-              "salary_station": 15969.42
-            },
-            "pakad": {
-              "rating": "מח\"ר",
-              "salary_not_station": 14711.97,
-              "salary_station": 15421.97
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 18169.74,
+          "salary_station": 18879.74
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 16601.3,
-            "salary_station": 17311.3
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 3",
-            "salary": 17598.76,
-            "salary_hablan_bachir": 18308.76
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 15752.56,
-              "salary_station": 16462.56
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 15770.95,
-              "salary_station": 16480.95
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 18576.0,
+          "salary_station": 19286.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 16601.3,
-            "salary_station": 17311.3
-          },
-          "stage3": {
-            "rating": "אקדמאי לא ישים",
-            "rank": "רס\"מ 3",
-            "salary": 17446.44,
-            "salary_hablan_bachir": 18156.44
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 15752.56,
-              "salary_station": 16462.56
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 15770.95,
-              "salary_station": 16480.95
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 19137.0,
+          "salary_station": 19847.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 16601.3,
-            "salary_station": 17311.3
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "salary": 17446.44,
-            "salary_hablan_bachir": 18156.44
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 15752.56,
-              "salary_station": 16462.56
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 15770.95,
-              "salary_station": 16480.95
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 18667.13,
+          "salary_station": 19377.13
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 16601.3,
-            "salary_station": 17311.3
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "salary": 17446.44,
-            "salary_hablan_bachir": 18156.44
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "אחיד",
-              "stage": 34,
-              "salary_not_station": 12025.5,
-              "salary_station": 12735.5
-            },
-            "pakad": {
-              "rating": "אחיד",
-              "salary_not_station": 12099.34,
-              "salary_station": 12809.34
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 19087.87,
+          "salary_station": 19797.87
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 17446.44,
-            "salary_station": 18156.44
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 5",
-            "salary": 18503.06,
-            "salary_hablan_bachir": 19213.06
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "מח\"ר",
-              "stage": 34,
-              "salary_not_station": 15562.08,
-              "salary_station": 16272.08
-            },
-            "pakad": {
-              "rating": "מח\"ר",
-              "salary_not_station": 15006.53,
-              "salary_station": 15716.53
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 19668.0,
+          "salary_station": 20378.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 17446.44,
-            "salary_station": 18156.44
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 5",
-            "salary": 18503.06,
-            "salary_hablan_bachir": 19213.06
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 16059.48,
-              "salary_station": 16769.48
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 16083.42,
-              "salary_station": 16793.42
-            }
-          }
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 19023.0,
+          "salary_station": 19733.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 17446.44,
-            "salary_station": 18156.44
-          },
-          "stage3": {
-            "rating": "אקדמאי לא ישים",
-            "rank": "רס\"מ 5",
-            "salary": 18352.62,
-            "salary_hablan_bachir": 19062.62
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 16059.48,
-              "salary_station": 16769.48
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 16083.42,
-              "salary_station": 16793.42
-            }
-          }
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 19456.04,
+          "salary_station": 20166.04
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 17446.44,
-            "salary_station": 18156.44
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "salary": 18352.62,
-            "salary_hablan_bachir": 19062.62
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 16059.48,
-              "salary_station": 16769.48
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 16083.42,
-              "salary_station": 16793.42
-            }
-          }
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 20052.98,
+          "salary_station": 20762.98
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 17446.44,
-            "salary_station": 18156.44
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "salary": 18352.62,
-            "salary_hablan_bachir": 19062.62
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "אחיד",
-              "stage": 34,
-              "salary_not_station": 12275.72,
-              "salary_station": 12985.72
-            },
-            "pakad": {
-              "rating": "אחיד",
-              "salary_not_station": 12350.13,
-              "salary_station": 13060.13
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 17143.96,
+          "salary_station": 17853.96
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 18352.62,
-            "salary_station": 19062.62
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 5",
-            "salary": 19472.67,
-            "salary_hablan_bachir": 20182.67
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "מח\"ר",
-              "stage": 34,
-              "salary_not_station": 15979.94,
-              "salary_station": 16689.94
-            },
-            "pakad": {
-              "rating": "מח\"ר",
-              "salary_not_station": 15413.21,
-              "salary_station": 16123.21
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 17523.0,
+          "salary_station": 18233.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 18352.62,
-            "salary_station": 19062.62
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 5",
-            "salary": 19472.67,
-            "salary_hablan_bachir": 20182.67
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 16483.21,
-              "salary_station": 17193.21
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 16514.81,
-              "salary_station": 17224.81
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 18047.0,
+          "salary_station": 18757.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 18352.62,
-            "salary_station": 19062.62
-          },
-          "stage3": {
-            "rating": "אקדמאי לא ישים",
-            "rank": "רס\"מ 5",
-            "salary": 18352.62,
-            "salary_hablan_bachir": 19062.62
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 16483.21,
-              "salary_station": 17193.21
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 16514.81,
-              "salary_station": 17224.81
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 17608.81,
+          "salary_station": 18318.81
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 18352.62,
-            "salary_station": 19062.62
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "salary": 18352.62,
-            "salary_hablan_bachir": 19062.62
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 16483.21,
-              "salary_station": 17193.21
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 16514.81,
-              "salary_station": 17224.81
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 18002.02,
+          "salary_station": 18712.02
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 18352.62,
-            "salary_station": 19062.62
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "salary": 18352.62,
-            "salary_hablan_bachir": 19062.62
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "אחיד",
-              "stage": 34,
-              "salary_not_station": 12621.19,
-              "salary_station": 13331.19
-            },
-            "pakad": {
-              "rating": "אחיד",
-              "salary_not_station": 12696.39,
-              "salary_station": 13406.39
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 18544.0,
+          "salary_station": 19254.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 17942.0,
+          "salary_station": 18652.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 18346.11,
+          "salary_station": 19056.11
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 18903.99,
+          "salary_station": 19613.99
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 17143.96,
+          "salary_station": 17853.96
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 17523.0,
+          "salary_station": 18233.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 18047.0,
+          "salary_station": 18757.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 17608.81,
+          "salary_station": 18318.81
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 18002.02,
+          "salary_station": 18712.02
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 18544.0,
+          "salary_station": 19254.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 17942.0,
+          "salary_station": 18652.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 18346.11,
+          "salary_station": 19056.11
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 18903.99,
+          "salary_station": 19613.99
         }
-      ]
+      ],
+      "stage3": [
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 18169.74,
+          "salary_station": 18879.74
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 18576.0,
+          "salary_station": 19286.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 19137.0,
+          "salary_station": 19847.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 18667.13,
+          "salary_station": 19377.13
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 19087.87,
+          "salary_station": 19797.87
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 19668.0,
+          "salary_station": 20378.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 19023.0,
+          "salary_station": 19733.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 19456.04,
+          "salary_station": 20166.04
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 20052.98,
+          "salary_station": 20762.98
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 17143.96,
+          "salary_station": 17853.96
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 17523.0,
+          "salary_station": 18233.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 18047.0,
+          "salary_station": 18757.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 17608.81,
+          "salary_station": 18318.81
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 18002.02,
+          "salary_station": 18712.02
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 18544.0,
+          "salary_station": 19254.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 17942.0,
+          "salary_station": 18652.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 18346.11,
+          "salary_station": 19056.11
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 18903.99,
+          "salary_station": 19613.99
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 17143.96,
+          "salary_station": 17853.96
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 17523.0,
+          "salary_station": 18233.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 18047.0,
+          "salary_station": 18757.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 17608.81,
+          "salary_station": 18318.81
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 18002.02,
+          "salary_station": 18712.02
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 18544.0,
+          "salary_station": 19254.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 17942.0,
+          "salary_station": 18652.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 18346.11,
+          "salary_station": 19056.11
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 18903.99,
+          "salary_station": 19613.99
+        }
+      ],
+      "stage4": {
+        "mifkach": [
+          {
+            "rating": "מח\"ר",
+            "seniority": 3,
+            "salary_not_station": 14828.59,
+            "salary_station": 15538.59
+          },
+          {
+            "rating": "מח\"ר",
+            "seniority": 6,
+            "salary_not_station": 15112.24,
+            "salary_station": 15822.24
+          },
+          {
+            "rating": "מח\"ר",
+            "seniority": 10,
+            "salary_not_station": 15503.86,
+            "salary_station": 16213.86
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 3,
+            "salary_not_station": 15318.68,
+            "salary_station": 16028.68
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 6,
+            "salary_not_station": 15606.32,
+            "salary_station": 16316.32
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 10,
+            "salary_not_station": 16003.45,
+            "salary_station": 16713.45
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 3,
+            "salary_not_station": 11759.38,
+            "salary_station": 12469.38
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 6,
+            "salary_not_station": 11993.89,
+            "salary_station": 12703.89
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 10,
+            "salary_not_station": 12317.66,
+            "salary_station": 13027.66
+          }
+        ],
+        "pakad": [
+          {
+            "rating": "מח\"ר",
+            "seniority": 3,
+            "salary_not_station": 14253.13,
+            "salary_station": 14963.13
+          },
+          {
+            "rating": "מח\"ר",
+            "seniority": 6,
+            "salary_not_station": 14535.98,
+            "salary_station": 15245.98
+          },
+          {
+            "rating": "מח\"ר",
+            "seniority": 10,
+            "salary_not_station": 14926.48,
+            "salary_station": 15636.48
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 3,
+            "salary_not_station": 15290.71,
+            "salary_station": 16000.71
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 6,
+            "salary_not_station": 15590.74,
+            "salary_station": 16300.74
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 10,
+            "salary_not_station": 16004.98,
+            "salary_station": 16714.98
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 3,
+            "salary_not_station": 11715.94,
+            "salary_station": 12425.94
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 6,
+            "salary_not_station": 11956.76,
+            "salary_station": 12666.76
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 10,
+            "salary_not_station": 12289.25,
+            "salary_station": 12999.25
+          }
+        ]
+      }
     },
-    "10877- מש\"ק סייר/מג\"ב - רמה א'+": {
+    "10877 - מש\"ק סייר מג\"ב - רמה א'+": {
       "activity_level": "רמה א'+",
       "incentive_group": 6,
-      "rows": [
+      "stage1": {
+        "rating": "אחיד",
+        "rank": "רס\"ר 8"
+      },
+      "stage2": [
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 17181.46,
-            "salary_station": 17891.46
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 3",
-            "salary": 18243.68,
-            "salary_hablan_bachir": 18953.68
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "מח\"ר",
-              "stage": 34,
-              "salary_not_station": 16111.07,
-              "salary_station": 16821.07
-            },
-            "pakad": {
-              "rating": "מח\"ר",
-              "salary_not_station": 15698.92,
-              "salary_station": 16408.92
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 19208.0,
+          "salary_station": 19918.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 17181.46,
-            "salary_station": 17891.46
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 3",
-            "salary": 18243.68,
-            "salary_hablan_bachir": 18953.68
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 16713.76,
-              "salary_station": 17423.76
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 17008.44,
-              "salary_station": 17718.44
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 19641.0,
+          "salary_station": 20351.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 17181.46,
-            "salary_station": 17891.46
-          },
-          "stage3": {
-            "rating": "אקדמאי לא ישים",
-            "rank": "רס\"מ 3",
-            "salary": 17963.17,
-            "salary_hablan_bachir": 18673.17
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 16713.76,
-              "salary_station": 17423.76
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 17008.44,
-              "salary_station": 17718.44
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 20239.0,
+          "salary_station": 20949.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 17181.46,
-            "salary_station": 17891.46
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "salary": 17963.17,
-            "salary_hablan_bachir": 18673.17
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 16713.76,
-              "salary_station": 17423.76
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 17008.44,
-              "salary_station": 17718.44
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 19627.0,
+          "salary_station": 20337.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 0",
-            "seniority": 3,
-            "salary_not_station": 17181.46,
-            "salary_station": 17891.46
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "salary": 17963.17,
-            "salary_hablan_bachir": 18673.17
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "אחיד",
-              "stage": 34,
-              "salary_not_station": 12638.56,
-              "salary_station": 13348.56
-            },
-            "pakad": {
-              "rating": "אחיד",
-              "salary_not_station": 13048.72,
-              "salary_station": 13758.72
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 20073.0,
+          "salary_station": 20783.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 17963.17,
-            "salary_station": 18673.17
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 5",
-            "salary": 19080.11,
-            "salary_hablan_bachir": 19790.11
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "מח\"ר",
-              "stage": 34,
-              "salary_not_station": 16433.83,
-              "salary_station": 17143.83
-            },
-            "pakad": {
-              "rating": "מח\"ר",
-              "salary_not_station": 16017.17,
-              "salary_station": 16727.17
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 20688.0,
+          "salary_station": 21398.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 17963.17,
-            "salary_station": 18673.17
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 5",
-            "salary": 19080.11,
-            "salary_hablan_bachir": 19790.11
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 17043.37,
-              "salary_station": 17753.37
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 17350.6,
-              "salary_station": 18060.6
-            }
-          }
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 20109.0,
+          "salary_station": 20819.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 17963.17,
-            "salary_station": 18673.17
-          },
-          "stage3": {
-            "rating": "אקדמאי לא ישים",
-            "rank": "רס\"מ 5",
-            "salary": 19041.05,
-            "salary_hablan_bachir": 19751.05
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 17043.37,
-              "salary_station": 17753.37
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 17350.6,
-              "salary_station": 18060.6
-            }
-          }
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 20570.0,
+          "salary_station": 21280.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 17963.17,
-            "salary_station": 18673.17
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "salary": 19041.05,
-            "salary_hablan_bachir": 19751.05
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 17043.37,
-              "salary_station": 17753.37
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 17350.6,
-              "salary_station": 18060.6
-            }
-          }
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 21206.0,
+          "salary_station": 21916.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 3",
-            "seniority": 6,
-            "salary_not_station": 17963.17,
-            "salary_station": 18673.17
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "salary": 19041.05,
-            "salary_hablan_bachir": 19751.05
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "אחיד",
-              "stage": 34,
-              "salary_not_station": 12904.1,
-              "salary_station": 13614.1
-            },
-            "pakad": {
-              "rating": "אחיד",
-              "salary_not_station": 13323.1,
-              "salary_station": 14033.1
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 18114.0,
+          "salary_station": 18824.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 19041.05,
-            "salary_station": 19751.05
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 5",
-            "salary": 20233.45,
-            "salary_hablan_bachir": 20943.45
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "מח\"ר",
-              "stage": 34,
-              "salary_not_station": 16879.45,
-              "salary_station": 17589.45
-            },
-            "pakad": {
-              "rating": "מח\"ר",
-              "salary_not_station": 16456.54,
-              "salary_station": 17166.54
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 18519.0,
+          "salary_station": 19229.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 19041.05,
-            "salary_station": 19751.05
-          },
-          "stage3": {
-            "rating": "אקדמאי ישים",
-            "rank": "רס\"מ 5",
-            "salary": 20233.45,
-            "salary_hablan_bachir": 20943.45
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 17498.43,
-              "salary_station": 18208.43
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 17823.0,
-              "salary_station": 18533.0
-            }
-          }
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 19078.0,
+          "salary_station": 19788.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 19041.05,
-            "salary_station": 19751.05
-          },
-          "stage3": {
-            "rating": "אקדמאי לא ישים",
-            "rank": "רס\"מ 5",
-            "salary": 19041.05,
-            "salary_hablan_bachir": 19751.05
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 17498.43,
-              "salary_station": 18208.43
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 17823.0,
-              "salary_station": 18533.0
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 18506.0,
+          "salary_station": 19216.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 19041.05,
-            "salary_station": 19751.05
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "salary": 19041.05,
-            "salary_hablan_bachir": 19751.05
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "דמ\"מ",
-              "stage": 34,
-              "salary_not_station": 17498.43,
-              "salary_station": 18208.43
-            },
-            "pakad": {
-              "rating": "דמ\"מ",
-              "salary_not_station": 17823.0,
-              "salary_station": 18533.0
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 19387.0,
+          "salary_station": 20097.0
         },
         {
-          "stage1": {
-            "rating": "אחיד",
-            "rank": "רס\"ר 8"
-          },
-          "stage2": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "seniority": 10,
-            "salary_not_station": 19041.05,
-            "salary_station": 19751.05
-          },
-          "stage3": {
-            "rating": "אחיד",
-            "rank": "רס\"מ 5",
-            "salary": 19041.05,
-            "salary_hablan_bachir": 19751.05
-          },
-          "stage4": {
-            "mifkach": {
-              "rating": "אחיד",
-              "stage": 34,
-              "salary_not_station": 13270.7,
-              "salary_station": 13980.7
-            },
-            "pakad": {
-              "rating": "אחיד",
-              "salary_not_station": 13701.93,
-              "salary_station": 14411.93
-            }
-          }
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 19498.0,
+          "salary_station": 20208.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 18957.0,
+          "salary_station": 19667.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 18923.0,
+          "salary_station": 19633.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 19982.0,
+          "salary_station": 20692.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 18114.0,
+          "salary_station": 18824.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 18519.0,
+          "salary_station": 19229.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 19078.0,
+          "salary_station": 19788.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 18506.0,
+          "salary_station": 19216.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 19387.0,
+          "salary_station": 20097.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 19498.0,
+          "salary_station": 20208.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 18957.0,
+          "salary_station": 19667.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 18923.0,
+          "salary_station": 19633.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 19982.0,
+          "salary_station": 20692.0
         }
-      ]
+      ],
+      "stage3": [
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 19208.0,
+          "salary_station": 19918.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 19641.0,
+          "salary_station": 20351.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 20239.0,
+          "salary_station": 20949.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 19627.0,
+          "salary_station": 20337.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 20073.0,
+          "salary_station": 20783.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 20688.0,
+          "salary_station": 21398.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 3,
+          "salary_not_station": 20109.0,
+          "salary_station": 20819.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 6,
+          "salary_not_station": 20570.0,
+          "salary_station": 21280.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי ישים",
+          "seniority": 10,
+          "salary_not_station": 21206.0,
+          "salary_station": 21916.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 18114.0,
+          "salary_station": 18824.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 18519.0,
+          "salary_station": 19229.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 19078.0,
+          "salary_station": 19788.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 18506.0,
+          "salary_station": 19216.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 19387.0,
+          "salary_station": 20097.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 19498.0,
+          "salary_station": 20208.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 3,
+          "salary_not_station": 18957.0,
+          "salary_station": 19667.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 6,
+          "salary_not_station": 18923.0,
+          "salary_station": 19633.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אקדמאי לא ישים",
+          "seniority": 10,
+          "salary_not_station": 19982.0,
+          "salary_station": 20692.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 18114.0,
+          "salary_station": 18824.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 18519.0,
+          "salary_station": 19229.0
+        },
+        {
+          "rank": "רס\"מ 0",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 19078.0,
+          "salary_station": 19788.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 18506.0,
+          "salary_station": 19216.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 19387.0,
+          "salary_station": 20097.0
+        },
+        {
+          "rank": "רס\"מ 3",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 19498.0,
+          "salary_station": 20208.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 3,
+          "salary_not_station": 18957.0,
+          "salary_station": 19667.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 6,
+          "salary_not_station": 18923.0,
+          "salary_station": 19633.0
+        },
+        {
+          "rank": "רס\"מ 5",
+          "rating": "אחיד",
+          "seniority": 10,
+          "salary_not_station": 19982.0,
+          "salary_station": 20692.0
+        }
+      ],
+      "stage4": {
+        "mifkach": [
+          {
+            "rating": "מח\"ר",
+            "seniority": 3,
+            "salary_not_station": 15644.0,
+            "salary_station": 16354.0
+          },
+          {
+            "rating": "מח\"ר",
+            "seniority": 6,
+            "salary_not_station": 15947.0,
+            "salary_station": 16657.0
+          },
+          {
+            "rating": "מח\"ר",
+            "seniority": 10,
+            "salary_not_station": 16365.0,
+            "salary_station": 17075.0
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 3,
+            "salary_not_station": 16237.0,
+            "salary_station": 16947.0
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 6,
+            "salary_not_station": 16546.0,
+            "salary_station": 17256.0
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 10,
+            "salary_not_station": 16036.0,
+            "salary_station": 16746.0
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 3,
+            "salary_not_station": 12347.0,
+            "salary_station": 13057.0
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 6,
+            "salary_not_station": 12596.0,
+            "salary_station": 13306.0
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 10,
+            "salary_not_station": 12940.0,
+            "salary_station": 13650.0
+          }
+        ],
+        "pakad": [
+          {
+            "rating": "מח\"ר",
+            "seniority": 3,
+            "salary_not_station": 15618.0,
+            "salary_station": 16328.0
+          },
+          {
+            "rating": "מח\"ר",
+            "seniority": 6,
+            "salary_not_station": 15926.0,
+            "salary_station": 16636.0
+          },
+          {
+            "rating": "מח\"ר",
+            "seniority": 10,
+            "salary_not_station": 16350.0,
+            "salary_station": 17060.0
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 3,
+            "salary_not_station": 16902.0,
+            "salary_station": 17612.0
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 6,
+            "salary_not_station": 17232.0,
+            "salary_station": 17942.0
+          },
+          {
+            "rating": "דמ\"מ",
+            "seniority": 10,
+            "salary_not_station": 17688.0,
+            "salary_station": 18398.0
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 3,
+            "salary_not_station": 13033.0,
+            "salary_station": 13743.0
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 6,
+            "salary_not_station": 13298.0,
+            "salary_station": 14008.0
+          },
+          {
+            "rating": "אחיד",
+            "seniority": 10,
+            "salary_not_station": 13663.0,
+            "salary_station": 14373.0
+          }
+        ]
+      }
     }
   }
 }

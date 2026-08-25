@@ -4,237 +4,188 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>אומדן שכר</title>
-
   <link rel="icon" type="image/png" href="./topleft.png">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="./style.css?v=20260825-print-3" />
 </head>
-
 <body>
-  <div class="wrap">
-    <div class="card">
-      <div class="topbar topbar-single">
-        <img class="top-logo single" src="./topcenter.png" alt="לוגו">
-        <div class="top-slogan">אומדן ראשוני למועמדים ליציאה לקורס קצינים במג"ב</div>
+  <main class="page-shell">
+    <header class="brand-banner">
+      <img src="./topcenter.png" alt="חשבות משטרת ישראל" class="banner-img" />
+    </header>
+
+    <section class="hero-card">
+      <div>
+        <div class="eyebrow">מחשבון שכר</div>
+        <h1>אומדן ראשוני למועמדים ליציאה לקורס קצינים במג״ב</h1>
+        <p>בחרי את נתוני השכר לפי השלבים. הדרגה והוותק מתעדכנים בהתאם לחוקים שהוגדרו, והחישוב נשען על טבלת השכר המעודכנת.</p>
       </div>
-
-      <!-- נתונים בסיסיים -->
-      <div class="section">
-        <div class="section-title"><i class="fa-solid fa-layer-group"></i> תפקיד נוכחי</div>
-
-        <div class="grid grid-3">
-          <div class="field">
-            <label>מקצוע</label>
-            <select id="profession"></select>
-          </div>
-
-          <div class="field">
-            <label>רמת פעילות</label>
-            <select id="activity" disabled></select>
-          </div>
-
-          <div class="field">
-            <label>קבוצת תמריץ</label>
-            <select id="incentiveGroup" disabled></select>
-          </div>
-        </div>
-      </div>
-
-      <!-- שלב 1 -->
-      <div class="section stage1-hidden">
-        <div class="section-title">
-          <i class="fa-solid fa-clipboard-list"></i> בתחילת קורס קצינים
-        </div>
-
-        <div class="grid grid-2">
-          <div class="field">
-            <label>דירוג</label>
-            <select id="s1_rating"></select>
-          </div>
-
-          <div class="field">
-            <label>דרגה</label>
-            <select id="s1_rank"></select>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- שלב 2 -->
-      <div class="section">
-        <div class="section-title"><i class="fa-solid fa-graduation-cap"></i> בתחילת קורס קצינים</div>
-
-        <div class="grid grid-4">
-          <div class="field">
-            <label>דרגה</label>
-            <select id="s2_rank"></select>
-          </div>
-
-          <div class="field">
-            <label>דירוג</label>
-            <select id="s2_rating"></select>
-          </div>
-
-          <div class="field">
-            <label>וותק</label>
-            <select id="s2_seniority"></select>
-          </div>
-
-          <div class="field">
-            <label>האם בתחנה?</label>
-            <div class="segmented" id="s2_stationSeg">
-              <button type="button" class="seg-btn" data-value="0">
-                <i class="fa-regular"></i><span>לא</span>
-              </button>
-              <button type="button" class="seg-btn" data-value="1">
-                <i class="fa-solid"></i><span>כן</span>
-              </button>
-            </div>
-            <select id="s2_station" style="display:none">
-              <option value="" selected></option>
-              <option value="0" >לא</option>
-              <option value="1">כן</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- שלב 3 -->
-      <div class="section">
-        <div class="section-title"><i class="fa-solid fa-award"></i> בסיום קורס קצינים</div>
-
-        <div class="grid grid-3">
-          <div class="field">
-            <label>דרגה</label>
-            <select id="s3_rank"></select>
-          </div>
-
-          <div class="field">
-            <label>דירוג</label>
-            <select id="s3_rating"></select>
-          </div>
-
-          <div class="field">
-            <label>האם חבלן בכיר?</label>
-            <div class="segmented" id="s3_hablanSeg">
-              <button type="button" class="seg-btn" data-value="0">
-                <i class="fa-regular"></i><span>לא</span>
-              </button>
-              <button type="button" class="seg-btn" data-value="1">
-                <i class="fa-solid"></i><span>כן</span>
-              </button>
-            </div>
-            <select id="s3_hablan" style="display:none">
-              <option value="" selected></option>
-              <option value="0" >לא</option>
-              <option value="1">כן</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- שלב 4 -->
-      <div class="section">
-        <div class="section-title"><i class="fa-solid fa-user-shield"></i> לאחר מינוי</div>
-
-        <div class="grid grid-4">
-          <div class="field">
-            <label>מפקח / פקד</label>
-            <select id="s4_role">
-              <option value="mifkach">מפקח</option>
-              <option value="pakad">פקד</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label>דירוג</label>
-            <select id="s4_rating" disabled></select>
-          </div>
-
-          <div class="field">
-            <label>שלב (רק מפקח)</label>
-            <select id="s4_stage" disabled></select>
-          </div>
-
-          <div class="field">
-            <label>האם בתחנה?</label>
-            <div class="segmented" id="s4_stationSeg">
-              <button type="button" class="seg-btn" data-value="0">
-                <i class="fa-regular"></i><span>לא</span>
-              </button>
-              <button type="button" class="seg-btn" data-value="1">
-                <i class="fa-solid"></i><span>כן</span>
-              </button>
-            </div>
-            <select id="s4_station" style="display:none">
-              <option value="" selected></option>
-              <option value="0" >לא</option>
-              <option value="1">כן</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="actions">
-        <button class="btn-primary" id="calcBtn" disabled>
-          <i class="fa-solid fa-equals"></i> חשב שכר
-        </button>
-        <button class="btn-ghost" id="pdfBtn" type="button">
-          <i class="fa-solid fa-file-pdf"></i> יצוא ל-PDF
-        </button>
-
-        <button class="btn-ghost" id="resetBtn" type="button">
-          <i class="fa-solid fa-rotate-left"></i> איפוס
-        </button>
-      </div>
-
-      <div class="results" id="results"></div>
-      <div class="calc-disclaimer">
-        <div class="calc-disclaimer">
-          <b>
-            חישובים אלה הינם בגדר אומדן בלבד, אינם סופיים ומבוססים על נתונים משוערים בלבד
-            שטרם נבדקו ואומתו סופית והם כפופים לשינויים.<br>
-            גרסה זו (גרסה 1) כוללת הסכמי שכר שניתנו בפועל עד תאריך
-            01.01.2026.
-          </b>
-
-          <p class="disclaimer-big">
-           סימולציה קובעת תבוצע בסמוך ליציאתך לקורס קצינים ע"י חשבי מח' שכר וגמלאות 
-          </p>
-        </div>   
-      </div>
-
-    </div>
-  </div>
-    <!-- Disclaimer Modal -->
-  <div class="disclaimer-backdrop" id="disclaimerModal">
-    <div class="disclaimer-modal">
-      <h2>⚠️ הבהרה חשובה</h2>
-      <p>
-        חישובים אלה הינם בגדר אומדן בלבד, אינם סופיים ומבוססים על נתונים משוערים בלבד
-        שטרם נבדקו ואומתו סופית והם כפופים לשינויים.<br>
-        גרסה זו (גרסה 1) כוללת הסכמי שכר שניתנו בפועל עד תאריך
-        01.01.2026.
-      </p>
-      <p class="disclaimer-big">
-       <b> סימולציה קובעת תבוצע בסמוך ליציאתך לקורס קצינים ע"י חשבי מח' שכר וגמלאות </b>      
-      </p>
-      <button id="disclaimerAccept" class="btn-primary" type="button">
-        מאשר/ת
+      <button class="top-reset" id="resetBtn" type="button">
+        <i class="fa-solid fa-rotate-left"></i>
+        איפוס
       </button>
+    </section>
+
+    <div class="print-stamp" aria-hidden="true">
+        <img src="./topcenter.png" alt="חשבות משטרת ישראל" />
+      </div>
+
+    <div class="print-title">
+      <h1>אומדן שכר קק&quot;צ מג&quot;ב</h1>
+      <div>חשבות - מחלקת שכר וגמלאות</div>
+    </div>
+
+    <section class="workspace">
+      <div class="form-column">
+        <section class="glass-card section-card">
+          <div class="section-heading">
+            <div class="section-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <div>
+              <span class="section-kicker">שלב 1</span>
+              <h2>תפקיד נוכחי</h2>
+            </div>
+          </div>
+          <div class="grid grid-3">
+            <div class="field"><label>מקצוע</label><select id="profession"></select></div>
+            <div class="field"><label>רמת פעילות</label><select id="activity" disabled></select></div>
+            <div class="field"><label>קבוצת תמריץ</label><select id="incentiveGroup" disabled></select></div>
+          </div>
+        </section>
+
+        <section class="stage1-hidden">
+          <select id="s1_rating"></select>
+          <select id="s1_rank"></select>
+        </section>
+
+        <section class="glass-card section-card">
+          <div class="section-heading">
+            <div class="section-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div>
+              <span class="section-kicker">שלב 2</span>
+              <h2>בתחילת קורס קצינים</h2>
+            </div>
+          </div>
+          <div class="grid grid-4">
+            <div class="field"><label>דרגה</label><select id="s2_rank"></select></div>
+            <div class="field"><label>דירוג</label><select id="s2_rating"></select></div>
+            <div class="field"><label>וותק</label><select id="s2_seniority"></select></div>
+            <div class="field">
+              <label>האם בתחנה?</label>
+              <div class="segmented" id="s2_stationSeg">
+                <button type="button" class="seg-btn" data-value="0"><span>לא</span></button>
+                <button type="button" class="seg-btn" data-value="1"><span>כן</span></button>
+              </div>
+              <select id="s2_station" style="display:none"><option value="" selected></option><option value="0">לא</option><option value="1">כן</option></select>
+            </div>
+          </div>
+        </section>
+
+        <section class="glass-card section-card">
+          <div class="section-heading">
+            <div class="section-icon"><i class="fa-solid fa-award"></i></div>
+            <div>
+              <span class="section-kicker">שלב 3</span>
+              <h2>בסיום קורס קצינים</h2>
+            </div>
+          </div>
+          <div class="grid grid-3">
+            <div class="field"><label>דרגה</label><select id="s3_rank"></select></div>
+            <div class="field"><label>דירוג</label><select id="s3_rating"></select></div>
+            <div class="field"><label>וותק</label><select id="s3_seniority"></select></div>
+          </div>
+        </section>
+
+        <section class="glass-card section-card">
+          <div class="section-heading">
+            <div class="section-icon"><i class="fa-solid fa-user-shield"></i></div>
+            <div>
+              <span class="section-kicker">שלב 4</span>
+              <h2>לאחר מינוי</h2>
+            </div>
+          </div>
+          <div class="grid grid-4">
+            <div class="field">
+              <label>מפקח / פקד</label>
+              <select id="s4_role">
+                <option value="" selected>בחר</option>
+                <option value="mifkach">מפקח</option>
+                <option value="pakad">פקד</option>
+              </select>
+            </div>
+            <div class="field"><label>דירוג</label><select id="s4_rating" disabled></select></div>
+            <div class="field"><label>וותק</label><select id="s4_seniority" disabled></select></div>
+            <div class="field">
+              <label>האם בתחנה?</label>
+              <div class="segmented" id="s4_stationSeg">
+                <button type="button" class="seg-btn" data-value="0"><span>לא</span></button>
+                <button type="button" class="seg-btn" data-value="1"><span>כן</span></button>
+              </div>
+              <select id="s4_station" style="display:none"><option value="" selected></option><option value="0">לא</option><option value="1">כן</option></select>
+            </div>
+          </div>
+        </section>
+
+        <div class="actions glass-card">
+          <button class="btn-primary" id="calcBtn" disabled><i class="fa-solid fa-equals"></i> חשב שכר</button>
+          <button class="btn-secondary" id="pdfBtn" type="button"><i class="fa-solid fa-file-pdf"></i> יצוא ל‑PDF</button>
+        </div>
+      </div>
+
+      <aside class="summary-column">
+        <div class="glass-card summary-card">
+          <div class="summary-head">
+            <div>
+              <span class="section-kicker">תוצאה</span>
+              <h2>אומדן השכר שלך</h2>
+            </div>
+            <div class="summary-badge"><i class="fa-solid fa-chart-line"></i></div>
+          </div>
+          <div class="results" id="results">
+            <div class="empty-state">
+              <div class="empty-icon"><i class="fa-solid fa-calculator"></i></div>
+              <strong>התוצאה תופיע כאן</strong>
+              <span>מלאי את השדות ולחצי על “חשב שכר”.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="notice-card">
+          <i class="fa-solid fa-circle-info"></i>
+          <div>
+            <strong>לתשומת לבך</strong>
+            <p>החישוב הוא אומדן ראשוני בלבד ומבוסס על הנתונים שנבחרו.</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="print-footer-wrap">
+      
+
+      <footer class="disclaimer-card">
+        <p><b>חישובים אלה הינם בגדר אומדן בלבד</b>, אינם סופיים ומבוססים על נתונים משוערים בלבד שטרם נבדקו ואומתו סופית והם כפופים לשינויים.</p>
+        <p>גרסה זו (גרסה 1) כוללת הסכמי שכר שניתנו בפועל עד תאריך 01.01.2026.</p>
+        <p class="disclaimer-strong">סימולציה קובעת תבוצע בסמוך ליציאתך לקורס קצינים ע״י חשבי מח׳ שכר וגמלאות.</p>
+      </footer>
+    </div>
+  </main>
+
+  <div class="disclaimer-backdrop" id="disclaimerModal">
+    <div class="disclaimer-modal glass-card">
+      <div class="modal-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <h2>הבהרה חשובה</h2>
+      <p>חישובים אלה הינם בגדר אומדן בלבד, אינם סופיים ומבוססים על נתונים משוערים בלבד שטרם נבדקו ואומתו סופית והם כפופים לשינויים.</p>
+      <p>גרסה זו (גרסה 1) כוללת הסכמי שכר שניתנו בפועל עד תאריך 01.01.2026.</p>
+      <p class="modal-strong">סימולציה קובעת תבוצע בסמוך ליציאתך לקורס קצינים ע״י חשבי מח׳ שכר וגמלאות.</p>
+      <button id="disclaimerAccept" class="btn-primary" type="button">מאשר/ת</button>
     </div>
   </div>
-  <script src="./data.js"></script>
-  <script src="./app.js"></script>
+
+  <script src="./data.js?v=20260825-print-3"></script>
+  <script src="./app-new.js?v=20260825-print-3"></script>
 </body>
-
-
 </html>
