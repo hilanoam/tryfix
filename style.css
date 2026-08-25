@@ -118,7 +118,14 @@ select:disabled{background:rgba(239,244,251,.76);color:#8b95a8;cursor:not-allowe
 .disclaimer-modal{width:min(520px,100%);border-radius:28px;padding:28px;text-align:center;background:rgba(255,255,255,.94)}
 .disclaimer-modal h2{margin:8px 0 12px}.disclaimer-modal p{color:#667287;line-height:1.6}.modal-icon{width:58px;height:58px;border-radius:19px;margin:0 auto;background:#fff1dd;color:#bd7a18;display:grid;place-items:center;font-size:24px}.modal-strong{font-weight:700;color:#3c4860!important}
 .modal-open{overflow:hidden}
-
+/* מרכוז כפתור מאשר/ת בחלונית הפתיחה */
+.disclaimer-modal .btn-primary{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:20px auto 0;
+  width:220px;
+}
 @media(max-width:1000px){.workspace{grid-template-columns:1fr}.summary-column{position:static}.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.summary-card{min-height:0}}
 @media(max-width:720px){.page-shell{width:min(100% - 18px,1240px);padding-top:10px}.hero-card{padding:22px;align-items:flex-start;flex-direction:column}.banner-img{border-radius:18px}.section-card{padding:18px}.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}.actions{grid-template-columns:1fr}.top-reset{align-self:flex-start}.hero-card h1{font-size:29px}.pay-box{align-items:flex-start;flex-direction:column}.pay-box .val{font-size:24px}}
 
