@@ -743,8 +743,8 @@ function diffHtml(delta) {
     return `
       <div class="diff positive diff-inline-text">
         במהלך הקורס תתקבל תוספת על סך
-        <span class="amount">
-          ₪ ${money(delta)}
+        <span class="amount money-value">
+          <span class="shekel-sign">₪</span><span class="money-number">${money(delta)} ברוטו </span>
         </span>
         עקב השינוי בנתוני השכר
       </div>
@@ -755,10 +755,10 @@ function diffHtml(delta) {
   return `
     <div class="diff negative">
       סכום ההקפאה לצורך שימור שכר:
-      <span class="amount">
-        ₪ ${money(
+      <span class="amount money-value">
+        <span class="shekel-sign">₪</span><span class="money-number">${money(
           Math.abs(delta)
-        )}
+        )} ברוטו </span>
       </span>
     </div>
   `;
@@ -961,7 +961,7 @@ function calc() {
     <div class="calc">
 
       ${stepRow(
-        `<b>בתחילת</b> קורס קצינים (${stage2Text}, גמול א')`,
+        `שכר ברוטו <b>בתחילת</b> קורס קצינים (${stage2Text}, גמול א')`,
         s2Salary
       )}
 
@@ -970,7 +970,7 @@ function calc() {
       </div>
 
       ${stepRow(
-        `<b>בסיום</b> קורס קצינים (${stage3Text}, גמול א')`,
+        `שכר ברוטו <b>בסיום</b> קורס קצינים (${stage3Text}, גמול א')`,
         s3Salary
       )}
   `;
@@ -985,7 +985,7 @@ function calc() {
       </div>
 
       ${stepRow(
-        `לאחר מינוי (${stage4Text})`,
+        `שכר ברוטו לאחר מינוי(${stage4Text})`,
         s4Salary,
         appointmentIsLower ? "cancelled-salary" : ""
       )}
@@ -996,13 +996,13 @@ function calc() {
     html += `
       <div class="pay-box">
         <div class="label">
-          שכר כקצין
+          שכר ברוטו כקצין
         </div>
 
         <div class="val">
-           ${money(
-            finalPaid
-          )} ₪ ברוטו
+         
+          <span class="money-value"><span class="shekel-sign">₪</span><span class="money-number">${money(finalPaid)}</span></span>
+          
         </div>
       </div>
     `;
@@ -1023,13 +1023,13 @@ function calc() {
     html += `
       <div class="pay-box">
         <div class="label">
-          שכר משולם בפועל
+          שכר כקצין
         </div>
 
         <div class="val">
-           ₪ ${money(
+          <span class="money-value"><span class="shekel-sign">₪</span><span class="money-number">${money(
             s3Salary
-          )}  ברוטו
+          )}</span></span> ברוטו
         </div>
       </div>
     `;

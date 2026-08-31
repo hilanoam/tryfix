@@ -104,7 +104,8 @@ select:disabled{background:rgba(239,244,251,.76);color:#8b95a8;cursor:not-allowe
 .diff .amount{font-weight:800}
 .freeze-box{padding:14px 16px;border-radius:16px;background:var(--danger-soft);border:1px solid rgba(189,52,52,.2);color:var(--danger);font-weight:700;text-align:center}
 .pay-box{padding:18px;border-radius:20px;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:white;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 14px 30px rgba(47,115,217,.24)}
-.pay-box .label{font-size:15px;font-weight:700;opacity:.9}.pay-box .val{font-size:26px;font-weight:800;direction:ltr}
+.pay-box .label{font-size:15px;font-weight:700;opacity:.9}.pay-box .val{font-size:26px;font-weight:800;direction:rtl;
+  unicode-bidi:isolate}
 .warn{padding:14px 16px;border-radius:16px;background:#fff8ea;border:1px solid rgba(154,106,23,.22);color:#875d14;font-weight:700}
 
 .notice-card{display:flex;gap:12px;align-items:flex-start;padding:18px;border-radius:22px;background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.8);box-shadow:var(--shadow-soft);color:#59667d}
@@ -118,7 +119,7 @@ select:disabled{background:rgba(239,244,251,.76);color:#8b95a8;cursor:not-allowe
 .disclaimer-modal{width:min(520px,100%);border-radius:28px;padding:28px;text-align:center;background:rgba(255,255,255,.94)}
 .disclaimer-modal h2{margin:8px 0 12px}.disclaimer-modal p{color:#667287;line-height:1.6}.modal-icon{width:58px;height:58px;border-radius:19px;margin:0 auto;background:#fff1dd;color:#bd7a18;display:grid;place-items:center;font-size:24px}.modal-strong{font-weight:700;color:#3c4860!important}
 .modal-open{overflow:hidden}
-/* מרכוז כפתור מאשר/ת בחלונית הפתיחה */
+/* ׳׳¨׳›׳•׳– ׳›׳₪׳×׳•׳¨ ׳׳׳©׳¨/׳× ׳‘׳—׳׳•׳ ׳™׳× ׳”׳₪׳×׳™׳—׳” */
 .disclaimer-modal .btn-primary{
   display:flex;
   justify-content:center;
@@ -130,7 +131,7 @@ select:disabled{background:rgba(239,244,251,.76);color:#8b95a8;cursor:not-allowe
 @media(max-width:720px){.page-shell{width:min(100% - 18px,1240px);padding-top:10px}.hero-card{padding:22px;align-items:flex-start;flex-direction:column}.banner-img{border-radius:18px}.section-card{padding:18px}.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}.actions{grid-template-columns:1fr}.top-reset{align-self:flex-start}.hero-card h1{font-size:29px}.pay-box{align-items:flex-start;flex-direction:column}.pay-box .val{font-size:24px}}
 
 
-/* שכר לאחר מינוי שנמוך מהשכר המוגן */
+/* ׳©׳›׳¨ ׳׳׳—׳¨ ׳׳™׳ ׳•׳™ ׳©׳ ׳׳•׳ ׳׳”׳©׳›׳¨ ׳”׳׳•׳’׳ */
 .cancelled-salary{
   background:rgba(245,247,251,.74)!important;
   border-color:rgba(108,120,144,.14)!important;
@@ -159,7 +160,7 @@ select:disabled{background:rgba(239,244,251,.76);color:#8b95a8;cursor:not-allowe
 
 /* =====================================================
    PRINT / PDF ONLY
-   נקי ומאוחד - לא משפיע על העיצוב הרגיל של האתר
+   ׳ ׳§׳™ ׳•׳׳׳•׳—׳“ - ׳׳ ׳׳©׳₪׳™׳¢ ׳¢׳ ׳”׳¢׳™׳¦׳•׳‘ ׳”׳¨׳’׳™׳ ׳©׳ ׳”׳׳×׳¨
 ===================================================== */
 
 @media print {
@@ -200,7 +201,7 @@ select:disabled{background:rgba(239,244,251,.76);color:#8b95a8;cursor:not-allowe
     overflow: visible !important;
   }
 
-  /* חותמת - למעלה מעל הכותרת */
+  /* ׳—׳•׳×׳׳× - ׳׳׳¢׳׳” ׳׳¢׳ ׳”׳›׳•׳×׳¨׳× */
   .print-stamp {
     display: block !important;
     width: 210mm !important;
@@ -334,12 +335,12 @@ select:disabled{background:rgba(239,244,251,.76);color:#8b95a8;cursor:not-allowe
   .pay-box .val {
     font-size: 14pt !important;
     direction: rtl !important;
-    unicode-bidi: isolate !important;
+      unicode-bidi: isolate !important;
     text-align: left !important;
     white-space: nowrap !important;
   }
 
-  /* אזהרות - מוצמדות למטה */
+  /* ׳׳–׳”׳¨׳•׳× - ׳׳•׳¦׳׳“׳•׳× ׳׳׳˜׳” */
   .print-footer-wrap {
     position: absolute !important;
     left: 9mm !important;
@@ -388,4 +389,20 @@ select:disabled{background:rgba(239,244,251,.76);color:#8b95a8;cursor:not-allowe
     font-weight: 700 !important;
     color: #bd3434 !important;
   }
+}
+
+.money-value {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: baseline;
+  gap: 0.22em;
+  white-space: nowrap;
+}
+
+.money-value .shekel-sign,
+.money-value .money-number {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
 }
