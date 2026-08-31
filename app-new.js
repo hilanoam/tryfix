@@ -112,8 +112,8 @@ function money(value) {
   }
 
   return Number(value).toLocaleString("he-IL", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
   });
 }
 
@@ -992,7 +992,22 @@ function calc() {
     `;
 
 
-    if (frozen) {
+
+    html += `
+      <div class="pay-box">
+        <div class="label">
+          שכר כקצין
+        </div>
+
+        <div class="val">
+           ${money(
+            finalPaid
+          )} ₪ ברוטו
+        </div>
+      </div>
+    `;
+
+     if (frozen) {
       html += `
         <div class="freeze-box">
           השכר יכלול הקפאה על סך
@@ -1004,21 +1019,6 @@ function calc() {
         </div>
       `;
     }
-
-
-    html += `
-      <div class="pay-box">
-        <div class="label">
-          שכר משולם בפועל
-        </div>
-
-        <div class="val">
-           ${money(
-            finalPaid
-          )} ₪ ברוטו
-        </div>
-      </div>
-    `;
   } else {
     html += `
       <div class="pay-box">

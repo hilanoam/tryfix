@@ -5,7 +5,7 @@
     "structure": "independent_stages"
   },
   "professions": {
-    "10847 - מש\"ק סייר מג\"ב - רמה ב'": {
+    "מש\"ק סייר מג\"ב - רמה ב'": {
       "activity_level": "רמה ב'",
       "incentive_group": 6,
       "stage1": {
@@ -509,7 +509,7 @@
         ]
       }
     },
-    "10857 - מש\"ק סייר מג\"ב - רמה א'": {
+    "מש\"ק סייר מג\"ב - רמה א'": {
       "activity_level": "רמה א'",
       "incentive_group": 6,
       "stage1": {
@@ -1013,7 +1013,7 @@
         ]
       }
     },
-    "10877 - מש\"ק סייר מג\"ב - רמה א'+": {
+    "מש\"ק סייר מג\"ב - רמה א'+": {
       "activity_level": "רמה א'+",
       "incentive_group": 6,
       "stage1": {
