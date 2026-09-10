@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="./style.css?v=20260825-print-3" />
+  <link rel="stylesheet" href="./style.css?v=20260910-gamul" />
 </head>
 <body>
   <main class="page-shell">
@@ -22,17 +22,16 @@
       <div>
         <div class="eyebrow">מחשבון שכר</div>
         <h1>אומדן ראשוני למועמדים ליציאה לקורס קצינים במג״ב</h1>
-        <p>בחרי את נתוני השכר לפי השלבים. הדרגה והוותק מתעדכנים בהתאם לחוקים שהוגדרו, והחישוב נשען על טבלת השכר המעודכנת.</p>
+        <p>שלבים 1–3 מבוססים על טבלת הנגדים, והשלב שלאחר המינוי מבוסס על טבלת הקצינים.</p>
       </div>
       <button class="top-reset" id="resetBtn" type="button">
-        <i class="fa-solid fa-rotate-left"></i>
-        איפוס
+        <i class="fa-solid fa-rotate-left"></i> איפוס
       </button>
     </section>
 
     <div class="print-stamp" aria-hidden="true">
-        <img src="./topcenter.png" alt="חשבות משטרת ישראל" />
-      </div>
+      <img src="./topcenter.png" alt="חשבות משטרת ישראל" />
+    </div>
 
     <div class="print-title">
       <h1>אומדן שכר קק&quot;צ מג&quot;ב</h1>
@@ -44,10 +43,7 @@
         <section class="glass-card section-card">
           <div class="section-heading">
             <div class="section-icon"><i class="fa-solid fa-layer-group"></i></div>
-            <div>
-              <span class="section-kicker">שלב 1</span>
-              <h2>תפקיד נוכחי</h2>
-            </div>
+            <div><span class="section-kicker">שלב 1</span><h2>תפקיד נוכחי</h2></div>
           </div>
           <div class="grid grid-3">
             <div class="field"><label>מקצוע</label><select id="profession"></select></div>
@@ -56,30 +52,22 @@
           </div>
         </section>
 
-        <section class="stage1-hidden">
-          <select id="s1_rating"></select>
-          <select id="s1_rank"></select>
-        </section>
-
         <section class="glass-card section-card">
           <div class="section-heading">
             <div class="section-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-            <div>
-              <span class="section-kicker">שלב 2</span>
-              <h2>בתחילת קורס קצינים</h2>
-            </div>
+            <div><span class="section-kicker">שלב 2</span><h2>בתחילת קורס קצינים</h2></div>
           </div>
           <div class="grid grid-4">
             <div class="field"><label>דרגה</label><select id="s2_rank"></select></div>
             <div class="field"><label>דירוג</label><select id="s2_rating"></select></div>
             <div class="field"><label>וותק</label><select id="s2_seniority"></select></div>
             <div class="field">
-              <label>האם בתחנה?</label>
-              <div class="segmented" id="s2_stationSeg">
-                <button type="button" class="seg-btn" data-value="0"><span>לא</span></button>
-                <button type="button" class="seg-btn" data-value="1"><span>כן</span></button>
-              </div>
-              <select id="s2_station" style="display:none"><option value="" selected></option><option value="0">לא</option><option value="1">כן</option></select>
+              <label>גמולים</label>
+              <label class="check-card" for="s2_gamulA">
+                <input id="s2_gamulA" type="checkbox">
+                <span class="check-ui"><i class="fa-solid fa-check"></i></span>
+                <span>גמול א׳</span>
+              </label>
             </div>
           </div>
         </section>
@@ -87,25 +75,34 @@
         <section class="glass-card section-card">
           <div class="section-heading">
             <div class="section-icon"><i class="fa-solid fa-award"></i></div>
-            <div>
-              <span class="section-kicker">שלב 3</span>
-              <h2>בסיום קורס קצינים</h2>
-            </div>
+            <div><span class="section-kicker">שלב 3</span><h2>בסיום קורס קצינים</h2></div>
           </div>
-          <div class="grid grid-3">
+          <div class="grid grid-4">
             <div class="field"><label>דרגה</label><select id="s3_rank"></select></div>
             <div class="field"><label>דירוג</label><select id="s3_rating"></select></div>
             <div class="field"><label>וותק</label><select id="s3_seniority"></select></div>
+            <div class="field">
+              <label>גמולים</label>
+              <div class="checks-stack">
+                <label class="check-card" for="s3_gamulA">
+                  <input id="s3_gamulA" type="checkbox" checked>
+                  <span class="check-ui"><i class="fa-solid fa-check"></i></span>
+                  <span>גמול א׳</span>
+                </label>
+                <label class="check-card" for="s3_gamulB">
+                  <input id="s3_gamulB" type="checkbox">
+                  <span class="check-ui"><i class="fa-solid fa-check"></i></span>
+                  <span>גמול ב׳</span>
+                </label>
+              </div>
+            </div>
           </div>
         </section>
 
         <section class="glass-card section-card">
           <div class="section-heading">
             <div class="section-icon"><i class="fa-solid fa-user-shield"></i></div>
-            <div>
-              <span class="section-kicker">שלב 4</span>
-              <h2>לאחר מינוי</h2>
-            </div>
+            <div><span class="section-kicker">שלב 4</span><h2>לאחר מינוי</h2></div>
           </div>
           <div class="grid grid-4">
             <div class="field">
@@ -119,12 +116,19 @@
             <div class="field"><label>דירוג</label><select id="s4_rating" disabled></select></div>
             <div class="field"><label>וותק</label><select id="s4_seniority" disabled></select></div>
             <div class="field">
-              <label>האם בתחנה?</label>
-              <div class="segmented" id="s4_stationSeg">
-                <button type="button" class="seg-btn" data-value="0"><span>לא</span></button>
-                <button type="button" class="seg-btn" data-value="1"><span>כן</span></button>
+              <label>גמולים</label>
+              <div class="checks-stack">
+                <label class="check-card" for="s4_gamulA">
+                  <input id="s4_gamulA" type="checkbox" checked disabled>
+                  <span class="check-ui"><i class="fa-solid fa-check"></i></span>
+                  <span>גמול א׳</span>
+                </label>
+                <label class="check-card" for="s4_gamulB">
+                  <input id="s4_gamulB" type="checkbox">
+                  <span class="check-ui"><i class="fa-solid fa-check"></i></span>
+                  <span>גמול ב׳</span>
+                </label>
               </div>
-              <select id="s4_station" style="display:none"><option value="" selected></option><option value="0">לא</option><option value="1">כן</option></select>
             </div>
           </div>
         </section>
@@ -138,10 +142,7 @@
       <aside class="summary-column">
         <div class="glass-card summary-card">
           <div class="summary-head">
-            <div>
-              <span class="section-kicker">תוצאה</span>
-              <h2>אומדן השכר שלך</h2>
-            </div>
+            <div><span class="section-kicker">תוצאה</span><h2>אומדן השכר שלך</h2></div>
             <div class="summary-badge"><i class="fa-solid fa-chart-line"></i></div>
           </div>
           <div class="results" id="results">
@@ -155,17 +156,12 @@
 
         <div class="notice-card">
           <i class="fa-solid fa-circle-info"></i>
-          <div>
-            <strong>לתשומת לבך</strong>
-            <p>החישוב הוא אומדן ראשוני בלבד ומבוסס על הנתונים שנבחרו.</p>
-          </div>
+          <div><strong>לתשומת לבך</strong><p>החישוב הוא אומדן ראשוני בלבד ומבוסס על הנתונים שנבחרו.</p></div>
         </div>
       </aside>
     </section>
 
     <div class="print-footer-wrap">
-      
-
       <footer class="disclaimer-card">
         <p><b>חישובים אלה הינם בגדר אומדן בלבד</b>, אינם סופיים ומבוססים על נתונים משוערים בלבד שטרם נבדקו ואומתו סופית והם כפופים לשינויים.</p>
         <p>גרסה זו (גרסה 1) כוללת הסכמי שכר שניתנו בפועל עד תאריך 01.01.2026.</p>
@@ -185,7 +181,7 @@
     </div>
   </div>
 
-  <script src="./data.js?v=20260825-print-3"></script>
-  <script src="./app-new.js?v=20260825-print-3"></script>
+  <script src="./data.js?v=20260910-gamul"></script>
+  <script src="./app-new.js?v=20260910-gamul"></script>
 </body>
 </html>
