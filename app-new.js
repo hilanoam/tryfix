@@ -409,7 +409,7 @@ function resetAll() {
 
   els.s2_gamulA.checked = false;
 
-  els.s3_gamulA.checked = true;
+  els.s3_gamulA.checked = false;
   els.s3_gamulA.disabled = false;
 
   els.s4_gamulA.checked = true;
