@@ -1,8 +1,9 @@
 {
   "meta": {
-    "source_file": "פרופילים נגד עם תוצאות.xlsx",
+    "source_file": "פרופילים נגד עם תוצאות(1).xlsx",
     "sheet": "גיליון1",
-    "description": "שלבים 1-3 - נתוני נגדים"
+    "description": "שלבים 1-3 - נתוני נגדים",
+    "note": "כל שורה באקסל נשמרה כמקרה עצמאי; לא בוצע איחוד בין שורות."
   },
   "professions": {
     "מש\"ק סייר מג\"ב - רמה ב'": {
@@ -450,7 +451,7 @@
       "incentive_group": 6,
       "rows": [
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -458,7 +459,7 @@
           "salary": 15022.22
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -466,7 +467,7 @@
           "salary": 15401.96
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -474,7 +475,7 @@
           "salary": 15926.24
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -482,7 +483,7 @@
           "salary": 17143.96
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -490,7 +491,7 @@
           "salary": 17523.7
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -498,7 +499,7 @@
           "salary": 18047.98
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -506,7 +507,7 @@
           "salary": 15899.48
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -514,7 +515,7 @@
           "salary": 16305.8
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -522,7 +523,7 @@
           "salary": 16866.79
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -530,7 +531,7 @@
           "salary": 18169.74
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -538,7 +539,7 @@
           "salary": 18576.07
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -546,7 +547,7 @@
           "salary": 19137.05
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -554,7 +555,7 @@
           "salary": 15466.74
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -562,7 +563,7 @@
           "salary": 15859.95
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -570,7 +571,7 @@
           "salary": 16402.83
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -578,7 +579,7 @@
           "salary": 17608.81
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -586,7 +587,7 @@
           "salary": 18002.02
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -594,7 +595,7 @@
           "salary": 18544.9
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -602,7 +603,7 @@
           "salary": 16375.12
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -610,7 +611,7 @@
           "salary": 16795.85
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -618,7 +619,7 @@
           "salary": 17376.73
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -626,7 +627,7 @@
           "salary": 18667.13
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -634,7 +635,7 @@
           "salary": 19087.87
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -642,7 +643,7 @@
           "salary": 19668.75
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -650,7 +651,7 @@
           "salary": 15825.41
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -658,7 +659,7 @@
           "salary": 16229.49
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -666,7 +667,7 @@
           "salary": 16787.37
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -674,7 +675,7 @@
           "salary": 17942.03
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -682,7 +683,7 @@
           "salary": 18346.11
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -690,7 +691,7 @@
           "salary": 18903.99
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -698,7 +699,7 @@
           "salary": 16758.9
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -706,7 +707,7 @@
           "salary": 17191.26
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -714,7 +715,7 @@
           "salary": 17788.2
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -722,7 +723,7 @@
           "salary": 19023.68
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -730,7 +731,7 @@
           "salary": 19456.04
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -738,7 +739,7 @@
           "salary": 20052.98
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": true,
@@ -746,7 +747,7 @@
           "salary": 18169.74
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": true,
@@ -754,7 +755,7 @@
           "salary": 18576.07
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": true,
@@ -762,7 +763,7 @@
           "salary": 19137.05
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": true,
@@ -770,7 +771,7 @@
           "salary": 18667.13
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": true,
@@ -778,7 +779,7 @@
           "salary": 19087.87
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": true,
@@ -786,7 +787,7 @@
           "salary": 19668.75
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": true,
@@ -794,7 +795,7 @@
           "salary": 19023.68
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": true,
@@ -802,7 +803,7 @@
           "salary": 19456.04
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": true,
@@ -889,7 +890,7 @@
       "incentive_group": 6,
       "rows": [
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -897,7 +898,7 @@
           "salary": 15852.28
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -905,7 +906,7 @@
           "salary": 16257.17
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -913,7 +914,7 @@
           "salary": 16816.18
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -921,7 +922,7 @@
           "salary": 18114.55
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -929,7 +930,7 @@
           "salary": 18519.44
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -937,7 +938,7 @@
           "salary": 19078.45
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -945,7 +946,7 @@
           "salary": 16787.65
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -953,7 +954,7 @@
           "salary": 17220.88
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -961,7 +962,7 @@
           "salary": 17819.02
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -969,7 +970,7 @@
           "salary": 19208.28
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -977,7 +978,7 @@
           "salary": 19641.51
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -985,7 +986,7 @@
           "salary": 20239.65
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -993,7 +994,7 @@
           "salary": 16237.42
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -1001,7 +1002,7 @@
           "salary": 16653.98
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -1009,7 +1010,7 @@
           "salary": 17229.1
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -1017,7 +1018,7 @@
           "salary": 18506.71
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -1025,7 +1026,7 @@
           "salary": 18923.27
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -1033,7 +1034,7 @@
           "salary": 19498.39
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -1041,7 +1042,7 @@
           "salary": 17199.74
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -1049,7 +1050,7 @@
           "salary": 17645.47
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -1057,7 +1058,7 @@
           "salary": 18260.85
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -1065,7 +1066,7 @@
           "salary": 19627.88
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -1073,7 +1074,7 @@
           "salary": 20073.61
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -1081,7 +1082,7 @@
           "salary": 20688.98
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -1089,7 +1090,7 @@
           "salary": 16701.5
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -1097,7 +1098,7 @@
           "salary": 17132.13
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -1105,7 +1106,7 @@
           "salary": 17726.66
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -1113,7 +1114,7 @@
           "salary": 18957.17
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -1121,7 +1122,7 @@
           "salary": 19387.8
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -1129,7 +1130,7 @@
           "salary": 19982.33
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -1137,7 +1138,7 @@
           "salary": 17696.31
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -1145,7 +1146,7 @@
           "salary": 18157.08
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -1153,7 +1154,7 @@
           "salary": 18793.24
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -1161,7 +1162,7 @@
           "salary": 20109.88
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -1169,7 +1170,7 @@
           "salary": 20570.65
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -1177,7 +1178,7 @@
           "salary": 21206.8
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": true,
@@ -1185,7 +1186,7 @@
           "salary": 19208.28
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": true,
@@ -1193,7 +1194,7 @@
           "salary": 19641.51
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": true,
@@ -1201,7 +1202,7 @@
           "salary": 20239.65
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": true,
@@ -1209,7 +1210,7 @@
           "salary": 19627.88
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": true,
@@ -1217,7 +1218,7 @@
           "salary": 20073.61
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": true,
@@ -1225,7 +1226,7 @@
           "salary": 20688.98
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": true,
@@ -1233,7 +1234,7 @@
           "salary": 20109.88
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": true,
@@ -1241,7 +1242,7 @@
           "salary": 20570.65
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": true,
@@ -1328,7 +1329,7 @@
       "incentive_group": 7,
       "rows": [
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -1336,7 +1337,7 @@
           "salary": 15852.28
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -1344,7 +1345,7 @@
           "salary": 16257.17
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -1352,7 +1353,7 @@
           "salary": 16816.18
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -1360,7 +1361,7 @@
           "salary": 18114.55
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -1368,7 +1369,7 @@
           "salary": 18519.44
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -1376,7 +1377,7 @@
           "salary": 19078.45
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -1384,7 +1385,7 @@
           "salary": 16787.65
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -1392,7 +1393,7 @@
           "salary": 17220.88
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "gamul_b": false,
@@ -1400,7 +1401,7 @@
           "salary": 17819.02
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -1408,7 +1409,7 @@
           "salary": 19208.28
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -1416,7 +1417,7 @@
           "salary": 19641.51
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": false,
@@ -1424,7 +1425,7 @@
           "salary": 20239.65
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -1432,7 +1433,7 @@
           "salary": 16237.42
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -1440,7 +1441,7 @@
           "salary": 16653.98
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -1448,7 +1449,7 @@
           "salary": 17229.1
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -1456,7 +1457,7 @@
           "salary": 18506.71
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -1464,7 +1465,7 @@
           "salary": 18923.27
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -1472,7 +1473,7 @@
           "salary": 19498.39
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -1480,7 +1481,7 @@
           "salary": 17199.74
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -1488,7 +1489,7 @@
           "salary": 17645.47
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "gamul_b": false,
@@ -1496,7 +1497,7 @@
           "salary": 18260.85
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -1504,7 +1505,7 @@
           "salary": 19627.88
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -1512,7 +1513,7 @@
           "salary": 20073.61
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": false,
@@ -1520,7 +1521,7 @@
           "salary": 20688.98
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -1528,7 +1529,7 @@
           "salary": 16759.75
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -1536,7 +1537,7 @@
           "salary": 17192.14
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -1544,7 +1545,7 @@
           "salary": 17789.11
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -1552,7 +1553,7 @@
           "salary": 19024.66
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -1560,7 +1561,7 @@
           "salary": 19457.05
         },
         {
-          "rating": "אחיד",
+          "rating": "70",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -1568,7 +1569,7 @@
           "salary": 20054.02
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -1576,7 +1577,7 @@
           "salary": 17758.64
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -1584,7 +1585,7 @@
           "salary": 18221.29
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "gamul_b": false,
@@ -1592,7 +1593,7 @@
           "salary": 18860.05
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -1600,7 +1601,7 @@
           "salary": 20182.1
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -1608,7 +1609,7 @@
           "salary": 20644.75
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": false,
@@ -1616,7 +1617,7 @@
           "salary": 21283.51
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": true,
@@ -1624,7 +1625,7 @@
           "salary": 19208.28
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": true,
@@ -1632,7 +1633,7 @@
           "salary": 19641.51
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "gamul_b": true,
@@ -1640,7 +1641,7 @@
           "salary": 20239.65
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": true,
@@ -1648,7 +1649,7 @@
           "salary": 19627.88
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": true,
@@ -1656,7 +1657,7 @@
           "salary": 20073.61
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "gamul_b": true,
@@ -1664,7 +1665,7 @@
           "salary": 20688.98
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": true,
@@ -1672,7 +1673,7 @@
           "salary": 20182.1
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": true,
@@ -1680,7 +1681,7 @@
           "salary": 20644.75
         },
         {
-          "rating": "אקדמאי ישים",
+          "rating": "81",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "gamul_b": true,

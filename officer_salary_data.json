@@ -1,9 +1,9 @@
 {
   "meta": {
-    "source_file": "עותק של מפקח + פקד.xlsx",
+    "source_file": "עותק של מפקח + פקד(2).xlsx",
     "sheet": "גיליון1",
     "description": "שלב 4 - נתוני קצינים",
-    "note": "עמודת שלב לא נכנסה לסינון כי בקובץ המקור היא אינה משנה את השכר עבור אותו שילוב."
+    "note": "כל שורה באקסל נשמרה כמקרה עצמאי; לא בוצע איחוד בין שורות."
   },
   "professions": {
     "מש\"ק סייר מג\"ב - רמה ב'": {
@@ -16,7 +16,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 10846.29
+            "salary": 9302.0
           },
           {
             "rating": "אחיד",
@@ -37,7 +37,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 12237.01
+            "salary": 10621.16
           },
           {
             "rating": "מח\"ר",
@@ -58,7 +58,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 12934.4
+            "salary": 11289.97
           },
           {
             "rating": "דמ\"מ",
@@ -79,7 +79,7 @@
             "gamul_a": true,
             "gamul_b": true,
             "seniority": 3,
-            "salary": 13408.09
+            "salary": 11703.33
           },
           {
             "rating": "מח\"ר",
@@ -100,7 +100,7 @@
             "gamul_a": true,
             "gamul_b": true,
             "seniority": 3,
-            "salary": 14152.23
+            "salary": 12415.32
           },
           {
             "rating": "דמ\"מ",
@@ -130,7 +130,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 11759.38
+            "salary": 10146.29
           },
           {
             "rating": "אחיד",
@@ -151,7 +151,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 13500.52
+            "salary": 11788.73
           },
           {
             "rating": "מח\"ר",
@@ -172,7 +172,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 13971.94
+            "salary": 12248.73
           },
           {
             "rating": "דמ\"מ",
@@ -193,7 +193,7 @@
             "gamul_a": true,
             "gamul_b": true,
             "seniority": 3,
-            "salary": 14828.59
+            "salary": 13015.94
           },
           {
             "rating": "מח\"ר",
@@ -214,7 +214,7 @@
             "gamul_a": true,
             "gamul_b": true,
             "seniority": 3,
-            "salary": 15318.68
+            "salary": 13493.17
           },
           {
             "rating": "דמ\"מ",
@@ -244,7 +244,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 12347.53
+            "salary": 10689.77
           },
           {
             "rating": "אחיד",
@@ -265,7 +265,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 14226.03
+            "salary": 12459.12
           },
           {
             "rating": "מח\"ר",
@@ -286,7 +286,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 14789.1
+            "salary": 13003.82
           },
           {
             "rating": "דמ\"מ",
@@ -307,7 +307,7 @@
             "gamul_a": true,
             "gamul_b": true,
             "seniority": 3,
-            "salary": 15644.23
+            "salary": 13769.62
           },
           {
             "rating": "מח\"ר",
@@ -328,7 +328,7 @@
             "gamul_a": true,
             "gamul_b": true,
             "seniority": 3,
-            "salary": 16237.36
+            "salary": 14342.09
           },
           {
             "rating": "דמ\"מ",
@@ -359,7 +359,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 10439.87
+            "salary": 8939.0
           },
           {
             "rating": "אחיד",
@@ -380,7 +380,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 12278.61
+            "salary": 10654.0
           },
           {
             "rating": "מח\"ר",
@@ -401,7 +401,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 13330.08
+            "salary": 11650.0
           },
           {
             "rating": "דמ\"מ",
@@ -422,7 +422,7 @@
             "gamul_a": true,
             "gamul_b": true,
             "seniority": 3,
-            "salary": 13377.84
+            "salary": 11669.0
           },
           {
             "rating": "מח\"ר",
@@ -443,7 +443,7 @@
             "gamul_a": true,
             "gamul_b": true,
             "seniority": 3,
-            "salary": 14514.11
+            "salary": 12743.0
           },
           {
             "rating": "דמ\"מ",
@@ -473,7 +473,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 12116.33
+            "salary": 10471.0
           },
           {
             "rating": "אחיד",
@@ -494,7 +494,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 13432.31
+            "salary": 11720.0
           },
           {
             "rating": "מח\"ר",
@@ -515,7 +515,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 14399.02
+            "salary": 12637.0
           },
           {
             "rating": "דמ\"מ",
@@ -536,7 +536,7 @@
             "gamul_a": true,
             "gamul_b": true,
             "seniority": 3,
-            "salary": 14665.5
+            "salary": 12859.0
           },
           {
             "rating": "מח\"ר",
@@ -557,7 +557,7 @@
             "gamul_a": true,
             "gamul_b": true,
             "seniority": 3,
-            "salary": 15707.17
+            "salary": 13845.0
           },
           {
             "rating": "דמ\"מ",
@@ -587,7 +587,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 13033.16
+            "salary": 11317.0
           },
           {
             "rating": "אחיד",
@@ -608,7 +608,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 14286.27
+            "salary": 12508.0
           },
           {
             "rating": "מח\"ר",
@@ -629,7 +629,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 15469.76
+            "salary": 13626.0
           },
           {
             "rating": "דמ\"מ",
@@ -650,7 +650,7 @@
             "gamul_a": true,
             "gamul_b": true,
             "seniority": 3,
-            "salary": 15618.61
+            "salary": 13739.0
           },
           {
             "rating": "מח\"ר",
@@ -671,7 +671,7 @@
             "gamul_a": true,
             "gamul_b": true,
             "seniority": 3,
-            "salary": 16902.23
+            "salary": 14949.31
           },
           {
             "rating": "דמ\"מ",
@@ -686,6 +686,76 @@
             "gamul_b": true,
             "seniority": 10,
             "salary": 17688.86
+          },
+          {
+            "rating": "אחיד",
+            "gamul_a": true,
+            "gamul_b": false,
+            "seniority": 3,
+            "salary": 11317.78
+          },
+          {
+            "rating": "מח\"ר",
+            "gamul_a": true,
+            "gamul_b": false,
+            "seniority": 3,
+            "salary": 12508.84
+          },
+          {
+            "rating": "דמ\"מ",
+            "gamul_a": true,
+            "gamul_b": false,
+            "seniority": 3,
+            "salary": 13626.38
+          },
+          {
+            "rating": "מח\"ר",
+            "gamul_a": true,
+            "gamul_b": true,
+            "seniority": 3,
+            "salary": 13739.28
+          },
+          {
+            "rating": "דמ\"מ",
+            "gamul_a": true,
+            "gamul_b": true,
+            "seniority": 3,
+            "salary": 14949.31
+          },
+          {
+            "rating": "דמ\"מ",
+            "gamul_a": true,
+            "gamul_b": true,
+            "seniority": 3,
+            "salary": 14949.31
+          },
+          {
+            "rating": "אחיד",
+            "gamul_a": true,
+            "gamul_b": false,
+            "seniority": 3,
+            "salary": 11317.78
+          },
+          {
+            "rating": "מח\"ר",
+            "gamul_a": true,
+            "gamul_b": false,
+            "seniority": 3,
+            "salary": 12508.84
+          },
+          {
+            "rating": "דמ\"מ",
+            "gamul_a": true,
+            "gamul_b": false,
+            "seniority": 3,
+            "salary": 13626.38
+          },
+          {
+            "rating": "מח\"ר",
+            "gamul_a": true,
+            "gamul_b": true,
+            "seniority": 3,
+            "salary": 13739.28
           }
         ]
       }
@@ -700,7 +770,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 12347.53
+            "salary": 10689.77
           },
           {
             "rating": "אחיד",
@@ -721,7 +791,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 14226.03
+            "salary": 12459.12
           },
           {
             "rating": "מח\"ר",
@@ -742,7 +812,7 @@
             "gamul_a": true,
             "gamul_b": false,
             "seniority": 3,
-            "salary": 14789.1
+            "salary": 13003.82
           },
           {
             "rating": "דמ\"מ",
@@ -763,7 +833,7 @@
             "gamul_a": true,
             "gamul_b": true,
             "seniority": 3,
-            "salary": 15644.23
+            "salary": 13769.62
           },
           {
             "rating": "מח\"ר",
@@ -784,7 +854,7 @@
             "gamul_a": true,
             "gamul_b": true,
             "seniority": 3,
-            "salary": 16237.36
+            "salary": 14342.09
           },
           {
             "rating": "דמ\"מ",
@@ -799,6 +869,48 @@
             "gamul_b": true,
             "seniority": 10,
             "salary": 16973.75
+          },
+          {
+            "rating": "מח\"ר",
+            "gamul_a": true,
+            "gamul_b": false,
+            "seniority": 3,
+            "salary": 12459.12
+          },
+          {
+            "rating": "דמ\"מ",
+            "gamul_a": true,
+            "gamul_b": false,
+            "seniority": 3,
+            "salary": 13003.82
+          },
+          {
+            "rating": "מח\"ר",
+            "gamul_a": true,
+            "gamul_b": true,
+            "seniority": 3,
+            "salary": 13769.62
+          },
+          {
+            "rating": "מח\"ר",
+            "gamul_a": true,
+            "gamul_b": false,
+            "seniority": 3,
+            "salary": 12459.12
+          },
+          {
+            "rating": "מח\"ר",
+            "gamul_a": true,
+            "gamul_b": true,
+            "seniority": 3,
+            "salary": 13769.62
+          },
+          {
+            "rating": "דמ\"מ",
+            "gamul_a": true,
+            "gamul_b": true,
+            "seniority": 3,
+            "salary": 14342.09
           }
         ],
         "pakad": []

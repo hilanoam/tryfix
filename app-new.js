@@ -15,7 +15,6 @@ const els = {
   s3_rating: document.getElementById("s3_rating"),
   s3_seniority: document.getElementById("s3_seniority"),
   s3_gamulA: document.getElementById("s3_gamulA"),
-  s3_gamulB: document.getElementById("s3_gamulB"),
 
   s4_role: document.getElementById("s4_role"),
   s4_rating: document.getElementById("s4_rating"),
@@ -96,7 +95,7 @@ function stage2Gamul() {
   return { a: !!els.s2_gamulA?.checked, b: false };
 }
 function stage3Gamul() {
-  return { a: !!els.s3_gamulA?.checked, b: !!els.s3_gamulB?.checked };
+  return { a: !!els.s3_gamulA?.checked, b: false };
 }
 function stage4Gamul() {
   return { a: !!els.s4_gamulA?.checked, b: !!els.s4_gamulB?.checked };
@@ -118,12 +117,6 @@ function optionExists(selectEl, value){
 }
 
 function enforceGamulRules() {
-
-  // שלב 3 - המשתמשת יכולה לבחור אם גמול א' מסומן או לא
-  // אבל אם מסומן גמול ב' - חייב להיות גם גמול א'
-  if (els.s3_gamulB?.checked) {
-    els.s3_gamulA.checked = true;
-  }
 
   // שלב 4 - גמול א' תמיד מסומן ולא ניתן לבטל
   if (els.s4_gamulA) {
@@ -418,7 +411,6 @@ function resetAll() {
 
   els.s3_gamulA.checked = true;
   els.s3_gamulA.disabled = false;
-  els.s3_gamulB.checked = false;
 
   els.s4_gamulA.checked = true;
   els.s4_gamulA.disabled = true;
@@ -492,12 +484,11 @@ function wireEvents() {
     syncCalcEnabled();
   });
 
-  [els.s3_gamulA, els.s3_gamulB].forEach(el => el.addEventListener("change", () => {
+  els.s3_gamulA.addEventListener("change", () => {
     clearResults();
-    enforceGamulRules("s3");
     refreshStage3(true);
     syncCalcEnabled();
-  }));
+  });
 
   els.s3_rank.addEventListener("change", () => {
     clearResults();
