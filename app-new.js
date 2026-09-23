@@ -444,11 +444,13 @@ function exportToPDF() {
 function wireEvents() {
   els.profession.addEventListener("change", () => {
     clearResults();
+
     els.s2_gamulA.checked = false;
     els.s3_gamulA.checked = false;
-    els.s3_gamulB.checked = false;
+
     els.s4_gamulA.checked = false;
     els.s4_gamulB.checked = false;
+
     enforceGamulRules();
     fillProfile();
     syncCalcEnabled();
