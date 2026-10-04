@@ -1,9 +1,9 @@
 {
   "meta": {
-    "source_file": "פרופילים נגד עם תוצאות(2).xlsx",
-    "sheet": "גיליון2",
+    "source_file": "פרופילים נגד עם תוצאות(3).xlsx",
+    "sheet": "גיליון1",
     "description": "שלבים 1-3 - נתוני נגדים ללא גמול ב",
-    "note": "כל שורה באקסל נשמרה כמקרה עצמאי; השדה gamul_b הוסר לחלוטין."
+    "note": "כל שורה בגיליון המעובד נשמרה כמקרה עצמאי; gamul_b אינו קיים."
   },
   "professions": {
     "מש\"ק סייר מג\"ב - רמה ב'": {
@@ -12,53 +12,53 @@
       "incentive_group": 6,
       "rows": [
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 13722.39
+          "salary": 12083.12
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 6,
           "salary": 14062.75
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 10,
           "salary": 14532.65
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 15624.07
+          "salary": 13879.96
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 6,
-          "salary": 15964.42
+          "salary": 15964.44
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 10,
-          "salary": 16434.33
+          "salary": 16434.34
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 14508.67
+          "salary": 12826.05
         },
         {
           "rating": "אקדמאי ישים",
@@ -72,77 +72,77 @@
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 10,
-          "salary": 15375.65
+          "salary": 15375.64
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 16543.46
+          "salary": 14748.65
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 6,
-          "salary": 16907.64
+          "salary": 16907.65
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 10,
-          "salary": 17410.44
+          "salary": 17410.45
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 14042.22
+          "salary": 12401.38
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 6,
           "salary": 14392.27
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 10,
-          "salary": 14875.55
+          "salary": 14875.57
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 15949.15
+          "salary": 14205.81
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 6,
-          "salary": 16299.2
+          "salary": 16299.22
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 10,
-          "salary": 16782.48
+          "salary": 16782.49
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 14850.89
+          "salary": 13166.58
         },
         {
           "rating": "אקדמאי ישים",
@@ -156,21 +156,21 @@
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 10,
-          "salary": 15742.55
+          "salary": 15742.56
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 16891.3
+          "salary": 15097.34
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 6,
-          "salary": 17265.85
+          "salary": 17265.86
         },
         {
           "rating": "אקדמאי ישים",
@@ -180,53 +180,53 @@
           "salary": 17782.97
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 14451.01
+          "salary": 12834.12
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 14813.45
+          "salary": 14813.46
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 10,
           "salary": 15313.83
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 16349.49
+          "salary": 14637.83
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 6,
           "salary": 16711.92
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 10,
-          "salary": 17212.31
+          "salary": 17212.32
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 15288.29
+          "salary": 13629.61
         },
         {
           "rating": "אקדמאי ישים",
@@ -240,154 +240,28 @@
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 10,
-          "salary": 16211.51
+          "salary": 16211.5
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 17319.66
+          "salary": 15559.59
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 6,
-          "salary": 17707.46
+          "salary": 17707.47
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 10,
-          "salary": 18242.87
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 16543.46
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 16907.64
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 17410.44
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 16891.3
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 17265.85
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 17782.97
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 17319.66
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 17707.46
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 18242.87
-        },
-        {
-          "rating": "אקדמאי לא ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 15624.07
-        },
-        {
-          "rating": "אקדמאי לא ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 15964.42
-        },
-        {
-          "rating": "אקדמאי לא ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 16434.33
-        },
-        {
-          "rating": "אקדמאי לא ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 15949.15
-        },
-        {
-          "rating": "אקדמאי לא ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 16299.2
-        },
-        {
-          "rating": "אקדמאי לא ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 16782.48
-        },
-        {
-          "rating": "אקדמאי לא ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 16349.49
-        },
-        {
-          "rating": "אקדמאי לא ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 16711.92
-        },
-        {
-          "rating": "אקדמאי לא ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 17212.31
+          "salary": 18242.88
         }
       ]
     },
@@ -397,137 +271,137 @@
       "incentive_group": 6,
       "rows": [
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 15022.22
+          "salary": 13311.26
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 15401.96
+          "salary": 15401.97
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 10,
           "salary": 15926.24
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 17143.96
+          "salary": 15316.05
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 6,
-          "salary": 17523.7
+          "salary": 17523.69
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 10,
-          "salary": 18047.98
+          "salary": 18047.99
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 15899.48
+          "salary": 14140.18
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 16305.8
+          "salary": 16305.82
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 10,
-          "salary": 16866.79
+          "salary": 16866.8
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 18169.74
+          "salary": 16285.28
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 6,
-          "salary": 18576.07
+          "salary": 18576.06
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 10,
-          "salary": 19137.05
+          "salary": 19137.06
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 15466.74
+          "salary": 13749.32
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 15859.95
+          "salary": 15859.96
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 10,
           "salary": 16402.83
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 17608.81
+          "salary": 15776.28
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 6,
-          "salary": 18002.02
+          "salary": 18002.04
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 10,
-          "salary": 18544.9
+          "salary": 18544.89
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 16375.12
+          "salary": 14608.9
         },
         {
           "rating": "אקדמאי ישים",
@@ -541,14 +415,14 @@
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 10,
-          "salary": 17376.73
+          "salary": 17376.74
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 18667.13
+          "salary": 16777.72
         },
         {
           "rating": "אקדמאי ישים",
@@ -565,53 +439,53 @@
           "salary": 19668.75
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 15825.41
+          "salary": 14139.92
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 16229.49
+          "salary": 16229.5
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 10,
           "salary": 16787.37
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 17942.03
+          "salary": 16150.91
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 6,
-          "salary": 18346.11
+          "salary": 18346.1
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 10,
-          "salary": 18903.99
+          "salary": 18904
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 16758.9
+          "salary": 15026.81
         },
         {
           "rating": "אקדמאי ישים",
@@ -625,154 +499,28 @@
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 10,
-          "salary": 17788.2
+          "salary": 17788.21
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 19023.68
+          "salary": 17178.59
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 6,
-          "salary": 19456.04
+          "salary": 19456.03
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 10,
-          "salary": 20052.98
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 18169.74
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 18576.07
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 19137.05
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 18667.13
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 19087.87
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 19668.75
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 19023.68
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 19456.04
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 20052.98
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 17143.96
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 17523.7
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 18047.98
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 17608.81
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 18002.02
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 18544.9
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 17942.03
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 18346.11
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 18903.99
+          "salary": 20052.99
         }
       ]
     },
@@ -782,42 +530,42 @@
       "incentive_group": 6,
       "rows": [
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 15852.28
+          "salary": 14095.59
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 16257.17
+          "salary": 16257.18
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 10,
-          "salary": 16816.18
+          "salary": 16816.21
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 18114.55
+          "salary": 16233.12
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 6,
-          "salary": 18519.44
+          "salary": 18519.45
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 10,
@@ -828,28 +576,28 @@
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 16787.65
+          "salary": 14979.39
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 17220.88
+          "salary": 17220.89
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 10,
-          "salary": 17819.02
+          "salary": 17819.04
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 19208.28
+          "salary": 17266.55
         },
         {
           "rating": "אקדמאי ישים",
@@ -863,45 +611,45 @@
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 10,
-          "salary": 20239.65
+          "salary": 20239.66
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 16237.42
+          "salary": 14478.58
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 16653.98
+          "salary": 16653.99
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 10,
-          "salary": 17229.1
+          "salary": 17229.12
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 18506.71
+          "salary": 16625.91
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 6,
           "salary": 18923.27
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 10,
@@ -912,14 +660,14 @@
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 17199.74
+          "salary": 15389.19
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 17645.47
+          "salary": 17645.48
         },
         {
           "rating": "אקדמאי ישים",
@@ -933,7 +681,7 @@
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 19627.88
+          "salary": 17686.83
         },
         {
           "rating": "אקדמאי ישים",
@@ -950,42 +698,42 @@
           "salary": 20688.98
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 16701.5
+          "salary": 14972.28
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 17132.13
+          "salary": 17132.12
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 10,
           "salary": 17726.66
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 18957.17
+          "salary": 17115.4
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 6,
-          "salary": 19387.8
+          "salary": 19387.79
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 10,
@@ -996,7 +744,7 @@
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 17696.31
+          "salary": 15917.46
         },
         {
           "rating": "אקדמאי ישים",
@@ -1017,7 +765,7 @@
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 20109.88
+          "salary": 18210.58
         },
         {
           "rating": "אקדמאי ישים",
@@ -1032,132 +780,6 @@
           "gamul_a": true,
           "seniority": 10,
           "salary": 21206.8
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 19208.28
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 19641.51
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 20239.65
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 19627.88
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 20073.61
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 20688.98
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 20109.88
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 20570.65
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 21206.8
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 18114.55
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 18519.44
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 19078.45
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 18506.71
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 18923.27
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 19498.39
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 18957.17
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 19387.8
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 19982.33
         }
       ]
     },
@@ -1167,42 +789,42 @@
       "incentive_group": 7,
       "rows": [
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 15852.28
+          "salary": 14095.59
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 16257.17
+          "salary": 16257.18
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 10,
-          "salary": 16816.18
+          "salary": 16816.21
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 18114.55
+          "salary": 16233.12
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 6,
-          "salary": 18519.44
+          "salary": 18519.45
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 10,
@@ -1213,28 +835,28 @@
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 16787.65
+          "salary": 14979.39
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 17220.88
+          "salary": 17220.89
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": false,
           "seniority": 10,
-          "salary": 17819.02
+          "salary": 17819.04
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 19208.28
+          "salary": 17266.55
         },
         {
           "rating": "אקדמאי ישים",
@@ -1248,45 +870,45 @@
           "rank": "רס\"מ 0",
           "gamul_a": true,
           "seniority": 10,
-          "salary": 20239.65
+          "salary": 20239.66
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 16237.42
+          "salary": 14478.58
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 16653.98
+          "salary": 16653.99
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 10,
-          "salary": 17229.1
+          "salary": 17229.12
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 18506.71
+          "salary": 16625.91
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 6,
           "salary": 18923.27
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 10,
@@ -1297,14 +919,14 @@
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 17199.74
+          "salary": 15389.19
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 3",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 17645.47
+          "salary": 17645.48
         },
         {
           "rating": "אקדמאי ישים",
@@ -1318,7 +940,7 @@
           "rank": "רס\"מ 3",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 19627.88
+          "salary": 17686.83
         },
         {
           "rating": "אקדמאי ישים",
@@ -1335,60 +957,60 @@
           "salary": 20688.98
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 16759.75
+          "salary": 15027.63
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 6,
           "salary": 17192.14
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 10,
-          "salary": 17789.11
+          "salary": 17789.1
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 19024.66
+          "salary": 17179.52
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 6,
-          "salary": 19457.05
+          "salary": 19457.04
         },
         {
-          "rating": "אחיד/אקדמאי לא ישים",
+          "rating": "אחיד / אקדמאי לא ישים",
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 10,
-          "salary": 20054.02
+          "salary": 20054.03
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 3,
-          "salary": 17758.64
+          "salary": 15976.67
         },
         {
           "rating": "אקדמאי ישים",
           "rank": "רס\"מ 5",
           "gamul_a": false,
           "seniority": 6,
-          "salary": 18221.29
+          "salary": 18221.3
         },
         {
           "rating": "אקדמאי ישים",
@@ -1402,7 +1024,7 @@
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 3,
-          "salary": 20182.1
+          "salary": 18279.19
         },
         {
           "rating": "אקדמאי ישים",
@@ -1416,133 +1038,7 @@
           "rank": "רס\"מ 5",
           "gamul_a": true,
           "seniority": 10,
-          "salary": 21283.51
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 19208.28
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 19641.51
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 20239.65
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 19627.88
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 20073.61
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 20688.98
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 20182.1
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 20644.75
-        },
-        {
-          "rating": "אקדמאי ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 21283.51
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 18114.55
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 18519.44
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 0",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 19078.45
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 18506.71
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 18923.27
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 3",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 19498.39
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 3,
-          "salary": 19024.66
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 6,
-          "salary": 19457.05
-        },
-        {
-          "rating": "אחיד/אקדמאי לא ישים",
-          "rank": "רס\"מ 5",
-          "gamul_a": true,
-          "seniority": 10,
-          "salary": 20054.02
+          "salary": 21283.52
         }
       ]
     }
